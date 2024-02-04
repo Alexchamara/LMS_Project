@@ -15,6 +15,8 @@ namespace LMS1.Classes
         //{
         //}
 
+
+
         //Add book to the database
         public void addBook(string titel, string author, string publication, string subject, string isbn, int price)
         {

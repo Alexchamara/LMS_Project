@@ -1,4 +1,9 @@
 {
-  "ExpandedNodes": [],
+  "ExpandedNodes": [
+    "",
+    "\\LMS1",
+    "\\LMS1\\Librarian"
+  ],
+  "SelectedNode": "\\LMS1\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

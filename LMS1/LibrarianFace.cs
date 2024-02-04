@@ -49,7 +49,7 @@ namespace LMS1
             SidePanel.Height = removeBookBtn.Height;
             SidePanel.Top = removeBookBtn.Top;
 
-            librarianLoadPalen(new RemoveBooksForm());
+            librarianLoadPalen(new RemoveBooksForm(library));
 
         }
 

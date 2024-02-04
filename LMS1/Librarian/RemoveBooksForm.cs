@@ -17,13 +17,13 @@ namespace LMS1
 
         public RemoveBooksForm(Library library)
         {
-            this.library = library();
+            this.library = library;
             InitializeComponent();
         }
 
         private void RemoveBookBtn_Click(object sender, EventArgs e)
         {
-            library.removeBook(this.RemoveISBNTextBox.Text, this.RemoveBookNameTextBox.Text);
+            library.removeBook(this.ISBNNOTextBox.Text, this.RemoveBookNameTextBox.Text);
         }
     }
 }
