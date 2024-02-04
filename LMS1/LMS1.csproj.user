@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Error messages\Log in\InvalidPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Error messages\Log in\InvalidUname&amp;Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Error messages\Log in\InvalidUserName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LibrarianFace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Librarian\AddBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Librarian\AddMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Librarian\RemoveBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Librarian\RemoverMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Log in forms\LibrarianLogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Log in forms\MemberLogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainInterFace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MemberFace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Member\MemberBorrowBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Member\MemberReturnBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SearchBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
