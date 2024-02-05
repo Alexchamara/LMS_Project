@@ -16,5 +16,19 @@ namespace LMS1
         {
             InitializeComponent();
         }
+
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            this.MemberReturnBookNameTextBox.Clear();
+            this.MemberReturnISBNNOTextBox.Clear();
+            this.MemberReturnBookDate.Value = DateTime.Now;
+            this.MemberReturnBookNameTextBox.Focus();
+        }
+
+        private void MemberReturnBookForm_Load(object sender, EventArgs e)
+        {
+            this.MemberReturnBookNameTextBox.Focus();
+        }
     }
 }

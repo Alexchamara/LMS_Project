@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberReturnBookForm));
-            BorrowBookDate = new DateTimePicker();
+            MemberReturnBookDate = new DateTimePicker();
             ReturnDateLable = new Label();
             pictureBox1 = new PictureBox();
             MemberReturnBookBtn = new Button();
@@ -38,16 +38,17 @@
             ISBNNoLable = new Label();
             BookNameLable = new Label();
             MemberReturnBookLable = new Label();
+            ClearBtn = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // BorrowBookDate
+            // MemberReturnBookDate
             // 
-            BorrowBookDate.Location = new Point(355, 159);
-            BorrowBookDate.Margin = new Padding(2, 1, 2, 1);
-            BorrowBookDate.Name = "BorrowBookDate";
-            BorrowBookDate.Size = new Size(217, 23);
-            BorrowBookDate.TabIndex = 3;
+            MemberReturnBookDate.Location = new Point(355, 159);
+            MemberReturnBookDate.Margin = new Padding(2, 1, 2, 1);
+            MemberReturnBookDate.Name = "MemberReturnBookDate";
+            MemberReturnBookDate.Size = new Size(217, 23);
+            MemberReturnBookDate.TabIndex = 3;
             // 
             // ReturnDateLable
             // 
@@ -78,7 +79,7 @@
             MemberReturnBookBtn.BackColor = Color.FromArgb(246, 174, 0);
             MemberReturnBookBtn.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             MemberReturnBookBtn.ForeColor = SystemColors.Control;
-            MemberReturnBookBtn.Location = new Point(387, 201);
+            MemberReturnBookBtn.Location = new Point(387, 207);
             MemberReturnBookBtn.Margin = new Padding(2, 1, 2, 1);
             MemberReturnBookBtn.Name = "MemberReturnBookBtn";
             MemberReturnBookBtn.Size = new Size(184, 27);
@@ -138,12 +139,26 @@
             MemberReturnBookLable.TabIndex = 0;
             MemberReturnBookLable.Text = "Return Book";
             // 
+            // ClearBtn
+            // 
+            ClearBtn.AutoSize = true;
+            ClearBtn.Font = new Font("Franklin Gothic Medium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ClearBtn.ForeColor = SystemColors.ActiveCaptionText;
+            ClearBtn.Location = new Point(504, 184);
+            ClearBtn.Margin = new Padding(2, 0, 2, 0);
+            ClearBtn.Name = "ClearBtn";
+            ClearBtn.Size = new Size(65, 16);
+            ClearBtn.TabIndex = 36;
+            ClearBtn.Text = "Clear Fields";
+            ClearBtn.Click += ClearBtn_Click;
+            // 
             // MemberReturnBookForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(848, 420);
-            Controls.Add(BorrowBookDate);
+            Controls.Add(ClearBtn);
+            Controls.Add(MemberReturnBookDate);
             Controls.Add(ReturnDateLable);
             Controls.Add(pictureBox1);
             Controls.Add(MemberReturnBookBtn);
@@ -156,6 +171,7 @@
             Margin = new Padding(2, 1, 2, 1);
             Name = "MemberReturnBookForm";
             Text = "MemberReturnBookForm";
+            Load += MemberReturnBookForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -172,5 +188,8 @@
         private Label ISBNNoLable;
         private Label BookNameLable;
         private Label MemberReturnBookLable;
+        private DateTimePicker ReturnBookDate;
+        private DateTimePicker MemberReturnBookDate;
+        private Label ClearBtn;
     }
 }

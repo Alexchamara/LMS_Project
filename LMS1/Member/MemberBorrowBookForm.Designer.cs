@@ -39,6 +39,8 @@
             BorrowBookDate = new DateTimePicker();
             BorrowDateLable = new Label();
             ClearBtn = new Label();
+            ReturnBookDate = new DateTimePicker();
+            ReturnDateLable = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -59,7 +61,7 @@
             MemberBorrowBookBtn.BackColor = Color.FromArgb(246, 174, 0);
             MemberBorrowBookBtn.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             MemberBorrowBookBtn.ForeColor = SystemColors.Control;
-            MemberBorrowBookBtn.Location = new Point(387, 204);
+            MemberBorrowBookBtn.Location = new Point(387, 252);
             MemberBorrowBookBtn.Margin = new Padding(2, 1, 2, 1);
             MemberBorrowBookBtn.Name = "MemberBorrowBookBtn";
             MemberBorrowBookBtn.Size = new Size(184, 27);
@@ -89,7 +91,7 @@
             ISBNNoLable.Anchor = AnchorStyles.Top;
             ISBNNoLable.AutoSize = true;
             ISBNNoLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            ISBNNoLable.Location = new Point(211, 113);
+            ISBNNoLable.Location = new Point(211, 116);
             ISBNNoLable.Margin = new Padding(2, 0, 2, 0);
             ISBNNoLable.Name = "ISBNNoLable";
             ISBNNoLable.Size = new Size(77, 24);
@@ -122,20 +124,23 @@
             // 
             // BorrowBookDate
             // 
+            BorrowBookDate.AccessibleRole = AccessibleRole.MenuBar;
             BorrowBookDate.Location = new Point(355, 159);
             BorrowBookDate.Margin = new Padding(2, 1, 2, 1);
-            BorrowBookDate.MaxDate = new DateTime(2024, 2, 5, 11, 18, 51, 0);
+            BorrowBookDate.MaxDate = new DateTime(2100, 2, 5, 11, 18, 0, 0);
+            BorrowBookDate.MinDate = new DateTime(2024, 2, 5, 0, 0, 0, 0);
             BorrowBookDate.Name = "BorrowBookDate";
             BorrowBookDate.Size = new Size(217, 23);
             BorrowBookDate.TabIndex = 3;
-            BorrowBookDate.Value = new DateTime(2024, 2, 5, 0, 0, 0, 0);
+            BorrowBookDate.Value = new DateTime(2024, 2, 5, 11, 44, 0, 0);
+            BorrowBookDate.ValueChanged += BorrowBookDate_ValueChanged;
             // 
             // BorrowDateLable
             // 
             BorrowDateLable.Anchor = AnchorStyles.Top;
             BorrowDateLable.AutoSize = true;
             BorrowDateLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            BorrowDateLable.Location = new Point(211, 158);
+            BorrowDateLable.Location = new Point(211, 160);
             BorrowDateLable.Margin = new Padding(2, 0, 2, 0);
             BorrowDateLable.Name = "BorrowDateLable";
             BorrowDateLable.Size = new Size(130, 24);
@@ -147,7 +152,7 @@
             ClearBtn.AutoSize = true;
             ClearBtn.Font = new Font("Franklin Gothic Medium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ClearBtn.ForeColor = SystemColors.ActiveCaptionText;
-            ClearBtn.Location = new Point(504, 184);
+            ClearBtn.Location = new Point(504, 232);
             ClearBtn.Margin = new Padding(2, 0, 2, 0);
             ClearBtn.Name = "ClearBtn";
             ClearBtn.Size = new Size(65, 16);
@@ -155,11 +160,33 @@
             ClearBtn.Text = "Clear Fields";
             ClearBtn.Click += ClearBtn_Click;
             // 
+            // ReturnBookDate
+            // 
+            ReturnBookDate.Location = new Point(355, 206);
+            ReturnBookDate.Margin = new Padding(2, 1, 2, 1);
+            ReturnBookDate.Name = "ReturnBookDate";
+            ReturnBookDate.Size = new Size(217, 23);
+            ReturnBookDate.TabIndex = 4;
+            // 
+            // ReturnDateLable
+            // 
+            ReturnDateLable.Anchor = AnchorStyles.Top;
+            ReturnDateLable.AutoSize = true;
+            ReturnDateLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
+            ReturnDateLable.Location = new Point(211, 206);
+            ReturnDateLable.Margin = new Padding(2, 0, 2, 0);
+            ReturnDateLable.Name = "ReturnDateLable";
+            ReturnDateLable.Size = new Size(107, 24);
+            ReturnDateLable.TabIndex = 0;
+            ReturnDateLable.Text = "Return Date";
+            // 
             // MemberBorrowBookForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(848, 420);
+            Controls.Add(ReturnBookDate);
+            Controls.Add(ReturnDateLable);
             Controls.Add(ClearBtn);
             Controls.Add(BorrowBookDate);
             Controls.Add(BorrowDateLable);
@@ -192,5 +219,7 @@
         private DateTimePicker BorrowBookDate;
         private Label BorrowDateLable;
         private Label ClearBtn;
+        private DateTimePicker ReturnBookDate;
+        private Label ReturnDateLable;
     }
 }
