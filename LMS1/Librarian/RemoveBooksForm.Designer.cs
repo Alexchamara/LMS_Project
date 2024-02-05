@@ -41,6 +41,7 @@
             BookTitelRadioButton = new RadioButton();
             SearchBookTextRemoveBook = new TextBox();
             dataGridView1 = new DataGridView();
+            ClearBtn = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -62,7 +63,7 @@
             RemoveBookBtn.BackColor = Color.FromArgb(246, 174, 0);
             RemoveBookBtn.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             RemoveBookBtn.ForeColor = SystemColors.Control;
-            RemoveBookBtn.Location = new Point(374, 156);
+            RemoveBookBtn.Location = new Point(374, 163);
             RemoveBookBtn.Margin = new Padding(2, 1, 2, 1);
             RemoveBookBtn.Name = "RemoveBookBtn";
             RemoveBookBtn.Size = new Size(184, 27);
@@ -182,11 +183,25 @@
             dataGridView1.TabIndex = 0;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
+            // ClearBtn
+            // 
+            ClearBtn.AutoSize = true;
+            ClearBtn.Font = new Font("Franklin Gothic Medium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ClearBtn.ForeColor = SystemColors.ActiveCaptionText;
+            ClearBtn.Location = new Point(490, 141);
+            ClearBtn.Margin = new Padding(2, 0, 2, 0);
+            ClearBtn.Name = "ClearBtn";
+            ClearBtn.Size = new Size(65, 16);
+            ClearBtn.TabIndex = 0;
+            ClearBtn.Text = "Clear Fields";
+            ClearBtn.Click += ClearBtn_Click;
+            // 
             // RemoveBooksForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(848, 420);
+            Controls.Add(ClearBtn);
             Controls.Add(dataGridView1);
             Controls.Add(label2);
             Controls.Add(ISBNRadioButton);
@@ -224,5 +239,6 @@
         private RadioButton BookTitelRadioButton;
         private TextBox SearchBookTextRemoveBook;
         private DataGridView dataGridView1;
+        private Label ClearBtn;
     }
 }

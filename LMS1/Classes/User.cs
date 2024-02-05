@@ -81,8 +81,7 @@ namespace LMS1.Classes
         //Check the librarian name and password is matched
         public bool librarianLogin(string librarianId, string librarianPassword)
         {
-
-            if (userId != null && this.userId == librarianId || this.password == librarianPassword)
+            if (userId != null && this.userId == librarianId && this.password == librarianPassword)
             {
                 return true;
             }
@@ -95,7 +94,7 @@ namespace LMS1.Classes
         //Check the member name and password is matched
         public bool memberLogin(string memberId, string memberPassword)
         {
-            if (userId != null && this.userId == memberId || this.password == memberPassword)
+            if (userId != null && this.userId == memberId && this.password == memberPassword)
             {
                 return true;
             }

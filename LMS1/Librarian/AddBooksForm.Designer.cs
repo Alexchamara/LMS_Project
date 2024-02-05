@@ -44,6 +44,7 @@
             AddBookBtn = new Button();
             pictureBox1 = new PictureBox();
             AddPublisherTextBox = new TextBox();
+            ClearBtn = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -176,7 +177,7 @@
             AddBookBtn.BackColor = Color.FromArgb(246, 174, 0);
             AddBookBtn.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             AddBookBtn.ForeColor = SystemColors.Control;
-            AddBookBtn.Location = new Point(374, 321);
+            AddBookBtn.Location = new Point(374, 324);
             AddBookBtn.Margin = new Padding(2, 1, 2, 1);
             AddBookBtn.Name = "AddBookBtn";
             AddBookBtn.Size = new Size(184, 27);
@@ -205,11 +206,25 @@
             AddPublisherTextBox.Size = new Size(217, 23);
             AddPublisherTextBox.TabIndex = 4;
             // 
+            // ClearBtn
+            // 
+            ClearBtn.AutoSize = true;
+            ClearBtn.Font = new Font("Franklin Gothic Medium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ClearBtn.ForeColor = SystemColors.ActiveCaptionText;
+            ClearBtn.Location = new Point(491, 302);
+            ClearBtn.Margin = new Padding(2, 0, 2, 0);
+            ClearBtn.Name = "ClearBtn";
+            ClearBtn.Size = new Size(65, 16);
+            ClearBtn.TabIndex = 0;
+            ClearBtn.Text = "Clear Fields";
+            ClearBtn.Click += ClearBtn_Click;
+            // 
             // AddBooksForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(848, 420);
+            Controls.Add(ClearBtn);
             Controls.Add(AddPublisherTextBox);
             Controls.Add(pictureBox1);
             Controls.Add(AddBookBtn);
@@ -251,5 +266,6 @@
         private Button AddBookBtn;
         private PictureBox pictureBox1;
         private TextBox AddPublisherTextBox;
+        private Label ClearBtn;
     }
 }

@@ -46,6 +46,7 @@
             memberNameRadioBtn = new RadioButton();
             membershipIdRadioBtn = new RadioButton();
             NICRadioBtn = new RadioButton();
+            ClearBtn = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -75,7 +76,7 @@
             RemoveMemberBtn.BackColor = Color.FromArgb(246, 174, 0);
             RemoveMemberBtn.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             RemoveMemberBtn.ForeColor = SystemColors.Control;
-            RemoveMemberBtn.Location = new Point(396, 240);
+            RemoveMemberBtn.Location = new Point(396, 241);
             RemoveMemberBtn.Margin = new Padding(2, 1, 2, 1);
             RemoveMemberBtn.Name = "RemoveMemberBtn";
             RemoveMemberBtn.Size = new Size(184, 27);
@@ -242,11 +243,25 @@
             NICRadioBtn.UseVisualStyleBackColor = true;
             NICRadioBtn.CheckedChanged += NICRadioBtn_CheckedChanged;
             // 
+            // ClearBtn
+            // 
+            ClearBtn.AutoSize = true;
+            ClearBtn.Font = new Font("Franklin Gothic Medium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ClearBtn.ForeColor = SystemColors.ActiveCaptionText;
+            ClearBtn.Location = new Point(512, 220);
+            ClearBtn.Margin = new Padding(2, 0, 2, 0);
+            ClearBtn.Name = "ClearBtn";
+            ClearBtn.Size = new Size(65, 16);
+            ClearBtn.TabIndex = 0;
+            ClearBtn.Text = "Clear Fields";
+            ClearBtn.Click += ClearBtn_Click;
+            // 
             // RemoverMemberForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(848, 420);
+            Controls.Add(ClearBtn);
             Controls.Add(NICRadioBtn);
             Controls.Add(membershipIdRadioBtn);
             Controls.Add(memberNameRadioBtn);
@@ -294,5 +309,6 @@
         private RadioButton memberNameRadioBtn;
         private RadioButton membershipIdRadioBtn;
         private RadioButton NICRadioBtn;
+        private Label ClearBtn;
     }
 }

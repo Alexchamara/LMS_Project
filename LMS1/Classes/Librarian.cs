@@ -30,8 +30,6 @@ namespace LMS1.Classes
             {
                 var client = new MongoClient().GetDatabase("LMSdb");
                 var collection = client.GetCollection<Member>("Memberdb");
-                //collection.DeleteOne(m => m.UserId == membershipId);
-                //var filter = Builders<Member>.Filter(member => member.);
                 collection.DeleteOne(m => m.UserId == membershipId);
                 MessageBox.Show("Member removed successfully!");
             }

@@ -39,13 +39,37 @@ namespace LMS1
         // Remove book button click event
         private void RemoveBookBtn_Click(object sender, EventArgs e)
         {
-            // Remove the book from the library
-            library.removeBook(this.ISBNNOTextBox.Text, this.RemoveBookNameTextBox.Text);
-
-            this.ISBNNOTextBox.Clear();
-            this.RemoveBookNameTextBox.Clear();
+            if (isValid())
+            {
+                // Remove the book from the library
+                library.removeBook(this.ISBNNOTextBox.Text, this.RemoveBookNameTextBox.Text);
+                //MessageBox.Show("Book removed successfully!");
+                this.ISBNNOTextBox.Clear();
+                this.RemoveBookNameTextBox.Clear();
+                this.RemoveBookNameTextBox.Focus();
+            }
         }
 
+        // Check if the fields are empty
+        private bool isValid()
+        {
+            if (this.RemoveBookNameTextBox.Text == "")
+            {
+                MessageBox.Show("Please enter the bookme!");
+                this.RemoveBookNameTextBox.Focus();
+                return false;
+            }
+            else if (this.ISBNNOTextBox.Text == "")
+            {
+                MessageBox.Show("Please enter the ISBN number!");
+                this.ISBNNOTextBox.Focus();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
         private void RemoveBooksForm_Load(object sender, EventArgs e)
         {
@@ -71,6 +95,7 @@ namespace LMS1
             // Set the DataGridView's data source to the DataTable
             dataGridView1.DataSource = table;
         }
+
 
         // Radio button checked changed to BookTitel
         private void BookTitelRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -109,10 +134,18 @@ namespace LMS1
             }
         }
 
+        // DataGridView cell double click event
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.RemoveBookNameTextBox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             this.ISBNNOTextBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            this.RemoveBookNameTextBox.Clear();
+            this.ISBNNOTextBox.Clear();
+            this.RemoveBookNameTextBox.Focus();
         }
     }
 }

@@ -44,6 +44,7 @@
             MemberContactTexBox = new TextBox();
             MemberLoginPasswordTextBox = new TextBox();
             label1 = new Label();
+            ClearBtn = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             AddMemberBtn.BackColor = Color.FromArgb(246, 174, 0);
             AddMemberBtn.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             AddMemberBtn.ForeColor = SystemColors.Control;
-            AddMemberBtn.Location = new Point(397, 321);
+            AddMemberBtn.Location = new Point(397, 324);
             AddMemberBtn.Margin = new Padding(2, 1, 2, 1);
             AddMemberBtn.Name = "AddMemberBtn";
             AddMemberBtn.Size = new Size(184, 27);
@@ -205,11 +206,25 @@
             label1.TabIndex = 33;
             label1.Text = "Login Password";
             // 
+            // ClearBtn
+            // 
+            ClearBtn.AutoSize = true;
+            ClearBtn.Font = new Font("Franklin Gothic Medium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ClearBtn.ForeColor = SystemColors.ActiveCaptionText;
+            ClearBtn.Location = new Point(513, 301);
+            ClearBtn.Margin = new Padding(2, 0, 2, 0);
+            ClearBtn.Name = "ClearBtn";
+            ClearBtn.Size = new Size(65, 16);
+            ClearBtn.TabIndex = 0;
+            ClearBtn.Text = "Clear Fields";
+            ClearBtn.Click += ClearBtn_Click;
+            // 
             // AddMemberForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(848, 420);
+            Controls.Add(ClearBtn);
             Controls.Add(MemberLoginPasswordTextBox);
             Controls.Add(label1);
             Controls.Add(MemberContactTexBox);
@@ -252,5 +267,6 @@
         private TextBox MemberContactTexBox;
         private TextBox MemberLoginPasswordTextBox;
         private Label label1;
+        private Label ClearBtn;
     }
 }

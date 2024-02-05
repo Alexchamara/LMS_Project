@@ -28,14 +28,18 @@ namespace LMS1
             //Add book to the database
             try
             {
-                library.addBook(this.AddBookNameTextBox.Text, this.AddAuthorTextBox.Text, this.AddPublisherTextBox.Text, this.AddSubjectTextBox.Text, this.AddISBNNOTextBox.Text, int.Parse(this.AddPriceTextBox.Text));
-                MessageBox.Show("Book saved successfully!");
-                this.AddBookNameTextBox.Clear();
-                this.AddAuthorTextBox.Clear();
-                this.AddPublisherTextBox.Clear();
-                this.AddSubjectTextBox.Clear();
-                this.AddISBNNOTextBox.Clear();
-                this.AddPriceTextBox.Clear();
+                if (isValidate())
+                {
+                    library.addBook(this.AddBookNameTextBox.Text, this.AddAuthorTextBox.Text, this.AddPublisherTextBox.Text, this.AddSubjectTextBox.Text, this.AddISBNNOTextBox.Text, int.Parse(this.AddPriceTextBox.Text));
+                    MessageBox.Show("Book saved successfully!");
+                    this.AddBookNameTextBox.Clear();
+                    this.AddAuthorTextBox.Clear();
+                    this.AddPublisherTextBox.Clear();
+                    this.AddSubjectTextBox.Clear();
+                    this.AddISBNNOTextBox.Clear();
+                    this.AddPriceTextBox.Clear();
+                    this.AddBookNameTextBox.Focus();
+                }
             }
             catch (MongoWriteException ex)
             {
@@ -56,10 +60,34 @@ namespace LMS1
             }
         }
 
+        //Validate the fields
+        private bool isValidate()
+        {
+            if (this.AddBookNameTextBox.Text == "" || this.AddAuthorTextBox.Text == "" || this.AddISBNNOTextBox.Text == "" || this.AddPriceTextBox.Text == "")
+            {
+                MessageBox.Show("Please fill all the fields!");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         private void AddBooksForm_Load(object sender, EventArgs e)
         {
             this.AddBookNameTextBox.Focus();
         }
 
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            this.AddBookNameTextBox.Clear();
+            this.AddAuthorTextBox.Clear();
+            this.AddPublisherTextBox.Clear();
+            this.AddSubjectTextBox.Clear();
+            this.AddISBNNOTextBox.Clear();
+            this.AddPriceTextBox.Clear();
+            this.AddBookNameTextBox.Focus();
+        }
     }
 }

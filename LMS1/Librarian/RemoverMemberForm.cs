@@ -38,10 +38,39 @@ namespace LMS1
 
         private void RemoveMemberBtn_Click(object sender, EventArgs e)
         {
-            librarian.removeMember(this.RemoveMembershipIdTextBox.Text, this.RemoveMemberNameTextBox.Text);
+            if (isValidated())
+            {
+                // Remove the member from the library
+                librarian.removeMember(this.RemoveMembershipIdTextBox.Text, this.RemoveMemberNameTextBox.Text);
+                this.RemoveMembershipIdTextBox.Clear();
+                this.RemoveMemberNameTextBox.Clear();
+                this.RemoveNICTextBox.Clear();
+                this.RemoveMemberResonTexBox.Clear();
+                this.RemoveMemberNameTextBox.Focus();
+            }
+        }
 
-            this.RemoveMembershipIdTextBox.Clear();
-            this.RemoveMemberNameTextBox.Clear();
+        private bool isValidated()
+        {
+            if (this.RemoveMemberNameTextBox.Text == "")
+            {
+                MessageBox.Show("Please enter the member name!");
+                this.RemoveMemberNameTextBox.Focus();
+                return false;
+            }
+            else if (this.RemoveMembershipIdTextBox.Text == "")
+            {
+                MessageBox.Show("Please enter the membership ID!");
+                this.RemoveMembershipIdTextBox.Focus();
+                return false;
+            }
+            else if (this.RemoveMemberResonTexBox.Text == "")
+            {
+                MessageBox.Show("Please enter the reason for removing the member!");
+                this.RemoveMemberResonTexBox.Focus();
+                return false;
+            }
+            return true;
         }
 
         private void RemoverMemberForm_Load(object sender, EventArgs e)
@@ -128,6 +157,15 @@ namespace LMS1
             this.RemoveNICTextBox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
 
             this.RemoveMemberResonTexBox.Focus();
+        }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            this.RemoveMembershipIdTextBox.Clear();
+            this.RemoveMemberNameTextBox.Clear();
+            this.RemoveNICTextBox.Clear();
+            this.RemoveMemberResonTexBox.Clear();
+            this.RemoveMemberNameTextBox.Focus();
         }
     }
 }

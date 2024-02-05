@@ -22,11 +22,22 @@ namespace LMS1
             this.member = member;
         }
 
-
-
         private void MemberBorrowBookBtn_Click(object sender, EventArgs e)
         {
             //member.BorrowBook(new Book(this.MemberBorrowBookNameTextBox.Text, this.MemberBorrowISBNNOTextBox.Text));
+        }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            this.MemberBorrowBookNameTextBox.Clear();
+            this.MemberBorrowISBNNOTextBox.Clear();
+            this.BorrowBookDate.Value = DateTime.Now;
+            this.MemberBorrowBookNameTextBox.Focus();
+        }
+
+        private void MemberBorrowBookForm_Load(object sender, EventArgs e)
+        {
+            this.MemberBorrowBookNameTextBox.Focus();
         }
     }
 }

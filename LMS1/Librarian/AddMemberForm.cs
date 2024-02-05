@@ -26,18 +26,22 @@ namespace LMS1
         {
             try
             {
-                librarian.addMember(this.AddMemberNameTextBox.Text, this.AddMembershipIdTextBox.Text, this.AddNICTextBox.Text, int.Parse(this.MemberContactTexBox.Text), this.AddEmailTextBox.Text, this.MemberLoginPasswordTextBox.Text);
-                MessageBox.Show("Member saved successfully!");
-                this.AddMemberNameTextBox.Clear();
-                this.AddMembershipIdTextBox.Clear();   
-                this.AddNICTextBox.Clear();
-                this.MemberContactTexBox.Clear();
-                this.AddEmailTextBox.Clear();
-                this.MemberLoginPasswordTextBox.Clear();
+                if (isValidate())
+                {
+                    librarian.addMember(this.AddMemberNameTextBox.Text, this.AddMembershipIdTextBox.Text, this.AddNICTextBox.Text, int.Parse(this.MemberContactTexBox.Text), this.AddEmailTextBox.Text, this.MemberLoginPasswordTextBox.Text);
+                    MessageBox.Show("Member saved successfully!");
+                    this.AddMemberNameTextBox.Clear();
+                    this.AddMembershipIdTextBox.Clear();
+                    this.AddNICTextBox.Clear();
+                    this.MemberContactTexBox.Clear();
+                    this.AddEmailTextBox.Clear();
+                    this.MemberLoginPasswordTextBox.Clear();
+                    this.AddMemberNameTextBox.Focus();
+                }
             }
             catch (MongoWriteException ex)
             {
-                if(ex.WriteError.Category == ServerErrorCategory.DuplicateKey)
+                if (ex.WriteError.Category == ServerErrorCategory.DuplicateKey)
                 {
                     MessageBox.Show("Duplicate Key Error: " + ex.WriteError.Message);
                     this.AddMembershipIdTextBox.Clear();
@@ -54,10 +58,58 @@ namespace LMS1
             }
         }
 
+        private bool isValidate()
+        {
+            if (this.AddMemberNameTextBox.Text == "")
+            {
+                MessageBox.Show("Please enter the member name!");
+                this.AddMemberNameTextBox.Focus();
+                return false;
+            }
+            else if (this.AddMembershipIdTextBox.Text == "")
+            {
+                MessageBox.Show("Please enter the membership ID!");
+                this.AddMembershipIdTextBox.Focus();
+                return false;
+            }
+            else if (this.AddNICTextBox.Text == "")
+            {
+                MessageBox.Show("Please enter the NIC!");
+                this.AddNICTextBox.Focus();
+                return false;
+            }
+            else if (this.MemberContactTexBox.Text == "")
+            {
+                MessageBox.Show("Please enter the contact number!");
+                this.MemberContactTexBox.Focus();
+                return false;
+            }
+            else if (this.MemberLoginPasswordTextBox.Text == "")
+            {
+                MessageBox.Show("Please enter the password!");
+                this.MemberLoginPasswordTextBox.Focus();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         private void AddMemberForm_Load(object sender, EventArgs e)
         {
             this.AddMemberNameTextBox.Focus();
         }
 
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            this.AddMemberNameTextBox.Clear();
+            this.AddMembershipIdTextBox.Clear();
+            this.AddNICTextBox.Clear();
+            this.MemberContactTexBox.Clear();
+            this.AddEmailTextBox.Clear();
+            this.MemberLoginPasswordTextBox.Clear();
+            this.AddMemberNameTextBox.Focus();
+        }
     }
 }
