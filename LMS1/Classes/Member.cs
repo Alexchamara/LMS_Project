@@ -96,18 +96,21 @@ public class Member : User
         {
             MessageBox.Show("This book is not found!", "Error");
         }
-        else if (!(book.BookTitel == bTitle && book.BookISBN == bISBN))   //check the book title and ISBN is matched
+        //check the book title and ISBN is matched
+        else if (!(book.BookTitel == bTitle && book.BookISBN == bISBN))   
         {
             MessageBox.Show("Incorrect Title or ISBN. Please try again!", "Error");
         }
-        else if (book.BorrowedBy == null)  //check the book is borrowed by the member
+        //check the book is borrowed by the member
+        else if (book.BorrowedBy == null)  
         {
             MessageBox.Show("This book is not borrowed by you!", "Error");
         }
-        //else if (!book.BorrowedBy.Equals(this))    //check the book is borrowed by the member
-        //{
-        //    MessageBox.Show("This book is not borrowed by Alex!", "Error");
-        //}
+        //check the book is borrowed by the member
+        else if (!(book.BorrowedBy.UserId == this.UserId))
+        {
+            MessageBox.Show("This book is not borrowed by you!", "Error");
+        }
         else
         {
             try

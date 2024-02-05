@@ -51,9 +51,10 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(1907, 12);
+            button1.Location = new Point(1027, 6);
+            button1.Margin = new Padding(2, 1, 2, 1);
             button1.Name = "button1";
-            button1.Size = new Size(55, 41);
+            button1.Size = new Size(30, 19);
             button1.TabIndex = 7;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -63,9 +64,10 @@
             label2.AutoSize = true;
             label2.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(405, 3);
+            label2.Location = new Point(218, 1);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(785, 61);
+            label2.Size = new Size(394, 30);
             label2.TabIndex = 6;
             label2.Text = "Libarary Managment Syste - Member";
             // 
@@ -74,18 +76,20 @@
             label1.AutoSize = true;
             label1.Font = new Font("Franklin Gothic Medium", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(104, 279);
+            label1.Location = new Point(56, 131);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(169, 37);
-            label1.TabIndex = 1;
+            label1.Size = new Size(88, 20);
+            label1.TabIndex = 0;
             label1.Text = "Hi Member !";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(89, 75);
+            pictureBox1.Location = new Point(48, 35);
+            pictureBox1.Margin = new Padding(2, 1, 2, 1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(204, 201);
+            pictureBox1.Size = new Size(110, 94);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -102,16 +106,18 @@
             panel1.Controls.Add(returnBookBtn);
             panel1.Controls.Add(borrowBookBtn);
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(2, 1, 2, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(400, 957);
-            panel1.TabIndex = 5;
+            panel1.Size = new Size(215, 449);
+            panel1.TabIndex = 0;
             // 
             // SidePanel
             // 
             SidePanel.BackColor = Color.FromArgb(178, 8, 55);
-            SidePanel.Location = new Point(3, 394);
+            SidePanel.Location = new Point(2, 185);
+            SidePanel.Margin = new Padding(2, 1, 2, 1);
             SidePanel.Name = "SidePanel";
-            SidePanel.Size = new Size(15, 91);
+            SidePanel.Size = new Size(8, 43);
             SidePanel.TabIndex = 1;
             // 
             // button5
@@ -120,10 +126,11 @@
             button5.Font = new Font("Franklin Gothic Medium", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
             button5.Image = (Image)resources.GetObject("button5.Image");
             button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(89, 796);
+            button5.Location = new Point(48, 373);
+            button5.Margin = new Padding(2, 1, 2, 1);
             button5.Name = "button5";
-            button5.Size = new Size(198, 62);
-            button5.TabIndex = 1;
+            button5.Size = new Size(107, 29);
+            button5.TabIndex = 5;
             button5.Text = "    Log Out";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
@@ -136,10 +143,11 @@
             searchBookBtn.ForeColor = Color.White;
             searchBookBtn.Image = (Image)resources.GetObject("searchBookBtn.Image");
             searchBookBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            searchBookBtn.Location = new Point(18, 685);
+            searchBookBtn.Location = new Point(10, 321);
+            searchBookBtn.Margin = new Padding(2, 1, 2, 1);
             searchBookBtn.Name = "searchBookBtn";
-            searchBookBtn.Size = new Size(382, 91);
-            searchBookBtn.TabIndex = 1;
+            searchBookBtn.Size = new Size(206, 43);
+            searchBookBtn.TabIndex = 4;
             searchBookBtn.Text = "        Search Book";
             searchBookBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             searchBookBtn.UseVisualStyleBackColor = true;
@@ -153,10 +161,11 @@
             borrowedBookBtn.ForeColor = Color.White;
             borrowedBookBtn.Image = (Image)resources.GetObject("borrowedBookBtn.Image");
             borrowedBookBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            borrowedBookBtn.Location = new Point(18, 588);
+            borrowedBookBtn.Location = new Point(10, 276);
+            borrowedBookBtn.Margin = new Padding(2, 1, 2, 1);
             borrowedBookBtn.Name = "borrowedBookBtn";
-            borrowedBookBtn.Size = new Size(382, 91);
-            borrowedBookBtn.TabIndex = 1;
+            borrowedBookBtn.Size = new Size(206, 43);
+            borrowedBookBtn.TabIndex = 3;
             borrowedBookBtn.Text = "        Borrowed Book";
             borrowedBookBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             borrowedBookBtn.UseVisualStyleBackColor = true;
@@ -170,10 +179,11 @@
             returnBookBtn.ForeColor = Color.White;
             returnBookBtn.Image = (Image)resources.GetObject("returnBookBtn.Image");
             returnBookBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            returnBookBtn.Location = new Point(18, 491);
+            returnBookBtn.Location = new Point(10, 230);
+            returnBookBtn.Margin = new Padding(2, 1, 2, 1);
             returnBookBtn.Name = "returnBookBtn";
-            returnBookBtn.Size = new Size(382, 91);
-            returnBookBtn.TabIndex = 1;
+            returnBookBtn.Size = new Size(206, 43);
+            returnBookBtn.TabIndex = 2;
             returnBookBtn.Text = "        Return Book";
             returnBookBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             returnBookBtn.UseVisualStyleBackColor = true;
@@ -187,9 +197,10 @@
             borrowBookBtn.ForeColor = Color.White;
             borrowBookBtn.Image = (Image)resources.GetObject("borrowBookBtn.Image");
             borrowBookBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            borrowBookBtn.Location = new Point(18, 394);
+            borrowBookBtn.Location = new Point(10, 185);
+            borrowBookBtn.Margin = new Padding(2, 1, 2, 1);
             borrowBookBtn.Name = "borrowBookBtn";
-            borrowBookBtn.Size = new Size(382, 91);
+            borrowBookBtn.Size = new Size(206, 43);
             borrowBookBtn.TabIndex = 1;
             borrowBookBtn.Text = "        Borrow Book";
             borrowBookBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -198,21 +209,23 @@
             // 
             // MemberMainPanel
             // 
-            MemberMainPanel.Location = new Point(398, 67);
+            MemberMainPanel.Location = new Point(214, 31);
+            MemberMainPanel.Margin = new Padding(2, 1, 2, 1);
             MemberMainPanel.Name = "MemberMainPanel";
-            MemberMainPanel.Size = new Size(1577, 890);
-            MemberMainPanel.TabIndex = 8;
+            MemberMainPanel.Size = new Size(849, 417);
+            MemberMainPanel.TabIndex = 0;
             // 
             // MemberFace
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1974, 957);
+            ClientSize = new Size(1045, 449);
             Controls.Add(MemberMainPanel);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 1, 2, 1);
             Name = "MemberFace";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MemberFace";

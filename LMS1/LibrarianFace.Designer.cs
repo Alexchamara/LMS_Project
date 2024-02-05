@@ -77,7 +77,7 @@
             searchBookBtn.Margin = new Padding(2, 1, 2, 1);
             searchBookBtn.Name = "searchBookBtn";
             searchBookBtn.Size = new Size(206, 43);
-            searchBookBtn.TabIndex = 2;
+            searchBookBtn.TabIndex = 4;
             searchBookBtn.Text = "        Search";
             searchBookBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             searchBookBtn.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(92, 20);
-            label1.TabIndex = 1;
+            label1.TabIndex = 0;
             label1.Text = "Hi Librarian !";
             // 
             // SidePanel
@@ -125,7 +125,7 @@
             button5.Margin = new Padding(2, 1, 2, 1);
             button5.Name = "button5";
             button5.Size = new Size(107, 30);
-            button5.TabIndex = 1;
+            button5.TabIndex = 5;
             button5.Text = "    Log Out";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
@@ -142,7 +142,7 @@
             removeMemberBtn.Margin = new Padding(2, 1, 2, 1);
             removeMemberBtn.Name = "removeMemberBtn";
             removeMemberBtn.Size = new Size(206, 43);
-            removeMemberBtn.TabIndex = 1;
+            removeMemberBtn.TabIndex = 4;
             removeMemberBtn.Text = "        Remove Member";
             removeMemberBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             removeMemberBtn.UseVisualStyleBackColor = true;
@@ -160,7 +160,7 @@
             addMemberBtn.Margin = new Padding(2, 1, 2, 1);
             addMemberBtn.Name = "addMemberBtn";
             addMemberBtn.Size = new Size(206, 43);
-            addMemberBtn.TabIndex = 1;
+            addMemberBtn.TabIndex = 3;
             addMemberBtn.Text = "        Add Member";
             addMemberBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             addMemberBtn.UseVisualStyleBackColor = true;
@@ -178,7 +178,7 @@
             removeBookBtn.Margin = new Padding(2, 1, 2, 1);
             removeBookBtn.Name = "removeBookBtn";
             removeBookBtn.Size = new Size(206, 43);
-            removeBookBtn.TabIndex = 1;
+            removeBookBtn.TabIndex = 2;
             removeBookBtn.Text = "        Remove Book";
             removeBookBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             removeBookBtn.UseVisualStyleBackColor = true;
@@ -235,7 +235,7 @@
             LibrarianMainPanel.Margin = new Padding(2, 1, 2, 1);
             LibrarianMainPanel.Name = "LibrarianMainPanel";
             LibrarianMainPanel.Size = new Size(830, 420);
-            LibrarianMainPanel.TabIndex = 4;
+            LibrarianMainPanel.TabIndex = 0;
             // 
             // LibrarianFace
             // 

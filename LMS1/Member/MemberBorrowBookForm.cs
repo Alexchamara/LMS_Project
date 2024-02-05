@@ -111,16 +111,13 @@ namespace LMS1
                     book.BookPublication, book.BookSubject, book.BookPrice, book.BookAvailablility);
 
                 //show only available books in gridveiw
-                //if (book.BookAvailablility == true)
-                //{
-                //    DataView dv = table.DefaultView;
-                //    dv.RowFilter = "Availablity = true";
-                //    dataGridView1.DataSource = dv;
-                //}
-
-                // Set the DataGridView data source to the DataTable
+                if (book.BookAvailablility == false)
+                {
+                    table.Rows.Remove(table.Rows[table.Rows.Count - 1]);
+                }
             }
 
+            // Set the DataGridView data source to the DataTable
             dataGridView1.DataSource = table;
         }
 
@@ -161,6 +158,13 @@ namespace LMS1
             dataGridView1.DataSource = dv;
         }
 
+        // Double click event
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.MemberBorrowBookNameTextBox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            this.MemberBorrowISBNNOTextBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+        }
+
         private void BorrowBookDate_ValueChanged(object sender, EventArgs e)
         {
             //DateTime aux = this.BorrowBookDate.Value;
@@ -168,10 +172,5 @@ namespace LMS1
             //aux = aux.AddDays(1);
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            this.MemberBorrowBookNameTextBox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            this.MemberBorrowISBNNOTextBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-        }
     }
 }

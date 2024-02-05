@@ -39,7 +39,13 @@
             BookNameLable = new Label();
             MemberReturnBookLable = new Label();
             ClearBtn = new Label();
+            label2 = new Label();
+            ISBNRadioButton = new RadioButton();
+            BookTitelRadioButton = new RadioButton();
+            dataGridView1 = new DataGridView();
+            SearchBookTextBook = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // MemberReturnBookDate
@@ -153,11 +159,77 @@
             ClearBtn.Text = "Clear Fields";
             ClearBtn.Click += ClearBtn_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(149, 268);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(78, 21);
+            label2.TabIndex = 41;
+            label2.Text = "Search By";
+            // 
+            // ISBNRadioButton
+            // 
+            ISBNRadioButton.AutoSize = true;
+            ISBNRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ISBNRadioButton.Location = new Point(605, 266);
+            ISBNRadioButton.Name = "ISBNRadioButton";
+            ISBNRadioButton.Size = new Size(83, 25);
+            ISBNRadioButton.TabIndex = 40;
+            ISBNRadioButton.Text = "ISBN No";
+            ISBNRadioButton.UseVisualStyleBackColor = true;
+            ISBNRadioButton.CheckedChanged += ISBNRadioButton_CheckedChanged;
+            // 
+            // BookTitelRadioButton
+            // 
+            BookTitelRadioButton.AutoSize = true;
+            BookTitelRadioButton.Checked = true;
+            BookTitelRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            BookTitelRadioButton.Location = new Point(497, 266);
+            BookTitelRadioButton.Name = "BookTitelRadioButton";
+            BookTitelRadioButton.Size = new Size(96, 25);
+            BookTitelRadioButton.TabIndex = 39;
+            BookTitelRadioButton.TabStop = true;
+            BookTitelRadioButton.Text = "Book Titel";
+            BookTitelRadioButton.UseVisualStyleBackColor = true;
+            BookTitelRadioButton.CheckedChanged += BookTitelRadioButton_CheckedChanged;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(20, 309);
+            dataGridView1.Margin = new Padding(2, 1, 2, 1);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersWidth = 82;
+            dataGridView1.RowTemplate.Height = 41;
+            dataGridView1.Size = new Size(808, 101);
+            dataGridView1.TabIndex = 38;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            // 
+            // SearchBookTextBook
+            // 
+            SearchBookTextBook.Location = new Point(231, 269);
+            SearchBookTextBook.Margin = new Padding(2, 1, 2, 1);
+            SearchBookTextBook.Name = "SearchBookTextBook";
+            SearchBookTextBook.Size = new Size(223, 23);
+            SearchBookTextBook.TabIndex = 37;
+            SearchBookTextBook.TextChanged += SearchBookTextBook_TextChanged;
+            // 
             // MemberReturnBookForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(848, 420);
+            Controls.Add(label2);
+            Controls.Add(ISBNRadioButton);
+            Controls.Add(BookTitelRadioButton);
+            Controls.Add(dataGridView1);
+            Controls.Add(SearchBookTextBook);
             Controls.Add(ClearBtn);
             Controls.Add(MemberReturnBookDate);
             Controls.Add(ReturnDateLable);
@@ -174,6 +246,7 @@
             Text = "MemberReturnBookForm";
             Load += MemberReturnBookForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -192,5 +265,10 @@
         private DateTimePicker ReturnBookDate;
         private DateTimePicker MemberReturnBookDate;
         private Label ClearBtn;
+        private Label label2;
+        private RadioButton ISBNRadioButton;
+        private RadioButton BookTitelRadioButton;
+        private DataGridView dataGridView1;
+        private TextBox SearchBookTextBook;
     }
 }
