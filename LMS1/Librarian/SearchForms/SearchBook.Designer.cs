@@ -41,7 +41,7 @@
             // 
             // SearchBookTextBook
             // 
-            SearchBookTextBook.Location = new Point(265, 23);
+            SearchBookTextBook.Location = new Point(222, 28);
             SearchBookTextBook.Margin = new Padding(2, 1, 2, 1);
             SearchBookTextBook.Name = "SearchBookTextBook";
             SearchBookTextBook.Size = new Size(223, 23);
@@ -71,7 +71,7 @@
             BookTitelRadioButton.AutoSize = true;
             BookTitelRadioButton.Checked = true;
             BookTitelRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BookTitelRadioButton.Location = new Point(509, 22);
+            BookTitelRadioButton.Location = new Point(488, 25);
             BookTitelRadioButton.Name = "BookTitelRadioButton";
             BookTitelRadioButton.Size = new Size(96, 25);
             BookTitelRadioButton.TabIndex = 4;
@@ -84,7 +84,7 @@
             // 
             ISBNRadioButton.AutoSize = true;
             ISBNRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ISBNRadioButton.Location = new Point(613, 22);
+            ISBNRadioButton.Location = new Point(596, 25);
             ISBNRadioButton.Name = "ISBNRadioButton";
             ISBNRadioButton.Size = new Size(83, 25);
             ISBNRadioButton.TabIndex = 5;
@@ -96,7 +96,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(176, 23);
+            label2.Location = new Point(140, 27);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(78, 21);

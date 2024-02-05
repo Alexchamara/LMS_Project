@@ -86,6 +86,7 @@
             MemberReturnBookBtn.TabIndex = 4;
             MemberReturnBookBtn.Text = "Return Book";
             MemberReturnBookBtn.UseVisualStyleBackColor = false;
+            MemberReturnBookBtn.Click += MemberReturnBookBtn_Click;
             // 
             // MemberReturnBookNameTextBox
             // 

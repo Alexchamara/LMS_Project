@@ -48,6 +48,7 @@ namespace LMS1
                 this.RemoveMemberResonTexBox.Clear();
                 this.RemoveMemberNameTextBox.Focus();
             }
+            refreshMembertb();
         }
 
         private bool isValidated()
@@ -76,7 +77,11 @@ namespace LMS1
         private void RemoverMemberForm_Load(object sender, EventArgs e)
         {
             this.RemoveMemberNameTextBox.Focus();
+            refreshMembertb();
+        }
 
+        private void refreshMembertb()
+        {
             // Fill the DataGridView with the members from the database
             members = database.GetCollection<Member>("Memberdb").Find(_ => true).ToList();
 

@@ -102,7 +102,7 @@
             // 
             // SearchMemberTextRemove
             // 
-            SearchMemberTextRemove.Location = new Point(231, 28);
+            SearchMemberTextRemove.Location = new Point(222, 28);
             SearchMemberTextRemove.Margin = new Padding(2, 1, 2, 1);
             SearchMemberTextRemove.Name = "SearchMemberTextRemove";
             SearchMemberTextRemove.Size = new Size(223, 23);

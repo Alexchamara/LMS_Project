@@ -18,7 +18,6 @@ namespace LMS1
         {
             InitializeComponent();
             this.member = member;
-
         }
 
         private void MemberBorrowBookBtn_Click(object sender, EventArgs e)

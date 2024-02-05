@@ -22,7 +22,7 @@ public class Member : User
         set { this.borrowedList = value; }
     }
 
-
+    //borrow book method
     public void borrowBook(string bTitle, string bISBN)
     {
         //connect to the database
@@ -67,8 +67,6 @@ public class Member : User
             var memberUpdate = Builders<Member>.Update
                 .Set("BorrowedBook", this.borrowedList);
 
-
-
             //update the member collection
             memberCollection.UpdateOne(m => m.UserId == this.UserId, memberUpdate);
 
@@ -77,6 +75,55 @@ public class Member : User
 
     }
 
+    //return book method
+    public void returnBook(string bTitle, string bISBN)
+    {
+        //connect to the database
+        var client = new MongoClient().GetDatabase("LMSdb");
+        var bookRemoveCollection = client.GetCollection<Book>("Bookdb");
+        var memberCollection = client.GetCollection<Member>("Memberdb");
 
+        //find the book from the database
+        var book = bookRemoveCollection.Find(m => m.BookISBN == bISBN).FirstOrDefault();
+        if (book == null)
+        {
+            MessageBox.Show("This book is not found!");
+        }
+        else if (!(book.BookTitel == bTitle && book.BookISBN == bISBN))
+        {
+            MessageBox.Show("Incorrect Title or ISBN. Please try again!");
+        }
+        else if (book.BorrowedBy == null || !book.BorrowedBy.Equals(this))
+        {
+            MessageBox.Show("This book is not borrowed by you!");
+        }
+        else
+        {
+            //update the book availability
+            var update = Builders<Book>.Update
+                .Set("BookAvailablility", true);
 
+            //update the book collection
+            bookRemoveCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
+
+            update = Builders<Book>.Update.Unset("BorrowedBy");
+
+            bookRemoveCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
+
+            //remove the book from the borrow list
+            this.borrowedList.RemoveAll(b => b.BookISBN == book.BookISBN);
+
+            //update the member collection
+            var memberUpdate = Builders<Member>.Update
+                .Set("BorrowedBook", this.borrowedList);
+
+            //update the member collection
+            memberCollection.UpdateOne(m => m.UserId == this.UserId, memberUpdate);
+
+            MessageBox.Show("The book is returned successfully!");
+        }
+    }
 }
+
+
+

@@ -46,7 +46,7 @@ namespace LMS1
             SidePanel.Height = returnBookBtn.Height;
             SidePanel.Top = returnBookBtn.Top;
 
-            memberLoadPanel(new MemberReturnBookForm());
+            memberLoadPanel(new MemberReturnBookForm(member));
         }
 
         private void borrowedBookBtn_Click(object sender, EventArgs e)

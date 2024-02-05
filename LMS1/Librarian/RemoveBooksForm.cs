@@ -56,7 +56,7 @@ namespace LMS1
         {
             if (this.RemoveBookNameTextBox.Text == "")
             {
-                MessageBox.Show("Please enter the bookme!");
+                MessageBox.Show("Please enter the book name!");
                 this.RemoveBookNameTextBox.Focus();
                 return false;
             }
