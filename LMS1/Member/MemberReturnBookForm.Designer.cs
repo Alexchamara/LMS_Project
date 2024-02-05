@@ -61,7 +61,7 @@
             ReturnDateLable.Anchor = AnchorStyles.Top;
             ReturnDateLable.AutoSize = true;
             ReturnDateLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            ReturnDateLable.Location = new Point(211, 158);
+            ReturnDateLable.Location = new Point(193, 158);
             ReturnDateLable.Margin = new Padding(2, 0, 2, 0);
             ReturnDateLable.Name = "ReturnDateLable";
             ReturnDateLable.Size = new Size(127, 24);
@@ -115,7 +115,7 @@
             ISBNNoLable.Anchor = AnchorStyles.Top;
             ISBNNoLable.AutoSize = true;
             ISBNNoLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            ISBNNoLable.Location = new Point(211, 113);
+            ISBNNoLable.Location = new Point(193, 113);
             ISBNNoLable.Margin = new Padding(2, 0, 2, 0);
             ISBNNoLable.Name = "ISBNNoLable";
             ISBNNoLable.Size = new Size(77, 24);
@@ -127,7 +127,7 @@
             BookNameLable.Anchor = AnchorStyles.Top;
             BookNameLable.AutoSize = true;
             BookNameLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            BookNameLable.Location = new Point(211, 74);
+            BookNameLable.Location = new Point(193, 74);
             BookNameLable.Margin = new Padding(2, 0, 2, 0);
             BookNameLable.Name = "BookNameLable";
             BookNameLable.Size = new Size(106, 24);
@@ -139,7 +139,7 @@
             MemberReturnBookLable.Anchor = AnchorStyles.Top;
             MemberReturnBookLable.AutoSize = true;
             MemberReturnBookLable.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Underline, GraphicsUnit.Point);
-            MemberReturnBookLable.Location = new Point(345, 16);
+            MemberReturnBookLable.Location = new Point(327, 16);
             MemberReturnBookLable.Margin = new Padding(2, 0, 2, 0);
             MemberReturnBookLable.Name = "MemberReturnBookLable";
             MemberReturnBookLable.Size = new Size(143, 30);
@@ -201,13 +201,13 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(20, 309);
+            dataGridView1.Location = new Point(11, 309);
             dataGridView1.Margin = new Padding(2, 1, 2, 1);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(808, 101);
+            dataGridView1.Size = new Size(809, 275);
             dataGridView1.TabIndex = 38;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
@@ -224,6 +224,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             ClientSize = new Size(848, 420);
             Controls.Add(label2);
             Controls.Add(ISBNRadioButton);

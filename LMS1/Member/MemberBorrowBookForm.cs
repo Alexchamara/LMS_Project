@@ -83,11 +83,6 @@ namespace LMS1
             this.MemberBorrowBookNameTextBox.Focus();
         }
 
-        private void MemberBorrowBookForm_Load(object sender, EventArgs e)
-        {
-            this.MemberBorrowBookNameTextBox.Focus();
-            refreshtb();
-        }
 
         // Refresh the DataGridView
         private void refreshtb()
@@ -172,5 +167,10 @@ namespace LMS1
             //aux = aux.AddDays(1);
         }
 
+        private void MemberBorrowBookForm_Load(object sender, EventArgs e)
+        {
+            this.MemberBorrowBookNameTextBox.Focus();
+            refreshtb();
+        }
     }
 }

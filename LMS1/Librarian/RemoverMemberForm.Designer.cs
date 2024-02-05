@@ -63,7 +63,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(655, 116);
+            pictureBox1.Location = new Point(613, 113);
             pictureBox1.Margin = new Padding(2, 1, 2, 1);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(130, 102);
@@ -114,7 +114,7 @@
             ResonLable.Anchor = AnchorStyles.Top;
             ResonLable.AutoSize = true;
             ResonLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            ResonLable.Location = new Point(211, 193);
+            ResonLable.Location = new Point(184, 193);
             ResonLable.Margin = new Padding(2, 0, 2, 0);
             ResonLable.Name = "ResonLable";
             ResonLable.Size = new Size(61, 24);
@@ -126,7 +126,7 @@
             NICLable.Anchor = AnchorStyles.Top;
             NICLable.AutoSize = true;
             NICLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            NICLable.Location = new Point(211, 153);
+            NICLable.Location = new Point(184, 153);
             NICLable.Margin = new Padding(2, 0, 2, 0);
             NICLable.Name = "NICLable";
             NICLable.Size = new Size(38, 24);
@@ -138,7 +138,7 @@
             MembershipIdNoLable.Anchor = AnchorStyles.Top;
             MembershipIdNoLable.AutoSize = true;
             MembershipIdNoLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            MembershipIdNoLable.Location = new Point(211, 113);
+            MembershipIdNoLable.Location = new Point(184, 113);
             MembershipIdNoLable.Margin = new Padding(2, 0, 2, 0);
             MembershipIdNoLable.Name = "MembershipIdNoLable";
             MembershipIdNoLable.Size = new Size(134, 24);
@@ -150,7 +150,7 @@
             MemberNameLable.Anchor = AnchorStyles.Top;
             MemberNameLable.AutoSize = true;
             MemberNameLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            MemberNameLable.Location = new Point(211, 74);
+            MemberNameLable.Location = new Point(184, 74);
             MemberNameLable.Margin = new Padding(2, 0, 2, 0);
             MemberNameLable.Name = "MemberNameLable";
             MemberNameLable.Size = new Size(59, 24);
@@ -162,7 +162,7 @@
             RemoveMemberLable.Anchor = AnchorStyles.Top;
             RemoveMemberLable.AutoSize = true;
             RemoveMemberLable.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Underline, GraphicsUnit.Point);
-            RemoveMemberLable.Location = new Point(345, 16);
+            RemoveMemberLable.Location = new Point(318, 16);
             RemoveMemberLable.Margin = new Padding(2, 0, 2, 0);
             RemoveMemberLable.Name = "RemoveMemberLable";
             RemoveMemberLable.Size = new Size(190, 30);
@@ -174,13 +174,13 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(40, 328);
+            dataGridView1.Location = new Point(11, 332);
             dataGridView1.Margin = new Padding(2, 1, 2, 1);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(769, 74);
+            dataGridView1.Size = new Size(799, 275);
             dataGridView1.TabIndex = 43;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
@@ -259,6 +259,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             ClientSize = new Size(848, 420);
             Controls.Add(ClearBtn);
             Controls.Add(NICRadioBtn);

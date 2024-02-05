@@ -50,7 +50,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(621, 78);
+            pictureBox1.Location = new Point(579, 137);
             pictureBox1.Margin = new Padding(2, 1, 2, 1);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(137, 107);
@@ -93,7 +93,7 @@
             ISBNNoLable.Anchor = AnchorStyles.Top;
             ISBNNoLable.AutoSize = true;
             ISBNNoLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            ISBNNoLable.Location = new Point(211, 113);
+            ISBNNoLable.Location = new Point(139, 113);
             ISBNNoLable.Margin = new Padding(2, 0, 2, 0);
             ISBNNoLable.Name = "ISBNNoLable";
             ISBNNoLable.Size = new Size(77, 24);
@@ -105,7 +105,7 @@
             BookNameLable.Anchor = AnchorStyles.Top;
             BookNameLable.AutoSize = true;
             BookNameLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            BookNameLable.Location = new Point(211, 74);
+            BookNameLable.Location = new Point(139, 74);
             BookNameLable.Margin = new Padding(2, 0, 2, 0);
             BookNameLable.Name = "BookNameLable";
             BookNameLable.Size = new Size(106, 24);
@@ -117,7 +117,7 @@
             RemoveBookLable.Anchor = AnchorStyles.Top;
             RemoveBookLable.AutoSize = true;
             RemoveBookLable.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Underline, GraphicsUnit.Point);
-            RemoveBookLable.Location = new Point(345, 16);
+            RemoveBookLable.Location = new Point(273, 16);
             RemoveBookLable.Margin = new Padding(2, 0, 2, 0);
             RemoveBookLable.Name = "RemoveBookLable";
             RemoveBookLable.Size = new Size(158, 30);
@@ -175,13 +175,13 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(40, 264);
+            dataGridView1.Location = new Point(11, 264);
             dataGridView1.Margin = new Padding(2, 1, 2, 1);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(769, 138);
+            dataGridView1.Size = new Size(794, 275);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
@@ -202,6 +202,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             ClientSize = new Size(848, 420);
             Controls.Add(ClearBtn);
             Controls.Add(dataGridView1);

@@ -16,6 +16,7 @@ namespace LMS1
     {
         Member member;
 
+        // Create a new instance of the MongoClient class
         IMongoClient client = new MongoClient();
         IMongoDatabase database;
         IMongoCollection<Member> memberCollection;
@@ -28,9 +29,10 @@ namespace LMS1
             InitializeComponent();
             this.member = member;
 
+            // Get the database and the collection
             database = client.GetDatabase("LMSdb");
             memberCollection = database.GetCollection<Member>("Memberdb");
-            borrowedList = memberCollection.Find(mem => mem.UserId == this.member.UserId).FirstOrDefault().BorrowedBook;
+            borrowedList = memberCollection.Find(mem => mem.UserId == this.member.UserId).FirstOrDefault().BorrowedBook;    // Get the borrowed books of the member
         }
 
         private void MemberReturnBookBtn_Click(object sender, EventArgs e)
@@ -72,6 +74,7 @@ namespace LMS1
             return true;
         }
 
+        // Refresh the DataGridView
         private void refreshtb()
         {
             borrowedList = database.GetCollection<Member>("Memberdb").Find(m => m.UserId == member.UserId).FirstOrDefault().BorrowedBook;
@@ -91,6 +94,7 @@ namespace LMS1
             dataGridView1.DataSource = table;
         }
 
+        // Clear button
         private void ClearBtn_Click(object sender, EventArgs e)
         {
             this.MemberReturnBookNameTextBox.Clear();
@@ -99,11 +103,6 @@ namespace LMS1
             this.MemberReturnBookNameTextBox.Focus();
         }
 
-        private void MemberReturnBookForm_Load(object sender, EventArgs e)
-        {
-            this.MemberReturnBookNameTextBox.Focus();
-            refreshtb();
-        }
 
         private void SearchBookTextBook_TextChanged(object sender, EventArgs e)
         {
@@ -145,6 +144,12 @@ namespace LMS1
         {
             this.MemberReturnBookNameTextBox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             this.MemberReturnISBNNOTextBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void MemberReturnBookForm_Load(object sender, EventArgs e)
+        {
+            this.MemberReturnBookNameTextBox.Focus();
+            refreshtb();
         }
     }
 }
