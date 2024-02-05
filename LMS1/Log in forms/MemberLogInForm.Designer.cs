@@ -46,10 +46,11 @@
             ClearBtn.AutoSize = true;
             ClearBtn.Font = new Font("Franklin Gothic Medium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ClearBtn.ForeColor = SystemColors.Control;
-            ClearBtn.Location = new Point(450, 650);
+            ClearBtn.Location = new Point(242, 305);
+            ClearBtn.Margin = new Padding(2, 0, 2, 0);
             ClearBtn.Name = "ClearBtn";
-            ClearBtn.Size = new Size(134, 30);
-            ClearBtn.TabIndex = 38;
+            ClearBtn.Size = new Size(65, 16);
+            ClearBtn.TabIndex = 0;
             ClearBtn.Text = "Clear Fields";
             ClearBtn.Click += ClearBtn_Click;
             // 
@@ -59,10 +60,11 @@
             MemberLogInFormBtn.Font = new Font("Franklin Gothic Medium", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
             MemberLogInFormBtn.Image = (Image)resources.GetObject("MemberLogInFormBtn.Image");
             MemberLogInFormBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            MemberLogInFormBtn.Location = new Point(35, 708);
+            MemberLogInFormBtn.Location = new Point(19, 332);
+            MemberLogInFormBtn.Margin = new Padding(2, 1, 2, 1);
             MemberLogInFormBtn.Name = "MemberLogInFormBtn";
-            MemberLogInFormBtn.Size = new Size(551, 59);
-            MemberLogInFormBtn.TabIndex = 37;
+            MemberLogInFormBtn.Size = new Size(297, 28);
+            MemberLogInFormBtn.TabIndex = 3;
             MemberLogInFormBtn.Text = "    Log In";
             MemberLogInFormBtn.UseVisualStyleBackColor = false;
             MemberLogInFormBtn.Click += MemberLogInFormBtn_Click;
@@ -73,26 +75,29 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(598, 12);
+            button1.Location = new Point(322, 6);
+            button1.Margin = new Padding(2, 1, 2, 1);
             button1.Name = "button1";
-            button1.Size = new Size(28, 29);
+            button1.Size = new Size(15, 14);
             button1.TabIndex = 36;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // MemberLogInPassword
             // 
-            MemberLogInPassword.Location = new Point(241, 597);
+            MemberLogInPassword.Location = new Point(130, 280);
+            MemberLogInPassword.Margin = new Padding(2, 1, 2, 1);
             MemberLogInPassword.Name = "MemberLogInPassword";
-            MemberLogInPassword.Size = new Size(345, 39);
-            MemberLogInPassword.TabIndex = 34;
+            MemberLogInPassword.Size = new Size(188, 23);
+            MemberLogInPassword.TabIndex = 2;
             MemberLogInPassword.UseSystemPasswordChar = true;
             // 
             // MemberUserNaneTextBox
             // 
-            MemberUserNaneTextBox.Location = new Point(241, 507);
+            MemberUserNaneTextBox.Location = new Point(130, 238);
+            MemberUserNaneTextBox.Margin = new Padding(2, 1, 2, 1);
             MemberUserNaneTextBox.Name = "MemberUserNaneTextBox";
-            MemberUserNaneTextBox.Size = new Size(345, 39);
+            MemberUserNaneTextBox.Size = new Size(188, 23);
             MemberUserNaneTextBox.TabIndex = 1;
             // 
             // Password
@@ -101,10 +106,11 @@
             Password.AutoSize = true;
             Password.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
             Password.ForeColor = SystemColors.Control;
-            Password.Location = new Point(35, 591);
+            Password.Location = new Point(19, 277);
+            Password.Margin = new Padding(2, 0, 2, 0);
             Password.Name = "Password";
-            Password.Size = new Size(150, 37);
-            Password.TabIndex = 32;
+            Password.Size = new Size(76, 21);
+            Password.TabIndex = 0;
             Password.Tag = "";
             Password.Text = "Password";
             // 
@@ -114,18 +120,20 @@
             MemberLogInNameLable.AutoSize = true;
             MemberLogInNameLable.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
             MemberLogInNameLable.ForeColor = SystemColors.Control;
-            MemberLogInNameLable.Location = new Point(35, 501);
+            MemberLogInNameLable.Location = new Point(19, 235);
+            MemberLogInNameLable.Margin = new Padding(2, 0, 2, 0);
             MemberLogInNameLable.Name = "MemberLogInNameLable";
-            MemberLogInNameLable.Size = new Size(170, 37);
-            MemberLogInNameLable.TabIndex = 33;
-            MemberLogInNameLable.Text = "User Name";
+            MemberLogInNameLable.Size = new Size(58, 21);
+            MemberLogInNameLable.TabIndex = 0;
+            MemberLogInNameLable.Text = "User ID";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(160, 58);
+            pictureBox1.Location = new Point(86, 27);
+            pictureBox1.Margin = new Padding(2, 1, 2, 1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(315, 380);
+            pictureBox1.Size = new Size(170, 178);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 31;
             pictureBox1.TabStop = false;
@@ -135,18 +143,19 @@
             label1.AutoSize = true;
             label1.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(138, 392);
+            label1.Location = new Point(74, 184);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(349, 61);
-            label1.TabIndex = 39;
+            label1.Size = new Size(180, 30);
+            label1.TabIndex = 0;
             label1.Text = "Member Log In";
             // 
             // MemberLogInForm
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(51, 87, 163);
-            ClientSize = new Size(640, 815);
+            ClientSize = new Size(345, 382);
             Controls.Add(label1);
             Controls.Add(ClearBtn);
             Controls.Add(MemberLogInFormBtn);
@@ -157,6 +166,7 @@
             Controls.Add(MemberLogInNameLable);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 1, 2, 1);
             Name = "MemberLogInForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MemberLogInForm";

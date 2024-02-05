@@ -58,7 +58,7 @@ namespace LMS1
 
         private void AddBooksForm_Load(object sender, EventArgs e)
         {
-
+            this.AddBookNameTextBox.Focus();
         }
 
     }

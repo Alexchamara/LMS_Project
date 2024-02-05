@@ -9,6 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MongoDB.Driver;
+
+
 
 namespace LMS1
 {
@@ -20,25 +23,43 @@ namespace LMS1
             this.LibrarianUserNaneTextBox.Focus();
         }
 
+        //Close the form
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
 
+        //Check the librarianId and password is valid
         private void LibrarianLogInFormBtn_Click(object sender, EventArgs e)
         {
-            if (LibrarianUserNaneTextBox.Text == "alex" && LibrarianLogInPassword.Text == "1234")
+            //Create a connection with the database
+            var client = new MongoClient().GetDatabase("LMSdb");
+            var librarianInfo = client.GetCollection<Librarian>("Librariandb").Find(l => l.UserId == LibrarianUserNaneTextBox.Text).FirstOrDefault();
+
+            //Check the user name and password is valid
+            if (librarianInfo != null && librarianInfo.librarianLogin(this.LibrarianUserNaneTextBox.Text, this.LibrarianLogInPassword.Text))
             {
-                MainInterFace mainInterFaceForm = Application.OpenForms["MainInterFace"] as MainInterFace;
-                mainInterFaceForm.Hide();
+                //Hide the main interface form
+                if (librarianInfo.librarianLogin(this.LibrarianUserNaneTextBox.Text, this.LibrarianLogInPassword.Text))
+                {
+                    MainInterFace mainInterFaceForm = Application.OpenForms["MainInterFace"] as MainInterFace;
+                    mainInterFaceForm.Hide();
 
-                this.Hide();
+                    this.Hide();
 
-                Librarian librarian = new Librarian("userName", "userId", "password", "userNIC", "userEmail", 1234);
-                Library library = new Library();
+                    Librarian librarian = new Librarian("userName", "userId", "password", "userNIC", "userEmail", 1234);
+                    Library library = new Library();
 
-                new LibrarianFace(library, librarian).Show();
-            }
+                    new LibrarianFace(library, librarian).Show();
+                }
+                else   //If the user name and password is invalid
+                {
+                    new InvalidUname_Password().ShowDialog();
+                    LibrarianUserNaneTextBox.Clear();
+                    LibrarianLogInPassword.Clear();
+                    LibrarianUserNaneTextBox.Focus();
+                }
+            }   //If the user name and password is empty
             else if (isValid())
             {
                 new InvalidUname_Password().ShowDialog();
@@ -48,6 +69,7 @@ namespace LMS1
             }
         }
 
+        //Check the text boxs are empty
         private bool isValid()
         {
             if (LibrarianUserNaneTextBox.Text == string.Empty)
@@ -63,6 +85,7 @@ namespace LMS1
             return true;
         }
 
+        //Clear the text boxes
         private void ClearBtn_Click(object sender, EventArgs e)
         {
             LibrarianUserNaneTextBox.Clear();
@@ -74,5 +97,8 @@ namespace LMS1
         {
             LibrarianUserNaneTextBox.Focus();
         }
+
     }
+
 }
+

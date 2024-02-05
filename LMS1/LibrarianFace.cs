@@ -5,7 +5,7 @@ namespace LMS1
     public partial class LibrarianFace : Form
     {
         Librarian librarian;
-        Library library = new Library();
+        Library library = new Library();    
 
         //Create a constructor for 'LibrarianFace' class
         public LibrarianFace(Library library, Librarian librarian)
@@ -19,6 +19,7 @@ namespace LMS1
             this.librarian = librarian;
         }
 
+        //Load the panel
         public void librarianLoadPalen(object Form)
         {
             if (this.LibrarianMainPanel.Controls.Count > 0)
@@ -31,6 +32,7 @@ namespace LMS1
             f.Show();
         }
 
+        //Close the form
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -78,16 +80,16 @@ namespace LMS1
             librarianLoadPalen(new SearchBook());
         }
 
-        private void LibrarianFace_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             new MainInterFace().Show();
             this.Hide();
         }
+        private void LibrarianFace_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

@@ -68,7 +68,7 @@
             AddMemberBtn.Margin = new Padding(2, 1, 2, 1);
             AddMemberBtn.Name = "AddMemberBtn";
             AddMemberBtn.Size = new Size(184, 27);
-            AddMemberBtn.TabIndex = 30;
+            AddMemberBtn.TabIndex = 7;
             AddMemberBtn.Text = "Add Member";
             AddMemberBtn.UseVisualStyleBackColor = false;
             AddMemberBtn.Click += AddMemberBtn_Click;
@@ -79,7 +79,7 @@
             AddMemberNameTextBox.Margin = new Padding(2, 1, 2, 1);
             AddMemberNameTextBox.Name = "AddMemberNameTextBox";
             AddMemberNameTextBox.Size = new Size(217, 23);
-            AddMemberNameTextBox.TabIndex = 25;
+            AddMemberNameTextBox.TabIndex = 1;
             // 
             // AddMembershipIdTextBox
             // 
@@ -87,7 +87,7 @@
             AddMembershipIdTextBox.Margin = new Padding(2, 1, 2, 1);
             AddMembershipIdTextBox.Name = "AddMembershipIdTextBox";
             AddMembershipIdTextBox.Size = new Size(217, 23);
-            AddMembershipIdTextBox.TabIndex = 26;
+            AddMembershipIdTextBox.TabIndex = 2;
             // 
             // AddNICTextBox
             // 
@@ -95,7 +95,7 @@
             AddNICTextBox.Margin = new Padding(2, 1, 2, 1);
             AddNICTextBox.Name = "AddNICTextBox";
             AddNICTextBox.Size = new Size(217, 23);
-            AddNICTextBox.TabIndex = 27;
+            AddNICTextBox.TabIndex = 3;
             // 
             // AddEmailTextBox
             // 
@@ -103,7 +103,7 @@
             AddEmailTextBox.Margin = new Padding(2, 1, 2, 1);
             AddEmailTextBox.Name = "AddEmailTextBox";
             AddEmailTextBox.Size = new Size(217, 23);
-            AddEmailTextBox.TabIndex = 28;
+            AddEmailTextBox.TabIndex = 5;
             // 
             // EmailLable
             // 
@@ -114,7 +114,7 @@
             EmailLable.Margin = new Padding(2, 0, 2, 0);
             EmailLable.Name = "EmailLable";
             EmailLable.Size = new Size(62, 24);
-            EmailLable.TabIndex = 20;
+            EmailLable.TabIndex = 0;
             EmailLable.Text = "E-mail";
             // 
             // ContactLable
@@ -126,7 +126,7 @@
             ContactLable.Margin = new Padding(2, 0, 2, 0);
             ContactLable.Name = "ContactLable";
             ContactLable.Size = new Size(72, 24);
-            ContactLable.TabIndex = 21;
+            ContactLable.TabIndex = 0;
             ContactLable.Text = "Contact";
             // 
             // NICLable
@@ -138,7 +138,7 @@
             NICLable.Margin = new Padding(2, 0, 2, 0);
             NICLable.Name = "NICLable";
             NICLable.Size = new Size(38, 24);
-            NICLable.TabIndex = 22;
+            NICLable.TabIndex = 0;
             NICLable.Text = "NIC";
             // 
             // MembershipIdNoLable
@@ -150,7 +150,7 @@
             MembershipIdNoLable.Margin = new Padding(2, 0, 2, 0);
             MembershipIdNoLable.Name = "MembershipIdNoLable";
             MembershipIdNoLable.Size = new Size(134, 24);
-            MembershipIdNoLable.TabIndex = 23;
+            MembershipIdNoLable.TabIndex = 0;
             MembershipIdNoLable.Text = "Membership ID";
             // 
             // MemberNameLable
@@ -162,7 +162,7 @@
             MemberNameLable.Margin = new Padding(2, 0, 2, 0);
             MemberNameLable.Name = "MemberNameLable";
             MemberNameLable.Size = new Size(94, 24);
-            MemberNameLable.TabIndex = 24;
+            MemberNameLable.TabIndex = 0;
             MemberNameLable.Text = "Full Name";
             // 
             // AddMemberLable
@@ -174,7 +174,7 @@
             AddMemberLable.Margin = new Padding(2, 0, 2, 0);
             AddMemberLable.Name = "AddMemberLable";
             AddMemberLable.Size = new Size(145, 30);
-            AddMemberLable.TabIndex = 19;
+            AddMemberLable.TabIndex = 0;
             AddMemberLable.Text = "Add Member";
             // 
             // MemberContactTexBox
@@ -183,7 +183,7 @@
             MemberContactTexBox.Margin = new Padding(2, 1, 2, 1);
             MemberContactTexBox.Name = "MemberContactTexBox";
             MemberContactTexBox.Size = new Size(217, 23);
-            MemberContactTexBox.TabIndex = 32;
+            MemberContactTexBox.TabIndex = 4;
             // 
             // MemberLoginPasswordTextBox
             // 
@@ -191,7 +191,7 @@
             MemberLoginPasswordTextBox.Margin = new Padding(2, 1, 2, 1);
             MemberLoginPasswordTextBox.Name = "MemberLoginPasswordTextBox";
             MemberLoginPasswordTextBox.Size = new Size(217, 23);
-            MemberLoginPasswordTextBox.TabIndex = 34;
+            MemberLoginPasswordTextBox.TabIndex = 6;
             // 
             // label1
             // 

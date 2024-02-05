@@ -43,29 +43,32 @@
             // 
             // BorrowBookDate
             // 
-            BorrowBookDate.Location = new Point(660, 340);
+            BorrowBookDate.Location = new Point(355, 159);
+            BorrowBookDate.Margin = new Padding(2, 1, 2, 1);
             BorrowBookDate.Name = "BorrowBookDate";
-            BorrowBookDate.Size = new Size(400, 39);
-            BorrowBookDate.TabIndex = 37;
+            BorrowBookDate.Size = new Size(217, 23);
+            BorrowBookDate.TabIndex = 3;
             // 
             // ReturnDateLable
             // 
             ReturnDateLable.Anchor = AnchorStyles.Top;
             ReturnDateLable.AutoSize = true;
             ReturnDateLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            ReturnDateLable.Location = new Point(391, 336);
+            ReturnDateLable.Location = new Point(211, 158);
+            ReturnDateLable.Margin = new Padding(2, 0, 2, 0);
             ReturnDateLable.Name = "ReturnDateLable";
-            ReturnDateLable.Size = new Size(249, 43);
-            ReturnDateLable.TabIndex = 36;
+            ReturnDateLable.Size = new Size(127, 24);
+            ReturnDateLable.TabIndex = 0;
             ReturnDateLable.Text = "Returned Date";
             // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1174, 197);
+            pictureBox1.Location = new Point(632, 92);
+            pictureBox1.Margin = new Padding(2, 1, 2, 1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(254, 228);
+            pictureBox1.Size = new Size(137, 107);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 35;
             pictureBox1.TabStop = false;
@@ -75,36 +78,40 @@
             MemberReturnBookBtn.BackColor = Color.FromArgb(246, 174, 0);
             MemberReturnBookBtn.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             MemberReturnBookBtn.ForeColor = SystemColors.Control;
-            MemberReturnBookBtn.Location = new Point(719, 428);
+            MemberReturnBookBtn.Location = new Point(387, 201);
+            MemberReturnBookBtn.Margin = new Padding(2, 1, 2, 1);
             MemberReturnBookBtn.Name = "MemberReturnBookBtn";
-            MemberReturnBookBtn.Size = new Size(341, 58);
-            MemberReturnBookBtn.TabIndex = 34;
+            MemberReturnBookBtn.Size = new Size(184, 27);
+            MemberReturnBookBtn.TabIndex = 4;
             MemberReturnBookBtn.Text = "Return Book";
             MemberReturnBookBtn.UseVisualStyleBackColor = false;
             // 
             // MemberReturnBookNameTextBox
             // 
-            MemberReturnBookNameTextBox.Location = new Point(660, 163);
+            MemberReturnBookNameTextBox.Location = new Point(355, 76);
+            MemberReturnBookNameTextBox.Margin = new Padding(2, 1, 2, 1);
             MemberReturnBookNameTextBox.Name = "MemberReturnBookNameTextBox";
-            MemberReturnBookNameTextBox.Size = new Size(400, 39);
-            MemberReturnBookNameTextBox.TabIndex = 32;
+            MemberReturnBookNameTextBox.Size = new Size(217, 23);
+            MemberReturnBookNameTextBox.TabIndex = 1;
             // 
             // MemberReturnISBNNOTextBox
             // 
-            MemberReturnISBNNOTextBox.Location = new Point(660, 248);
+            MemberReturnISBNNOTextBox.Location = new Point(355, 116);
+            MemberReturnISBNNOTextBox.Margin = new Padding(2, 1, 2, 1);
             MemberReturnISBNNOTextBox.Name = "MemberReturnISBNNOTextBox";
-            MemberReturnISBNNOTextBox.Size = new Size(400, 39);
-            MemberReturnISBNNOTextBox.TabIndex = 33;
+            MemberReturnISBNNOTextBox.Size = new Size(217, 23);
+            MemberReturnISBNNOTextBox.TabIndex = 2;
             // 
             // ISBNNoLable
             // 
             ISBNNoLable.Anchor = AnchorStyles.Top;
             ISBNNoLable.AutoSize = true;
             ISBNNoLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            ISBNNoLable.Location = new Point(391, 242);
+            ISBNNoLable.Location = new Point(211, 113);
+            ISBNNoLable.Margin = new Padding(2, 0, 2, 0);
             ISBNNoLable.Name = "ISBNNoLable";
-            ISBNNoLable.Size = new Size(149, 43);
-            ISBNNoLable.TabIndex = 30;
+            ISBNNoLable.Size = new Size(77, 24);
+            ISBNNoLable.TabIndex = 0;
             ISBNNoLable.Text = "ISBN No";
             // 
             // BookNameLable
@@ -112,10 +119,11 @@
             BookNameLable.Anchor = AnchorStyles.Top;
             BookNameLable.AutoSize = true;
             BookNameLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            BookNameLable.Location = new Point(391, 157);
+            BookNameLable.Location = new Point(211, 74);
+            BookNameLable.Margin = new Padding(2, 0, 2, 0);
             BookNameLable.Name = "BookNameLable";
-            BookNameLable.Size = new Size(205, 43);
-            BookNameLable.TabIndex = 31;
+            BookNameLable.Size = new Size(106, 24);
+            BookNameLable.TabIndex = 0;
             BookNameLable.Text = "Book Name";
             // 
             // MemberReturnBookLable
@@ -123,17 +131,18 @@
             MemberReturnBookLable.Anchor = AnchorStyles.Top;
             MemberReturnBookLable.AutoSize = true;
             MemberReturnBookLable.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Underline, GraphicsUnit.Point);
-            MemberReturnBookLable.Location = new Point(641, 34);
+            MemberReturnBookLable.Location = new Point(345, 16);
+            MemberReturnBookLable.Margin = new Padding(2, 0, 2, 0);
             MemberReturnBookLable.Name = "MemberReturnBookLable";
-            MemberReturnBookLable.Size = new Size(283, 61);
-            MemberReturnBookLable.TabIndex = 29;
+            MemberReturnBookLable.Size = new Size(143, 30);
+            MemberReturnBookLable.TabIndex = 0;
             MemberReturnBookLable.Text = "Return Book";
             // 
             // MemberReturnBookForm
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1574, 897);
+            ClientSize = new Size(848, 420);
             Controls.Add(BorrowBookDate);
             Controls.Add(ReturnDateLable);
             Controls.Add(pictureBox1);
@@ -144,6 +153,7 @@
             Controls.Add(BookNameLable);
             Controls.Add(MemberReturnBookLable);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 1, 2, 1);
             Name = "MemberReturnBookForm";
             Text = "MemberReturnBookForm";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

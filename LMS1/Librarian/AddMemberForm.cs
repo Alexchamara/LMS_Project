@@ -56,7 +56,7 @@ namespace LMS1
 
         private void AddMemberForm_Load(object sender, EventArgs e)
         {
-
+            this.AddMemberNameTextBox.Focus();
         }
 
     }

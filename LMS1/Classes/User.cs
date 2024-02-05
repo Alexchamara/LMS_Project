@@ -20,7 +20,7 @@ namespace LMS1.Classes
         private int contact;
 
 
-        public User(string userName, string userId, string password, string userNIC, string  userEmail, int contact)
+        public User(string userName, string userId, string password, string userNIC, string userEmail, int contact)
         {
             this.userName = userName;
             this.userId = userId;
@@ -68,6 +68,7 @@ namespace LMS1.Classes
             set { contact = value; }
         }
 
+        //Search the book using ISBN from the database
         public Book searchBook(string ISBN)
         {
             var client = new MongoClient().GetDatabase("LMSdb");
@@ -76,6 +77,34 @@ namespace LMS1.Classes
             return bookCollection.Find(b => b.BookISBN == ISBN).FirstOrDefault();
 
         }
+
+        //Check the librarian name and password is matched
+        public bool librarianLogin(string librarianId, string librarianPassword)
+        {
+
+            if (userId != null && this.userId == librarianId || this.password == librarianPassword)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //Check the member name and password is matched
+        public bool memberLogin(string memberId, string memberPassword)
+        {
+            if (userId != null && this.userId == memberId || this.password == memberPassword)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
     }
 
 

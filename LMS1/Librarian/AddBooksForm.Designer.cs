@@ -49,48 +49,54 @@
             // 
             // AddBookNameTextBox
             // 
-            AddBookNameTextBox.Location = new Point(635, 163);
+            AddBookNameTextBox.Location = new Point(342, 76);
+            AddBookNameTextBox.Margin = new Padding(2, 1, 2, 1);
             AddBookNameTextBox.Name = "AddBookNameTextBox";
-            AddBookNameTextBox.Size = new Size(400, 39);
-            AddBookNameTextBox.TabIndex = 11;
+            AddBookNameTextBox.Size = new Size(217, 23);
+            AddBookNameTextBox.TabIndex = 1;
             // 
             // AddISBNNOTextBox
             // 
-            AddISBNNOTextBox.Location = new Point(635, 248);
+            AddISBNNOTextBox.Location = new Point(342, 116);
+            AddISBNNOTextBox.Margin = new Padding(2, 1, 2, 1);
             AddISBNNOTextBox.Name = "AddISBNNOTextBox";
-            AddISBNNOTextBox.Size = new Size(400, 39);
-            AddISBNNOTextBox.TabIndex = 12;
+            AddISBNNOTextBox.Size = new Size(217, 23);
+            AddISBNNOTextBox.TabIndex = 2;
             // 
             // AddAuthorTextBox
             // 
-            AddAuthorTextBox.Location = new Point(635, 333);
+            AddAuthorTextBox.Location = new Point(342, 156);
+            AddAuthorTextBox.Margin = new Padding(2, 1, 2, 1);
             AddAuthorTextBox.Name = "AddAuthorTextBox";
-            AddAuthorTextBox.Size = new Size(400, 39);
-            AddAuthorTextBox.TabIndex = 13;
+            AddAuthorTextBox.Size = new Size(217, 23);
+            AddAuthorTextBox.TabIndex = 3;
             // 
             // AddPriceTextBox
             // 
-            AddPriceTextBox.Location = new Point(635, 588);
+            AddPriceTextBox.Location = new Point(342, 276);
+            AddPriceTextBox.Margin = new Padding(2, 1, 2, 1);
             AddPriceTextBox.Name = "AddPriceTextBox";
-            AddPriceTextBox.Size = new Size(400, 39);
-            AddPriceTextBox.TabIndex = 14;
+            AddPriceTextBox.Size = new Size(217, 23);
+            AddPriceTextBox.TabIndex = 6;
             // 
             // AddSubjectTextBox
             // 
-            AddSubjectTextBox.Location = new Point(635, 503);
+            AddSubjectTextBox.Location = new Point(342, 236);
+            AddSubjectTextBox.Margin = new Padding(2, 1, 2, 1);
             AddSubjectTextBox.Name = "AddSubjectTextBox";
-            AddSubjectTextBox.Size = new Size(400, 39);
-            AddSubjectTextBox.TabIndex = 15;
+            AddSubjectTextBox.Size = new Size(217, 23);
+            AddSubjectTextBox.TabIndex = 5;
             // 
             // PriceLable
             // 
             PriceLable.Anchor = AnchorStyles.Top;
             PriceLable.AutoSize = true;
             PriceLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            PriceLable.Location = new Point(391, 582);
+            PriceLable.Location = new Point(211, 273);
+            PriceLable.Margin = new Padding(2, 0, 2, 0);
             PriceLable.Name = "PriceLable";
-            PriceLable.Size = new Size(98, 43);
-            PriceLable.TabIndex = 5;
+            PriceLable.Size = new Size(51, 24);
+            PriceLable.TabIndex = 0;
             PriceLable.Text = "Price";
             // 
             // SubjectLable
@@ -98,10 +104,11 @@
             SubjectLable.Anchor = AnchorStyles.Top;
             SubjectLable.AutoSize = true;
             SubjectLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            SubjectLable.Location = new Point(391, 497);
+            SubjectLable.Location = new Point(211, 233);
+            SubjectLable.Margin = new Padding(2, 0, 2, 0);
             SubjectLable.Name = "SubjectLable";
-            SubjectLable.Size = new Size(137, 43);
-            SubjectLable.TabIndex = 6;
+            SubjectLable.Size = new Size(71, 24);
+            SubjectLable.TabIndex = 0;
             SubjectLable.Text = "Subject";
             // 
             // PublisherLable
@@ -109,10 +116,11 @@
             PublisherLable.Anchor = AnchorStyles.Top;
             PublisherLable.AutoSize = true;
             PublisherLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            PublisherLable.Location = new Point(391, 412);
+            PublisherLable.Location = new Point(211, 193);
+            PublisherLable.Margin = new Padding(2, 0, 2, 0);
             PublisherLable.Name = "PublisherLable";
-            PublisherLable.Size = new Size(197, 43);
-            PublisherLable.TabIndex = 7;
+            PublisherLable.Size = new Size(101, 24);
+            PublisherLable.TabIndex = 0;
             PublisherLable.Text = "Publication";
             // 
             // AuthorLable
@@ -120,10 +128,11 @@
             AuthorLable.Anchor = AnchorStyles.Top;
             AuthorLable.AutoSize = true;
             AuthorLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            AuthorLable.Location = new Point(391, 327);
+            AuthorLable.Location = new Point(211, 153);
+            AuthorLable.Margin = new Padding(2, 0, 2, 0);
             AuthorLable.Name = "AuthorLable";
-            AuthorLable.Size = new Size(125, 43);
-            AuthorLable.TabIndex = 8;
+            AuthorLable.Size = new Size(63, 24);
+            AuthorLable.TabIndex = 0;
             AuthorLable.Text = "Author";
             // 
             // ISBNNoLable
@@ -131,10 +140,11 @@
             ISBNNoLable.Anchor = AnchorStyles.Top;
             ISBNNoLable.AutoSize = true;
             ISBNNoLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            ISBNNoLable.Location = new Point(391, 242);
+            ISBNNoLable.Location = new Point(211, 113);
+            ISBNNoLable.Margin = new Padding(2, 0, 2, 0);
             ISBNNoLable.Name = "ISBNNoLable";
-            ISBNNoLable.Size = new Size(149, 43);
-            ISBNNoLable.TabIndex = 9;
+            ISBNNoLable.Size = new Size(77, 24);
+            ISBNNoLable.TabIndex = 0;
             ISBNNoLable.Text = "ISBN No";
             // 
             // BookNameLable
@@ -142,10 +152,11 @@
             BookNameLable.Anchor = AnchorStyles.Top;
             BookNameLable.AutoSize = true;
             BookNameLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            BookNameLable.Location = new Point(391, 157);
+            BookNameLable.Location = new Point(211, 74);
+            BookNameLable.Margin = new Padding(2, 0, 2, 0);
             BookNameLable.Name = "BookNameLable";
-            BookNameLable.Size = new Size(205, 43);
-            BookNameLable.TabIndex = 10;
+            BookNameLable.Size = new Size(106, 24);
+            BookNameLable.TabIndex = 0;
             BookNameLable.Text = "Book Name";
             // 
             // AddBookLable
@@ -153,10 +164,11 @@
             AddBookLable.Anchor = AnchorStyles.Top;
             AddBookLable.AutoSize = true;
             AddBookLable.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Underline, GraphicsUnit.Point);
-            AddBookLable.Location = new Point(641, 34);
+            AddBookLable.Location = new Point(345, 16);
+            AddBookLable.Margin = new Padding(2, 0, 2, 0);
             AddBookLable.Name = "AddBookLable";
-            AddBookLable.Size = new Size(225, 61);
-            AddBookLable.TabIndex = 4;
+            AddBookLable.Size = new Size(113, 30);
+            AddBookLable.TabIndex = 0;
             AddBookLable.Text = "Add Book";
             // 
             // AddBookBtn
@@ -164,10 +176,11 @@
             AddBookBtn.BackColor = Color.FromArgb(246, 174, 0);
             AddBookBtn.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             AddBookBtn.ForeColor = SystemColors.Control;
-            AddBookBtn.Location = new Point(694, 685);
+            AddBookBtn.Location = new Point(374, 321);
+            AddBookBtn.Margin = new Padding(2, 1, 2, 1);
             AddBookBtn.Name = "AddBookBtn";
-            AddBookBtn.Size = new Size(341, 58);
-            AddBookBtn.TabIndex = 17;
+            AddBookBtn.Size = new Size(184, 27);
+            AddBookBtn.TabIndex = 7;
             AddBookBtn.Text = "Add Book";
             AddBookBtn.UseVisualStyleBackColor = false;
             AddBookBtn.Click += AddBookBtn_Click;
@@ -176,25 +189,27 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1168, 328);
+            pictureBox1.Location = new Point(629, 154);
+            pictureBox1.Margin = new Padding(2, 1, 2, 1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(241, 217);
+            pictureBox1.Size = new Size(130, 102);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
             // 
             // AddPublisherTextBox
             // 
-            AddPublisherTextBox.Location = new Point(635, 418);
+            AddPublisherTextBox.Location = new Point(342, 196);
+            AddPublisherTextBox.Margin = new Padding(2, 1, 2, 1);
             AddPublisherTextBox.Name = "AddPublisherTextBox";
-            AddPublisherTextBox.Size = new Size(400, 39);
-            AddPublisherTextBox.TabIndex = 19;
+            AddPublisherTextBox.Size = new Size(217, 23);
+            AddPublisherTextBox.TabIndex = 4;
             // 
             // AddBooksForm
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1574, 897);
+            ClientSize = new Size(848, 420);
             Controls.Add(AddPublisherTextBox);
             Controls.Add(pictureBox1);
             Controls.Add(AddBookBtn);
@@ -211,6 +226,7 @@
             Controls.Add(BookNameLable);
             Controls.Add(AddBookLable);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 1, 2, 1);
             Name = "AddBooksForm";
             Text = "AddBooksForm";
             Load += AddBooksForm_Load;

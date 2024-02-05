@@ -15,11 +15,15 @@ namespace LMS1
 {
     public partial class SearchBook : Form
     {
+        // MongoDB connection
         IMongoClient client = new MongoClient();
         IMongoDatabase database;
         List<Book> books = new List<Book>();
 
+        // DataTable for the DataGridView
         DataTable table;
+
+        // Constructor
         public SearchBook()
         {
             InitializeComponent();
@@ -27,10 +31,12 @@ namespace LMS1
             books = database.GetCollection<Book>("Bookdb").Find(_ => true).ToList();
         }
 
+        // Load event
         private void SearchBook_Load(object sender, EventArgs e)
         {
             this.SearchBookTextBook.Focus();
 
+            // Fill the DataGridView with the books from the database
             books = database.GetCollection<Book>("Bookdb").Find(_ => true).ToList();
 
             table = new DataTable();
@@ -41,14 +47,17 @@ namespace LMS1
             table.Columns.Add("Subject", typeof(string));
             table.Columns.Add("Price", typeof(int));
 
+            // Add the books to the DataTable
             foreach (Book book in books)
             {
                 table.Rows.Add(book.BookTitel, book.BookISBN, book.BookAuthor, book.BookPublication, book.BookSubject, book.BookPrice);
             }
 
+            // Set the DataGridView data source to the DataTable
             dataGridView1.DataSource = table;
         }
 
+        // Search text changed event
         private void SearchBookTextBook_TextChanged(object sender, EventArgs e)
         {
             if (this.BookTitelRadioButton.Checked)
@@ -65,6 +74,7 @@ namespace LMS1
             }
         }
 
+        // Radio button checked changed to ISBN
         private void ISBNRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             this.SearchBookTextBook.Focus();
@@ -74,6 +84,7 @@ namespace LMS1
             dataGridView1.DataSource = dv;
         }
 
+        // Radio button checked changed to BookTitel
         private void BookTitelRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             this.SearchBookTextBook.Focus();
