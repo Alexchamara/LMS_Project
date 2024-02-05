@@ -128,6 +128,7 @@ namespace LMS1
         // Radio button checked changed to Member Name
         private void memberNameRadioBtn_CheckedChanged_1(object sender, EventArgs e)
         {
+            this.SearchMemberTextRemoveMember.Clear();
             this.SearchMemberTextRemoveMember.Focus();
 
             DataView dv = table.DefaultView;
@@ -138,6 +139,7 @@ namespace LMS1
         // Radio button checked changed to Membership ID
         private void membershipIdRadioBtn_CheckedChanged_1(object sender, EventArgs e)
         {
+            this.SearchMemberTextRemoveMember.Clear();
             this.SearchMemberTextRemoveMember.Focus();
 
             DataView dv = table.DefaultView;
@@ -148,6 +150,7 @@ namespace LMS1
         // Radio button checked changed to NIC
         private void NICRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
+            this.SearchMemberTextRemoveMember.Clear();
             this.SearchMemberTextRemoveMember.Focus();
 
             DataView dv = table.DefaultView;

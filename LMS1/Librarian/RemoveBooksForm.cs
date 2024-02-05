@@ -39,14 +39,21 @@ namespace LMS1
         // Remove book button click event
         private void RemoveBookBtn_Click(object sender, EventArgs e)
         {
-            if (isValid())
+            try
             {
-                // Remove the book from the library
-                library.removeBook(this.ISBNNOTextBox.Text, this.RemoveBookNameTextBox.Text);
-                //MessageBox.Show("Book removed successfully!");
-                this.ISBNNOTextBox.Clear();
-                this.RemoveBookNameTextBox.Clear();
-                this.RemoveBookNameTextBox.Focus();
+                if (isValid())
+                {
+                    // Remove the book from the library
+                    library.removeBook(this.ISBNNOTextBox.Text, this.RemoveBookNameTextBox.Text);
+                    //MessageBox.Show("Book removed successfully!");
+                    this.ISBNNOTextBox.Clear();
+                    this.RemoveBookNameTextBox.Clear();
+                    this.RemoveBookNameTextBox.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
             refreshtb();
         }
@@ -92,11 +99,21 @@ namespace LMS1
             table.Columns.Add("Publication", typeof(string));
             table.Columns.Add("Subject", typeof(string));
             table.Columns.Add("Price", typeof(int));
+            table.Columns.Add("Availablity", typeof(bool));
 
             // Add the books to the DataTable
             foreach (Book book in books)
             {
-                table.Rows.Add(book.BookTitel, book.BookISBN, book.BookAuthor, book.BookPublication, book.BookSubject, book.BookPrice);
+                table.Rows.Add(book.BookTitel, book.BookISBN, book.BookAuthor,
+                    book.BookPublication, book.BookSubject, book.BookPrice, book.BookAvailablility);
+
+                //show only available books in gridveiw
+                if (book.BookAvailablility == true)
+                {
+                    DataView dv = table.DefaultView;
+                    dv.RowFilter = "Availablity = true";
+                    dataGridView1.DataSource = dv;
+                }
             }
 
             // Set the DataGridView's data source to the DataTable
@@ -106,6 +123,7 @@ namespace LMS1
         // Radio button checked changed to BookTitel
         private void BookTitelRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            this.SearchBookTextRemoveBook.Clear();
             this.SearchBookTextRemoveBook.Focus();
 
             DataView dv = table.DefaultView;
@@ -116,6 +134,7 @@ namespace LMS1
         // Radio button checked changed to ISBN
         private void ISBNRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            this.SearchBookTextRemoveBook.Clear();
             this.SearchBookTextRemoveBook.Focus();
 
             DataView dv = table.DefaultView;

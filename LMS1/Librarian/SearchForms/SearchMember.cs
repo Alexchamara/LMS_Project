@@ -78,6 +78,7 @@ namespace LMS1
 
         private void memberNameRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
+            this.SearchMemberTextRemove.Clear();
             this.SearchMemberTextRemove.Focus();
 
             DataView dv = table.DefaultView;
@@ -87,6 +88,7 @@ namespace LMS1
 
         private void membershipIdRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
+            this.SearchMemberTextRemove.Clear();
             this.SearchMemberTextRemove.Focus();
 
             DataView dv = table.DefaultView;
@@ -96,6 +98,7 @@ namespace LMS1
 
         private void NICRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
+            this.SearchMemberTextRemove.Clear();
             this.SearchMemberTextRemove.Focus();
 
             DataView dv = table.DefaultView;

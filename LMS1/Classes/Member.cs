@@ -36,41 +36,48 @@ public class Member : User
         //check the book is available for borrowing
         if (book == null)
         {
-            MessageBox.Show("This book is not found!");
+            MessageBox.Show("This book is not found!", "Error");
         }
         else if (!book.BookAvailablility)
         {
-            MessageBox.Show("The book is not availabe for borrowing!");
+            MessageBox.Show("The book is not availabe for borrowing!", "Error");
         }
         else if (!(book.BookTitel == bTitle && book.BookISBN == bISBN))
         {
-            MessageBox.Show("Incorrect Title or ISBN. Please try again!");
+            MessageBox.Show("Incorrect Title or ISBN. Please try again!", "Error");
         }
         else
         {
-            //update the book availability
-            var update = Builders<Book>.Update
-                .Set("BookAvailablility", false);
+            try
+            {
+                //update the book availability
+                var update = Builders<Book>.Update
+                    .Set("BookAvailablility", false);
 
-            //update the book collection
-            bookCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
+                //update the book collection
+                bookCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
 
-            update = Builders<Book>.Update
-                .Set("BorrowedBy", this);
+                update = Builders<Book>.Update
+                    .Set("BorrowedBy", this);
 
-            bookCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
+                bookCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
 
-            //add the book to the borrow list
-            this.borrowedList.Add(book);
+                //add the book to the borrow list
+                this.borrowedList.Add(book);
 
-            //update the member collection
-            var memberUpdate = Builders<Member>.Update
-                .Set("BorrowedBook", this.borrowedList);
+                //update the member collection
+                var memberUpdate = Builders<Member>.Update
+                    .Set("BorrowedBook", this.borrowedList);
 
-            //update the member collection
-            memberCollection.UpdateOne(m => m.UserId == this.UserId, memberUpdate);
+                //update the member collection
+                memberCollection.UpdateOne(m => m.UserId == this.UserId, memberUpdate);
 
-            MessageBox.Show("The book is borrowed successfully!");
+                MessageBox.Show("The book is borrowed successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }   
         }
 
     }
@@ -85,42 +92,53 @@ public class Member : User
 
         //find the book from the database
         var book = bookRemoveCollection.Find(m => m.BookISBN == bISBN).FirstOrDefault();
-        if (book == null)
+        if (book == null)   //check the book is in the database
         {
-            MessageBox.Show("This book is not found!");
+            MessageBox.Show("This book is not found!", "Error");
         }
-        else if (!(book.BookTitel == bTitle && book.BookISBN == bISBN))
+        else if (!(book.BookTitel == bTitle && book.BookISBN == bISBN))   //check the book title and ISBN is matched
         {
-            MessageBox.Show("Incorrect Title or ISBN. Please try again!");
+            MessageBox.Show("Incorrect Title or ISBN. Please try again!", "Error");
         }
-        else if (book.BorrowedBy == null || !book.BorrowedBy.Equals(this))
+        else if (book.BorrowedBy == null)  //check the book is borrowed by the member
         {
-            MessageBox.Show("This book is not borrowed by you!");
+            MessageBox.Show("This book is not borrowed by you!", "Error");
         }
+        //else if (!book.BorrowedBy.Equals(this))    //check the book is borrowed by the member
+        //{
+        //    MessageBox.Show("This book is not borrowed by Alex!", "Error");
+        //}
         else
         {
-            //update the book availability
-            var update = Builders<Book>.Update
-                .Set("BookAvailablility", true);
+            try
+            {
+                //update the book availability
+                var update = Builders<Book>.Update
+                    .Set("BookAvailablility", true);
 
-            //update the book collection
-            bookRemoveCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
+                //update the book collection
+                bookRemoveCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
 
-            update = Builders<Book>.Update.Unset("BorrowedBy");
+                update = Builders<Book>.Update.Unset("BorrowedBy");
 
-            bookRemoveCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
+                bookRemoveCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
 
-            //remove the book from the borrow list
-            this.borrowedList.RemoveAll(b => b.BookISBN == book.BookISBN);
+                //remove the book from the borrow list
+                this.borrowedList.RemoveAll(b => b.BookISBN == book.BookISBN);
 
-            //update the member collection
-            var memberUpdate = Builders<Member>.Update
-                .Set("BorrowedBook", this.borrowedList);
+                //update the member collection
+                var memberUpdate = Builders<Member>.Update
+                    .Set("BorrowedBook", this.borrowedList);
 
-            //update the member collection
-            memberCollection.UpdateOne(m => m.UserId == this.UserId, memberUpdate);
+                //update the member collection
+                memberCollection.UpdateOne(m => m.UserId == this.UserId, memberUpdate);
 
-            MessageBox.Show("The book is returned successfully!");
+                MessageBox.Show("The book is returned successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
     }
 }

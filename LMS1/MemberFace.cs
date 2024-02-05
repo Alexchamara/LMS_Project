@@ -5,6 +5,8 @@ namespace LMS1
     public partial class MemberFace : Form
     {
         Member member;
+
+
         public MemberFace(Member member)
         {
             this.member = member;

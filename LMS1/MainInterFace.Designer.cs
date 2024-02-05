@@ -44,19 +44,21 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(1907, 12);
+            button1.Location = new Point(1027, 6);
+            button1.Margin = new Padding(2, 1, 2, 1);
             button1.Name = "button1";
-            button1.Size = new Size(55, 41);
-            button1.TabIndex = 8;
+            button1.Size = new Size(30, 19);
+            button1.TabIndex = 4;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(696, 131);
+            pictureBox1.Location = new Point(375, 61);
+            pictureBox1.Margin = new Padding(2, 1, 2, 1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(577, 340);
+            pictureBox1.Size = new Size(311, 159);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
@@ -66,10 +68,11 @@
             label2.AutoSize = true;
             label2.Font = new Font("Franklin Gothic Medium", 24F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(575, 474);
+            label2.Location = new Point(310, 222);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(829, 81);
-            label2.TabIndex = 10;
+            label2.Size = new Size(412, 37);
+            label2.TabIndex = 0;
             label2.Text = "Libarary Managment System";
             // 
             // LibrarianLogInBtn
@@ -81,10 +84,11 @@
             LibrarianLogInBtn.ForeColor = Color.White;
             LibrarianLogInBtn.Image = (Image)resources.GetObject("LibrarianLogInBtn.Image");
             LibrarianLogInBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            LibrarianLogInBtn.Location = new Point(382, 640);
+            LibrarianLogInBtn.Location = new Point(206, 300);
+            LibrarianLogInBtn.Margin = new Padding(2, 1, 2, 1);
             LibrarianLogInBtn.Name = "LibrarianLogInBtn";
-            LibrarianLogInBtn.Size = new Size(308, 91);
-            LibrarianLogInBtn.TabIndex = 11;
+            LibrarianLogInBtn.Size = new Size(166, 43);
+            LibrarianLogInBtn.TabIndex = 1;
             LibrarianLogInBtn.Text = "    Librarian Log In";
             LibrarianLogInBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             LibrarianLogInBtn.UseVisualStyleBackColor = false;
@@ -99,10 +103,11 @@
             MemberLogInBtn.ForeColor = Color.White;
             MemberLogInBtn.Image = (Image)resources.GetObject("MemberLogInBtn.Image");
             MemberLogInBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            MemberLogInBtn.Location = new Point(825, 640);
+            MemberLogInBtn.Location = new Point(444, 300);
+            MemberLogInBtn.Margin = new Padding(2, 1, 2, 1);
             MemberLogInBtn.Name = "MemberLogInBtn";
-            MemberLogInBtn.Size = new Size(308, 91);
-            MemberLogInBtn.TabIndex = 12;
+            MemberLogInBtn.Size = new Size(166, 43);
+            MemberLogInBtn.TabIndex = 2;
             MemberLogInBtn.Text = "    Member Log In";
             MemberLogInBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             MemberLogInBtn.UseVisualStyleBackColor = false;
@@ -117,20 +122,21 @@
             BookDetailsBtn.ForeColor = Color.White;
             BookDetailsBtn.Image = (Image)resources.GetObject("BookDetailsBtn.Image");
             BookDetailsBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            BookDetailsBtn.Location = new Point(1279, 640);
+            BookDetailsBtn.Location = new Point(689, 300);
+            BookDetailsBtn.Margin = new Padding(2, 1, 2, 1);
             BookDetailsBtn.Name = "BookDetailsBtn";
-            BookDetailsBtn.Size = new Size(308, 91);
-            BookDetailsBtn.TabIndex = 13;
+            BookDetailsBtn.Size = new Size(166, 43);
+            BookDetailsBtn.TabIndex = 3;
             BookDetailsBtn.Text = "    Book Details";
             BookDetailsBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             BookDetailsBtn.UseVisualStyleBackColor = false;
             // 
             // MainInterFace
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(1974, 957);
+            ClientSize = new Size(1045, 449);
             Controls.Add(BookDetailsBtn);
             Controls.Add(MemberLogInBtn);
             Controls.Add(LibrarianLogInBtn);
@@ -138,6 +144,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 1, 2, 1);
             Name = "MainInterFace";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainInterFace";

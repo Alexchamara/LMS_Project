@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LMS1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e0b4d950353742b915a7e4f70c43ae9d2e01135")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+286518150313080f342e03cb1d078afca1a4fc53")]
 [assembly: System.Reflection.AssemblyProductAttribute("LMS1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LMS1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

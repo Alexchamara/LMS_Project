@@ -46,11 +46,13 @@ namespace LMS1
             table.Columns.Add("Publication", typeof(string));
             table.Columns.Add("Subject", typeof(string));
             table.Columns.Add("Price", typeof(int));
+            table.Columns.Add("Available", typeof(bool));
 
             // Add the books to the DataTable
             foreach (Book book in books)
             {
-                table.Rows.Add(book.BookTitel, book.BookISBN, book.BookAuthor, book.BookPublication, book.BookSubject, book.BookPrice);
+                table.Rows.Add(book.BookTitel, book.BookISBN, book.BookAuthor, 
+                    book.BookPublication, book.BookSubject, book.BookPrice, book.BookAvailablility);
             }
 
             // Set the DataGridView data source to the DataTable
@@ -77,6 +79,7 @@ namespace LMS1
         // Radio button checked changed to ISBN
         private void ISBNRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            this.SearchBookTextBook.Clear();
             this.SearchBookTextBook.Focus();
 
             DataView dv = table.DefaultView;
@@ -87,6 +90,7 @@ namespace LMS1
         // Radio button checked changed to BookTitel
         private void BookTitelRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            this.SearchBookTextBook.Clear();
             this.SearchBookTextBook.Focus();
 
             DataView dv = table.DefaultView;
