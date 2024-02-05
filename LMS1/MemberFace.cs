@@ -4,10 +4,13 @@ namespace LMS1
 {
     public partial class MemberFace : Form
     {
-        public MemberFace()
+        Member member;
+        public MemberFace(Member member)
         {
+            this.member = member;
+
             InitializeComponent();
-            memberLoadPanel(new MemberBorrowBookForm());
+            memberLoadPanel(new MemberBorrowBookForm(member));
 
             SidePanel.Height = borrowBookBtn.Height;
             SidePanel.Top = borrowBookBtn.Top;
@@ -35,7 +38,7 @@ namespace LMS1
             SidePanel.Height = borrowBookBtn.Height;
             SidePanel.Top = borrowBookBtn.Top;
 
-            memberLoadPanel(new MemberBorrowBookForm());
+            memberLoadPanel(new MemberBorrowBookForm(member));
         }
 
         private void returnBookBtn_Click(object sender, EventArgs e)

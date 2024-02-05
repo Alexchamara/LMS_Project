@@ -93,5 +93,7 @@ namespace LMS1
             dv.RowFilter = "Titel LIKE '" + SearchBookTextBook.Text + "%'";
             dataGridView1.DataSource = dv;
         }
+
+  
     }
 }

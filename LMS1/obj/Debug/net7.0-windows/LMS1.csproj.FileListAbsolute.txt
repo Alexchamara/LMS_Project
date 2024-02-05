@@ -203,3 +203,5 @@ C:\Users\User\Source\Repos\Alexchamara\LMS_Project\LMS1\bin\Debug\net7.0-windows
 C:\Users\User\Source\Repos\Alexchamara\LMS_Project\LMS1\obj\Debug\net7.0-windows\LMS1.csproj.CopyComplete
 C:\Users\User\Source\Repos\Alexchamara\LMS_Project\LMS1\obj\Debug\net7.0-windows\LMS1.genruntimeconfig.cache
 C:\Users\User\Source\Repos\Alexchamara\LMS_Project\LMS1\obj\Debug\net7.0-windows\ref\LMS1.dll
+C:\Users\User\Source\Repos\Alexchamara\LMS_Project\LMS1\obj\Debug\net7.0-windows\LMS1.LibrarianSearchForm.resources
+C:\Users\User\Source\Repos\Alexchamara\LMS_Project\LMS1\obj\Debug\net7.0-windows\LMS1.SearchMember.resources

@@ -207,6 +207,7 @@
             // memberNameRadioBtn
             // 
             memberNameRadioBtn.AutoSize = true;
+            memberNameRadioBtn.Checked = true;
             memberNameRadioBtn.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
             memberNameRadioBtn.Location = new Point(495, 291);
             memberNameRadioBtn.Name = "memberNameRadioBtn";
@@ -225,7 +226,6 @@
             membershipIdRadioBtn.Name = "membershipIdRadioBtn";
             membershipIdRadioBtn.Size = new Size(132, 25);
             membershipIdRadioBtn.TabIndex = 0;
-            membershipIdRadioBtn.TabStop = true;
             membershipIdRadioBtn.Text = "Membership ID";
             membershipIdRadioBtn.UseVisualStyleBackColor = true;
             membershipIdRadioBtn.CheckedChanged += membershipIdRadioBtn_CheckedChanged_1;
@@ -238,7 +238,6 @@
             NICRadioBtn.Name = "NICRadioBtn";
             NICRadioBtn.Size = new Size(51, 25);
             NICRadioBtn.TabIndex = 0;
-            NICRadioBtn.TabStop = true;
             NICRadioBtn.Text = "NIC";
             NICRadioBtn.UseVisualStyleBackColor = true;
             NICRadioBtn.CheckedChanged += NICRadioBtn_CheckedChanged;

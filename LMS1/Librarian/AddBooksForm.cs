@@ -63,9 +63,28 @@ namespace LMS1
         //Validate the fields
         private bool isValidate()
         {
-            if (this.AddBookNameTextBox.Text == "" || this.AddAuthorTextBox.Text == "" || this.AddISBNNOTextBox.Text == "" || this.AddPriceTextBox.Text == "")
+            if (this.AddBookNameTextBox.Text == "")
             {
-                MessageBox.Show("Please fill all the fields!");
+                MessageBox.Show("Please enter the book title!");
+                this.AddBookNameTextBox.Focus();
+                return false;
+            }
+            else if(this.AddAuthorTextBox.Text == "")
+            {
+                MessageBox.Show("Please enter the author name!");
+                this.AddAuthorTextBox.Focus();
+                return false;
+            }
+            else if (this.AddISBNNOTextBox.Text == "")
+            {
+                MessageBox.Show("Please enter the ISBN number!");
+                this.AddISBNNOTextBox.Focus();
+                return false;
+            }
+            else if (this.AddPriceTextBox.Text == "")
+            {
+                MessageBox.Show("Please enter the price!");
+                this.AddPriceTextBox.Focus();
                 return false;
             }
             else

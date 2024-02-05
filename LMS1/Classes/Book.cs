@@ -19,7 +19,7 @@ namespace LMS1.Classes
         private string subject;
         private int price;
         private bool availablility;
-        Member borrowedMember = null;
+        Member borrowedMember;
 
 
         public Book  //Create a class constructor for 'AddBook' class

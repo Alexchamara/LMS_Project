@@ -150,6 +150,7 @@ namespace LMS1
             dataGridView1.DataSource = dv;
         }
 
+        // DataGridView cell double click event
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.RemoveMemberNameTextBox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
@@ -159,6 +160,7 @@ namespace LMS1
             this.RemoveMemberResonTexBox.Focus();
         }
 
+        // Clear button click event
         private void ClearBtn_Click(object sender, EventArgs e)
         {
             this.RemoveMembershipIdTextBox.Clear();

@@ -31,8 +31,34 @@ namespace LMS1.Classes
             {
                 var client = new MongoClient().GetDatabase("LMSdb");
                 var collection = client.GetCollection<Book>("Bookdb");
-                collection.DeleteOne(m => m.BookISBN == isbn);
-                MessageBox.Show("Book removed successfully!");
+
+                if (bookAvailability(isbn))
+                {
+                    collection.DeleteOne(m => m.BookISBN == isbn);
+                    MessageBox.Show("Book removed successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Someone already borrowed this book. Failed to remove the book!");
+                }
+
+
+            }
+        }
+
+        //Check the book availability before remove the book
+        private bool bookAvailability(string isbn)
+        {
+            var client = new MongoClient().GetDatabase("LMSdb");
+            var collection = client.GetCollection<Book>("Bookdb");
+            Book book = collection.Find(m => m.BookISBN == isbn).FirstOrDefault();
+
+            if (book.BookAvailablility)
+            {
+                return true;
+            }else
+            {
+                return false;
             }
         }
 

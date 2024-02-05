@@ -2,6 +2,7 @@
 using LMS1.Classes;
 using System.ComponentModel;
 using MongoDB.Driver;
+using static MongoDB.Bson.Serialization.Serializers.SerializerHelper;
 
 namespace LMS1
 {
@@ -14,13 +15,13 @@ namespace LMS1
         static void Main()
         {
             //Library library = new Library();
+            //Member member = new Member("chamara", "chamara", "1234", "1234", "asddf", 88789);
 
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new MainInterFace());
-            //Application.Run(new MemberFace());
-            //Application.Run(new AddBooksForm());
+            //Application.Run(new MemberFace(member));
             //Application.Run(new LibrarianFace(library));
 
 

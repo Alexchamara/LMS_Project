@@ -127,20 +127,21 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 10.125F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(192, 232);
+            label2.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(194, 230);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(73, 17);
+            label2.Size = new Size(78, 21);
             label2.TabIndex = 0;
             label2.Text = "Search By";
             // 
             // ISBNRadioButton
             // 
             ISBNRadioButton.AutoSize = true;
-            ISBNRadioButton.Location = new Point(617, 231);
+            ISBNRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ISBNRadioButton.Location = new Point(626, 228);
             ISBNRadioButton.Name = "ISBNRadioButton";
-            ISBNRadioButton.Size = new Size(69, 19);
+            ISBNRadioButton.Size = new Size(83, 25);
             ISBNRadioButton.TabIndex = 0;
             ISBNRadioButton.Text = "ISBN No";
             ISBNRadioButton.UseVisualStyleBackColor = true;
@@ -150,9 +151,10 @@
             // 
             BookTitelRadioButton.AutoSize = true;
             BookTitelRadioButton.Checked = true;
-            BookTitelRadioButton.Location = new Point(524, 231);
+            BookTitelRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            BookTitelRadioButton.Location = new Point(523, 227);
             BookTitelRadioButton.Name = "BookTitelRadioButton";
-            BookTitelRadioButton.Size = new Size(77, 19);
+            BookTitelRadioButton.Size = new Size(96, 25);
             BookTitelRadioButton.TabIndex = 0;
             BookTitelRadioButton.TabStop = true;
             BookTitelRadioButton.Text = "Book Titel";

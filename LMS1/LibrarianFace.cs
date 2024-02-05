@@ -77,7 +77,8 @@ namespace LMS1
             SidePanel.Height = searchBookBtn.Height;    
             SidePanel.Top = searchBookBtn.Top;
 
-            librarianLoadPalen(new SearchBook());
+            //librarianLoadPalen(new SearchBook());
+            librarianLoadPalen(new LibrarianSearchForm());
         }
 
         private void button5_Click(object sender, EventArgs e)

@@ -14,18 +14,28 @@ namespace LMS1
     public partial class MemberBorrowBookForm : Form
     {
         Member member;
-        public MemberBorrowBookForm()
-        {
-            InitializeComponent();
-        }
         public MemberBorrowBookForm(Member member)
         {
+            InitializeComponent();
             this.member = member;
+
         }
 
         private void MemberBorrowBookBtn_Click(object sender, EventArgs e)
         {
-            //member.BorrowBook(new Book(this.MemberBorrowBookNameTextBox.Text, this.MemberBorrowISBNNOTextBox.Text));
+            try
+            {
+                member.borrowBook(this.MemberBorrowBookNameTextBox.Text, this.MemberBorrowISBNNOTextBox.Text);                
+                this.MemberBorrowBookNameTextBox.Clear();
+                this.MemberBorrowISBNNOTextBox.Clear();
+                this.BorrowBookDate.Value = DateTime.Now;
+                this.ReturnBookDate.Value = DateTime.Now;
+                this.MemberBorrowBookNameTextBox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void ClearBtn_Click(object sender, EventArgs e)
@@ -44,9 +54,9 @@ namespace LMS1
 
         private void BorrowBookDate_ValueChanged(object sender, EventArgs e)
         {
-            DateTime aux = this.BorrowBookDate.Value;
-            this.ReturnBookDate.Value = aux.AddDays(7);
-            aux = aux.AddDays(1);
+            //DateTime aux = this.BorrowBookDate.Value;
+            //this.ReturnBookDate.Value = aux.AddDays(7);
+            //aux = aux.AddDays(1);
         }
     }
 }

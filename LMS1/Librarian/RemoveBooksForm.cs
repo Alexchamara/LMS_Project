@@ -48,6 +48,7 @@ namespace LMS1
                 this.RemoveBookNameTextBox.Clear();
                 this.RemoveBookNameTextBox.Focus();
             }
+            refreshtb();
         }
 
         // Check if the fields are empty
@@ -74,6 +75,12 @@ namespace LMS1
         private void RemoveBooksForm_Load(object sender, EventArgs e)
         {
             this.RemoveBookNameTextBox.Focus();
+            refreshtb();
+
+        }
+
+        private void refreshtb()
+        {
 
             // Fill the DataGridView with the books from the database
             books = database.GetCollection<Book>("Bookdb").Find(_ => true).ToList();
@@ -95,7 +102,6 @@ namespace LMS1
             // Set the DataGridView's data source to the DataTable
             dataGridView1.DataSource = table;
         }
-
 
         // Radio button checked changed to BookTitel
         private void BookTitelRadioButton_CheckedChanged(object sender, EventArgs e)

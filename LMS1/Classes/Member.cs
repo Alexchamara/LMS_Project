@@ -1,4 +1,6 @@
 ﻿using LMS1.Classes;
+using MongoDB.Driver;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +14,6 @@ public class Member : User
     public Member(string userName, string userId, string password, string userNIC, string userEmail, int contact)
         : base(userName, userId, password, userNIC, userEmail, contact)
     {
-
     }
 
     public List<Book> BorrowedBook
@@ -22,31 +23,60 @@ public class Member : User
     }
 
 
+    public void borrowBook(string bTitle, string bISBN)
+    {
+        //connect to the database
+        var client = new MongoClient().GetDatabase("LMSdb");
+        var bookCollection = client.GetCollection<Book>("Bookdb");
+        var memberCollection = client.GetCollection<Member>("Memberdb");
 
-    //public void BorrowBook(Book borrowingBook)     //Create a method for borrw book and takes a 'Book' object as a parameter named 'borrowingBook'.
-    //{
-    //    if (borrowingBook.BookAvailablility)
-    //    {
-    //        this.borrowedList.Add(borrowingBook);   //Add borrowed book to 'borrowedList'
-    //        borrowingBook.BorrowedBy = this;        //Set borrwed member in Book class
-    //        borrowingBook.BookAvailablility = false;//Update availablility
-    //    }
-    //    else
-    //    {
-    //        MessageBox.Show($"{borrowingBook.BookTitel} is not available for borrowing.");
-    //    }
-    //}
+        //find the book from the database
+        var book = bookCollection.Find(m => m.BookISBN == bISBN).FirstOrDefault();
 
-    //public void ReturnBook(Book returningBook)
-    //{
-    //    if (this.borrowedList.Contains(returningBook))  //Check the book is borrowed
-    //    {
-    //        this.borrowedList.Remove(returningBook);    //If book was borrowed. The book remove from 'borrowedList'
-    //        returningBook.BorrowedBy = null;            //Remove the borrowed member as well
-    //        returningBook.BookAvailablility = true;     //Set the now book is available
-    //        Console.WriteLine($"\n{returningBook.BookTitel} returned succesfully!" +
-    //            $"\nPress Enter to continue...");
-    //        while (Console.ReadKey().Key != ConsoleKey.Enter) ; //Set entry key to continue
-    //    }
-    //}
+        //check the book is available for borrowing
+        if (book == null)
+        {
+            MessageBox.Show("This book is not found!");
+        }
+        else if (!book.BookAvailablility)
+        {
+            MessageBox.Show("The book is not availabe for borrowing!");
+        }
+        else if (!(book.BookTitel == bTitle && book.BookISBN == bISBN))
+        {
+            MessageBox.Show("Incorrect Title or ISBN. Please try again!");
+        }
+        else
+        {
+            //update the book availability
+            var update = Builders<Book>.Update
+                .Set("BookAvailablility", false);
+
+            //update the book collection
+            bookCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
+
+            update = Builders<Book>.Update
+                .Set("BorrowedBy", this);
+
+            bookCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
+
+            //add the book to the borrow list
+            this.borrowedList.Add(book);
+
+            //update the member collection
+            var memberUpdate = Builders<Member>.Update
+                .Set("BorrowedBook", this.borrowedList);
+
+
+
+            //update the member collection
+            memberCollection.UpdateOne(m => m.UserId == this.UserId, memberUpdate);
+
+            MessageBox.Show("The book is borrowed successfully!");
+        }
+
+    }
+
+
+
 }

@@ -37,7 +37,7 @@ namespace LMS1
 
                     this.Hide();
 
-                    new MemberFace().Show();
+                    new MemberFace(memberInfo).Show();
                 }
                 else    //If the memberId and password is invalid
                 {
@@ -54,22 +54,6 @@ namespace LMS1
                 MemberLogInPassword.Clear();
                 MemberUserNaneTextBox.Focus();
             }
-            //if (MemberUserNaneTextBox.Text == "chamara" && MemberLogInPassword.Text == "0987")
-            //{
-            //  MainInterFace mainInterFaceForm = Application.OpenForms["MainInterFace"] as MainInterFace;
-            //  mainInterFaceForm?.Hide();
-
-            //  this.Hide();
-
-            //  new MemberFace().Show();
-            //}
-            //else if (isValid())
-            //{
-            //    new InvalidUname_Password().ShowDialog();
-            //    MemberUserNaneTextBox.Clear();
-            //    MemberLogInPassword.Clear();
-            //    MemberUserNaneTextBox.Focus();
-            //}
         }
 
         //Check the text boxs are empty
