@@ -39,7 +39,6 @@
             BookNameLable = new Label();
             MemberReturnBookLable = new Label();
             ClearBtn = new Label();
-            label2 = new Label();
             ISBNRadioButton = new RadioButton();
             BookTitelRadioButton = new RadioButton();
             dataGridView1 = new DataGridView();
@@ -61,7 +60,7 @@
             ReturnDateLable.Anchor = AnchorStyles.Top;
             ReturnDateLable.AutoSize = true;
             ReturnDateLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            ReturnDateLable.Location = new Point(193, 158);
+            ReturnDateLable.Location = new Point(166, 158);
             ReturnDateLable.Margin = new Padding(2, 0, 2, 0);
             ReturnDateLable.Name = "ReturnDateLable";
             ReturnDateLable.Size = new Size(127, 24);
@@ -70,9 +69,9 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.Right;
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(632, 92);
+            pictureBox1.Location = new Point(622, 100);
             pictureBox1.Margin = new Padding(2, 1, 2, 1);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(137, 107);
@@ -115,7 +114,7 @@
             ISBNNoLable.Anchor = AnchorStyles.Top;
             ISBNNoLable.AutoSize = true;
             ISBNNoLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            ISBNNoLable.Location = new Point(193, 113);
+            ISBNNoLable.Location = new Point(166, 113);
             ISBNNoLable.Margin = new Padding(2, 0, 2, 0);
             ISBNNoLable.Name = "ISBNNoLable";
             ISBNNoLable.Size = new Size(77, 24);
@@ -127,7 +126,7 @@
             BookNameLable.Anchor = AnchorStyles.Top;
             BookNameLable.AutoSize = true;
             BookNameLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            BookNameLable.Location = new Point(193, 74);
+            BookNameLable.Location = new Point(166, 74);
             BookNameLable.Margin = new Padding(2, 0, 2, 0);
             BookNameLable.Name = "BookNameLable";
             BookNameLable.Size = new Size(106, 24);
@@ -139,7 +138,7 @@
             MemberReturnBookLable.Anchor = AnchorStyles.Top;
             MemberReturnBookLable.AutoSize = true;
             MemberReturnBookLable.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Underline, GraphicsUnit.Point);
-            MemberReturnBookLable.Location = new Point(327, 16);
+            MemberReturnBookLable.Location = new Point(300, 16);
             MemberReturnBookLable.Margin = new Padding(2, 0, 2, 0);
             MemberReturnBookLable.Name = "MemberReturnBookLable";
             MemberReturnBookLable.Size = new Size(143, 30);
@@ -159,22 +158,11 @@
             ClearBtn.Text = "Clear Fields";
             ClearBtn.Click += ClearBtn_Click;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(149, 268);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(78, 21);
-            label2.TabIndex = 41;
-            label2.Text = "Search By";
-            // 
             // ISBNRadioButton
             // 
             ISBNRadioButton.AutoSize = true;
             ISBNRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ISBNRadioButton.Location = new Point(605, 266);
+            ISBNRadioButton.Location = new Point(561, 271);
             ISBNRadioButton.Name = "ISBNRadioButton";
             ISBNRadioButton.Size = new Size(83, 25);
             ISBNRadioButton.TabIndex = 40;
@@ -187,7 +175,7 @@
             BookTitelRadioButton.AutoSize = true;
             BookTitelRadioButton.Checked = true;
             BookTitelRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BookTitelRadioButton.Location = new Point(497, 266);
+            BookTitelRadioButton.Location = new Point(452, 271);
             BookTitelRadioButton.Name = "BookTitelRadioButton";
             BookTitelRadioButton.Size = new Size(96, 25);
             BookTitelRadioButton.TabIndex = 39;
@@ -213,9 +201,10 @@
             // 
             // SearchBookTextBook
             // 
-            SearchBookTextBook.Location = new Point(231, 269);
+            SearchBookTextBook.Location = new Point(214, 272);
             SearchBookTextBook.Margin = new Padding(2, 1, 2, 1);
             SearchBookTextBook.Name = "SearchBookTextBook";
+            SearchBookTextBook.PlaceholderText = "   Search";
             SearchBookTextBook.Size = new Size(223, 23);
             SearchBookTextBook.TabIndex = 37;
             SearchBookTextBook.TextChanged += SearchBookTextBook_TextChanged;
@@ -226,7 +215,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             ClientSize = new Size(848, 420);
-            Controls.Add(label2);
             Controls.Add(ISBNRadioButton);
             Controls.Add(BookTitelRadioButton);
             Controls.Add(dataGridView1);
@@ -266,7 +254,6 @@
         private DateTimePicker ReturnBookDate;
         private DateTimePicker MemberReturnBookDate;
         private Label ClearBtn;
-        private Label label2;
         private RadioButton ISBNRadioButton;
         private RadioButton BookTitelRadioButton;
         private DataGridView dataGridView1;

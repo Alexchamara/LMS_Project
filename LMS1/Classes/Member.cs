@@ -23,7 +23,7 @@ public class Member : User
     }
 
     //borrow book method
-    public void borrowBook(string bTitle, string bISBN)
+    public void borrowBook(string bTitle, string bISBN, DateTime value)
     {
         //connect to the database
         var client = new MongoClient().GetDatabase("LMSdb");
@@ -71,6 +71,12 @@ public class Member : User
 
                 //update the member collection
                 memberCollection.UpdateOne(m => m.UserId == this.UserId, memberUpdate);
+
+                //save borroweddate into the database
+                book.BorrowedDate = DateTime.UtcNow;
+                update = Builders<Book>.Update
+                    .Set("BorrowedDate", book.BorrowedDate);
+                bookCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
 
                 MessageBox.Show("The book is borrowed successfully!");
             }
@@ -135,6 +141,10 @@ public class Member : User
 
                 //update the member collection
                 memberCollection.UpdateOne(m => m.UserId == this.UserId, memberUpdate);
+
+                //when the book is returned, the borrowed date is removed
+                update = Builders<Book>.Update.Unset("BorrowedDate");
+                bookRemoveCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
 
                 MessageBox.Show("The book is returned successfully!");
             }

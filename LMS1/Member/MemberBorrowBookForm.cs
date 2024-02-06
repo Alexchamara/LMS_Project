@@ -40,11 +40,10 @@ namespace LMS1
                 if (isValid())
                 {
                     // Call the borrowBook method from the Member class
-                    member.borrowBook(this.MemberBorrowBookNameTextBox.Text, this.MemberBorrowISBNNOTextBox.Text);
+                    member.borrowBook(this.MemberBorrowBookNameTextBox.Text, this.MemberBorrowISBNNOTextBox.Text, this.BorrowBookDate.Value);
                     this.MemberBorrowBookNameTextBox.Clear();
                     this.MemberBorrowISBNNOTextBox.Clear();
                     this.BorrowBookDate.Value = DateTime.Now;
-                    this.ReturnBookDate.Value = DateTime.Now;
                     this.MemberBorrowBookNameTextBox.Focus();
                 }
             }
@@ -79,7 +78,6 @@ namespace LMS1
             this.MemberBorrowBookNameTextBox.Clear();
             this.MemberBorrowISBNNOTextBox.Clear();
             this.BorrowBookDate.Value = DateTime.Now;
-            this.ReturnBookDate.Value = DateTime.Now;
             this.MemberBorrowBookNameTextBox.Focus();
         }
 
@@ -172,5 +170,7 @@ namespace LMS1
             this.MemberBorrowBookNameTextBox.Focus();
             refreshtb();
         }
+
+
     }
 }

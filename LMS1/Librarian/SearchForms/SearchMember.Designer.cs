@@ -32,7 +32,6 @@
             membershipIdRadioBtn = new RadioButton();
             memberNameRadioBtn = new RadioButton();
             dataGridView1 = new DataGridView();
-            label2 = new Label();
             SearchMemberTextRemove = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -41,7 +40,7 @@
             // 
             NICRadioBtn.AutoSize = true;
             NICRadioBtn.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            NICRadioBtn.Location = new Point(719, 25);
+            NICRadioBtn.Location = new Point(657, 28);
             NICRadioBtn.Name = "NICRadioBtn";
             NICRadioBtn.Size = new Size(51, 25);
             NICRadioBtn.TabIndex = 44;
@@ -53,7 +52,7 @@
             // 
             membershipIdRadioBtn.AutoSize = true;
             membershipIdRadioBtn.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            membershipIdRadioBtn.Location = new Point(572, 25);
+            membershipIdRadioBtn.Location = new Point(512, 28);
             membershipIdRadioBtn.Name = "membershipIdRadioBtn";
             membershipIdRadioBtn.Size = new Size(132, 25);
             membershipIdRadioBtn.TabIndex = 45;
@@ -66,7 +65,7 @@
             memberNameRadioBtn.AutoSize = true;
             memberNameRadioBtn.Checked = true;
             memberNameRadioBtn.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            memberNameRadioBtn.Location = new Point(488, 25);
+            memberNameRadioBtn.Location = new Point(434, 28);
             memberNameRadioBtn.Name = "memberNameRadioBtn";
             memberNameRadioBtn.Size = new Size(69, 25);
             memberNameRadioBtn.TabIndex = 46;
@@ -89,20 +88,9 @@
             dataGridView1.Size = new Size(808, 281);
             dataGridView1.TabIndex = 49;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(140, 27);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(78, 21);
-            label2.TabIndex = 47;
-            label2.Text = "Search By";
-            // 
             // SearchMemberTextRemove
             // 
-            SearchMemberTextRemove.Location = new Point(222, 28);
+            SearchMemberTextRemove.Location = new Point(195, 29);
             SearchMemberTextRemove.Margin = new Padding(2, 1, 2, 1);
             SearchMemberTextRemove.Name = "SearchMemberTextRemove";
             SearchMemberTextRemove.Size = new Size(223, 23);
@@ -118,7 +106,6 @@
             Controls.Add(membershipIdRadioBtn);
             Controls.Add(memberNameRadioBtn);
             Controls.Add(dataGridView1);
-            Controls.Add(label2);
             Controls.Add(SearchMemberTextRemove);
             FormBorderStyle = FormBorderStyle.None;
             Name = "SearchMember";
@@ -135,7 +122,6 @@
         private RadioButton membershipIdRadioBtn;
         private RadioButton memberNameRadioBtn;
         private DataGridView dataGridView1;
-        private Label label2;
         private TextBox SearchMemberTextRemoveMember;
         private TextBox SearchMemberTextRemove;
     }

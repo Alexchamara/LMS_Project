@@ -190,7 +190,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(629, 154);
+            pictureBox1.Location = new Point(639, 143);
             pictureBox1.Margin = new Padding(2, 1, 2, 1);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(130, 102);

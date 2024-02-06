@@ -19,6 +19,8 @@ namespace LMS1.Classes
         private string subject;
         private int price;
         private bool availablility;
+        private DateTime borrowedDate;
+        private DateTime returnDate;
         Member borrowedMember;
 
 
@@ -33,7 +35,6 @@ namespace LMS1.Classes
             this.ISBN = ISBN;
             this.price = price;
             this.availablility = availablility;
-            //this.published = new DateTime(2015, 12, 31);
         }
 
         public string BookTitel
@@ -78,6 +79,18 @@ namespace LMS1.Classes
         {
             get { return availablility; }
             set { availablility = value; }
+        }
+
+        public DateTime BorrowedDate
+        {
+            get { return this.borrowedDate; }
+            set { this.borrowedDate = value; }
+        }
+
+        public DateTime ReturnDate
+        {
+            get { return this.returnDate; }
+            set { this.returnDate = value; }
         }
 
         public Member BorrowedBy
