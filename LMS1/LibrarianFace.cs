@@ -5,7 +5,7 @@ namespace LMS1
     public partial class LibrarianFace : Form
     {
         Librarian librarian;
-        Library library = new Library();    
+        Library library = new Library();
 
         //Create a constructor for 'LibrarianFace' class
         public LibrarianFace(Library library, Librarian librarian)
@@ -36,6 +36,14 @@ namespace LMS1
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void TransactionBtn_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = TransactionBtn.Height;
+            SidePanel.Top = TransactionBtn.Top;
+
+
         }
 
         private void addBookBtn_Click(object sender, EventArgs e)
@@ -74,7 +82,7 @@ namespace LMS1
 
         private void searchBookBtn_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = searchBookBtn.Height;    
+            SidePanel.Height = searchBookBtn.Height;
             SidePanel.Top = searchBookBtn.Top;
 
             //librarianLoadPalen(new SearchBook());
@@ -91,6 +99,6 @@ namespace LMS1
 
         }
 
-
+        
     }
 }
