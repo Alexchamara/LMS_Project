@@ -38,9 +38,10 @@
             // 
             SearchBookRadioButton.AutoSize = true;
             SearchBookRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            SearchBookRadioButton.Location = new Point(476, 17);
+            SearchBookRadioButton.Location = new Point(894, 39);
+            SearchBookRadioButton.Margin = new Padding(6, 6, 6, 6);
             SearchBookRadioButton.Name = "SearchBookRadioButton";
-            SearchBookRadioButton.Size = new Size(63, 25);
+            SearchBookRadioButton.Size = new Size(118, 41);
             SearchBookRadioButton.TabIndex = 7;
             SearchBookRadioButton.Text = "Book";
             SearchBookRadioButton.UseVisualStyleBackColor = true;
@@ -51,9 +52,10 @@
             SearchMemberRadioButton.AutoSize = true;
             SearchMemberRadioButton.Checked = true;
             SearchMemberRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            SearchMemberRadioButton.Location = new Point(385, 17);
+            SearchMemberRadioButton.Location = new Point(701, 39);
+            SearchMemberRadioButton.Margin = new Padding(6, 6, 6, 6);
             SearchMemberRadioButton.Name = "SearchMemberRadioButton";
-            SearchMemberRadioButton.Size = new Size(85, 25);
+            SearchMemberRadioButton.Size = new Size(164, 41);
             SearchMemberRadioButton.TabIndex = 6;
             SearchMemberRadioButton.TabStop = true;
             SearchMemberRadioButton.Text = "Member";
@@ -63,32 +65,34 @@
             // LibrarianSearchPanel
             // 
             LibrarianSearchPanel.Dock = DockStyle.Bottom;
-            LibrarianSearchPanel.Location = new Point(0, 59);
+            LibrarianSearchPanel.Location = new Point(0, 89);
+            LibrarianSearchPanel.Margin = new Padding(6, 6, 6, 6);
             LibrarianSearchPanel.Name = "LibrarianSearchPanel";
-            LibrarianSearchPanel.Size = new Size(830, 361);
+            LibrarianSearchPanel.Size = new Size(1542, 976);
             LibrarianSearchPanel.TabIndex = 8;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(309, 19);
-            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Location = new Point(530, 41);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(69, 21);
+            label2.Size = new Size(136, 37);
             label2.TabIndex = 9;
             label2.Text = "Search  :";
             // 
             // LibrarianSearchForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(830, 420);
+            ClientSize = new Size(1542, 1065);
             Controls.Add(label2);
             Controls.Add(LibrarianSearchPanel);
             Controls.Add(SearchBookRadioButton);
             Controls.Add(SearchMemberRadioButton);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(6, 6, 6, 6);
             Name = "LibrarianSearchForm";
             Text = "LibrarianSearchForm";
             Load += LibrarianSearchForm_Load;

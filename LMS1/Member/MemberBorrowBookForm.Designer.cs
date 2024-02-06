@@ -51,10 +51,10 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(628, 94);
-            pictureBox1.Margin = new Padding(2, 1, 2, 1);
+            pictureBox1.Location = new Point(1133, 201);
+            pictureBox1.Margin = new Padding(4, 2, 4, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(137, 107);
+            pictureBox1.Size = new Size(254, 228);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 26;
             pictureBox1.TabStop = false;
@@ -64,10 +64,10 @@
             MemberBorrowBookBtn.BackColor = Color.FromArgb(246, 174, 0);
             MemberBorrowBookBtn.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             MemberBorrowBookBtn.ForeColor = SystemColors.Control;
-            MemberBorrowBookBtn.Location = new Point(387, 205);
-            MemberBorrowBookBtn.Margin = new Padding(2, 1, 2, 1);
+            MemberBorrowBookBtn.Location = new Point(719, 437);
+            MemberBorrowBookBtn.Margin = new Padding(4, 2, 4, 2);
             MemberBorrowBookBtn.Name = "MemberBorrowBookBtn";
-            MemberBorrowBookBtn.Size = new Size(184, 27);
+            MemberBorrowBookBtn.Size = new Size(342, 58);
             MemberBorrowBookBtn.TabIndex = 4;
             MemberBorrowBookBtn.Text = "Borrow Book";
             MemberBorrowBookBtn.UseVisualStyleBackColor = false;
@@ -75,18 +75,18 @@
             // 
             // MemberBorrowBookNameTextBox
             // 
-            MemberBorrowBookNameTextBox.Location = new Point(355, 76);
-            MemberBorrowBookNameTextBox.Margin = new Padding(2, 1, 2, 1);
+            MemberBorrowBookNameTextBox.Location = new Point(659, 162);
+            MemberBorrowBookNameTextBox.Margin = new Padding(4, 2, 4, 2);
             MemberBorrowBookNameTextBox.Name = "MemberBorrowBookNameTextBox";
-            MemberBorrowBookNameTextBox.Size = new Size(217, 23);
+            MemberBorrowBookNameTextBox.Size = new Size(400, 39);
             MemberBorrowBookNameTextBox.TabIndex = 1;
             // 
             // MemberBorrowISBNNOTextBox
             // 
-            MemberBorrowISBNNOTextBox.Location = new Point(355, 116);
-            MemberBorrowISBNNOTextBox.Margin = new Padding(2, 1, 2, 1);
+            MemberBorrowISBNNOTextBox.Location = new Point(659, 247);
+            MemberBorrowISBNNOTextBox.Margin = new Padding(4, 2, 4, 2);
             MemberBorrowISBNNOTextBox.Name = "MemberBorrowISBNNOTextBox";
-            MemberBorrowISBNNOTextBox.Size = new Size(217, 23);
+            MemberBorrowISBNNOTextBox.Size = new Size(400, 39);
             MemberBorrowISBNNOTextBox.TabIndex = 2;
             // 
             // ISBNNoLable
@@ -94,10 +94,10 @@
             ISBNNoLable.Anchor = AnchorStyles.Top;
             ISBNNoLable.AutoSize = true;
             ISBNNoLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            ISBNNoLable.Location = new Point(166, 116);
-            ISBNNoLable.Margin = new Padding(2, 0, 2, 0);
+            ISBNNoLable.Location = new Point(292, 247);
+            ISBNNoLable.Margin = new Padding(4, 0, 4, 0);
             ISBNNoLable.Name = "ISBNNoLable";
-            ISBNNoLable.Size = new Size(77, 24);
+            ISBNNoLable.Size = new Size(149, 43);
             ISBNNoLable.TabIndex = 0;
             ISBNNoLable.Text = "ISBN No";
             // 
@@ -106,10 +106,10 @@
             BookNameLable.Anchor = AnchorStyles.Top;
             BookNameLable.AutoSize = true;
             BookNameLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            BookNameLable.Location = new Point(166, 74);
-            BookNameLable.Margin = new Padding(2, 0, 2, 0);
+            BookNameLable.Location = new Point(292, 158);
+            BookNameLable.Margin = new Padding(4, 0, 4, 0);
             BookNameLable.Name = "BookNameLable";
-            BookNameLable.Size = new Size(106, 24);
+            BookNameLable.Size = new Size(205, 43);
             BookNameLable.TabIndex = 0;
             BookNameLable.Text = "Book Name";
             // 
@@ -118,22 +118,22 @@
             MemberBorrowBookLable.Anchor = AnchorStyles.Top;
             MemberBorrowBookLable.AutoSize = true;
             MemberBorrowBookLable.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Underline, GraphicsUnit.Point);
-            MemberBorrowBookLable.Location = new Point(300, 16);
-            MemberBorrowBookLable.Margin = new Padding(2, 0, 2, 0);
+            MemberBorrowBookLable.Location = new Point(627, 34);
+            MemberBorrowBookLable.Margin = new Padding(4, 0, 4, 0);
             MemberBorrowBookLable.Name = "MemberBorrowBookLable";
-            MemberBorrowBookLable.Size = new Size(147, 30);
+            MemberBorrowBookLable.Size = new Size(288, 61);
             MemberBorrowBookLable.TabIndex = 0;
             MemberBorrowBookLable.Text = "Borrow Book";
             // 
             // BorrowBookDate
             // 
             BorrowBookDate.AccessibleRole = AccessibleRole.MenuBar;
-            BorrowBookDate.Location = new Point(355, 159);
-            BorrowBookDate.Margin = new Padding(2, 1, 2, 1);
+            BorrowBookDate.Location = new Point(659, 339);
+            BorrowBookDate.Margin = new Padding(4, 2, 4, 2);
             BorrowBookDate.MaxDate = new DateTime(2100, 2, 5, 11, 18, 0, 0);
             BorrowBookDate.MinDate = new DateTime(2024, 2, 5, 0, 0, 0, 0);
             BorrowBookDate.Name = "BorrowBookDate";
-            BorrowBookDate.Size = new Size(217, 23);
+            BorrowBookDate.Size = new Size(400, 39);
             BorrowBookDate.TabIndex = 3;
             BorrowBookDate.Value = new DateTime(2024, 2, 5, 11, 44, 0, 0);
             BorrowBookDate.ValueChanged += BorrowBookDate_ValueChanged;
@@ -143,10 +143,10 @@
             BorrowDateLable.Anchor = AnchorStyles.Top;
             BorrowDateLable.AutoSize = true;
             BorrowDateLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            BorrowDateLable.Location = new Point(166, 160);
-            BorrowDateLable.Margin = new Padding(2, 0, 2, 0);
+            BorrowDateLable.Location = new Point(292, 341);
+            BorrowDateLable.Margin = new Padding(4, 0, 4, 0);
             BorrowDateLable.Name = "BorrowDateLable";
-            BorrowDateLable.Size = new Size(130, 24);
+            BorrowDateLable.Size = new Size(254, 43);
             BorrowDateLable.TabIndex = 0;
             BorrowDateLable.Text = "Borrowed Date";
             // 
@@ -155,10 +155,10 @@
             ClearBtn.AutoSize = true;
             ClearBtn.Font = new Font("Franklin Gothic Medium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ClearBtn.ForeColor = SystemColors.ActiveCaptionText;
-            ClearBtn.Location = new Point(504, 185);
-            ClearBtn.Margin = new Padding(2, 0, 2, 0);
+            ClearBtn.Location = new Point(936, 395);
+            ClearBtn.Margin = new Padding(4, 0, 4, 0);
             ClearBtn.Name = "ClearBtn";
-            ClearBtn.Size = new Size(65, 16);
+            ClearBtn.Size = new Size(134, 30);
             ClearBtn.TabIndex = 0;
             ClearBtn.Text = "Clear Fields";
             ClearBtn.Click += ClearBtn_Click;
@@ -167,9 +167,10 @@
             // 
             ISBNRadioButton.AutoSize = true;
             ISBNRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ISBNRadioButton.Location = new Point(576, 256);
+            ISBNRadioButton.Location = new Point(1014, 546);
+            ISBNRadioButton.Margin = new Padding(6, 6, 6, 6);
             ISBNRadioButton.Name = "ISBNRadioButton";
-            ISBNRadioButton.Size = new Size(83, 25);
+            ISBNRadioButton.Size = new Size(161, 41);
             ISBNRadioButton.TabIndex = 30;
             ISBNRadioButton.Text = "ISBN No";
             ISBNRadioButton.UseVisualStyleBackColor = true;
@@ -180,9 +181,10 @@
             BookTitelRadioButton.AutoSize = true;
             BookTitelRadioButton.Checked = true;
             BookTitelRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BookTitelRadioButton.Location = new Point(468, 256);
+            BookTitelRadioButton.Location = new Point(813, 546);
+            BookTitelRadioButton.Margin = new Padding(6, 6, 6, 6);
             BookTitelRadioButton.Name = "BookTitelRadioButton";
-            BookTitelRadioButton.Size = new Size(96, 25);
+            BookTitelRadioButton.Size = new Size(184, 41);
             BookTitelRadioButton.TabIndex = 29;
             BookTitelRadioButton.TabStop = true;
             BookTitelRadioButton.Text = "Book Titel";
@@ -194,33 +196,32 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(11, 292);
-            dataGridView1.Margin = new Padding(2, 1, 2, 1);
+            dataGridView1.Location = new Point(13, 623);
+            dataGridView1.Margin = new Padding(4, 2, 4, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(809, 275);
+            dataGridView1.Size = new Size(1516, 431);
             dataGridView1.TabIndex = 28;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
             // SearchBookTextBook
             // 
-            SearchBookTextBook.Location = new Point(228, 258);
-            SearchBookTextBook.Margin = new Padding(2, 1, 2, 1);
+            SearchBookTextBook.Location = new Point(367, 550);
+            SearchBookTextBook.Margin = new Padding(4, 2, 4, 2);
             SearchBookTextBook.Name = "SearchBookTextBook";
             SearchBookTextBook.PlaceholderText = "   Search";
             SearchBookTextBook.ShortcutsEnabled = false;
-            SearchBookTextBook.Size = new Size(223, 23);
+            SearchBookTextBook.Size = new Size(411, 39);
             SearchBookTextBook.TabIndex = 0;
             SearchBookTextBook.TextChanged += SearchBookTextBook_TextChanged;
             // 
             // MemberBorrowBookForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoScroll = true;
-            ClientSize = new Size(848, 420);
+            ClientSize = new Size(1542, 1065);
             Controls.Add(ISBNRadioButton);
             Controls.Add(BookTitelRadioButton);
             Controls.Add(dataGridView1);
@@ -236,7 +237,7 @@
             Controls.Add(BookNameLable);
             Controls.Add(MemberBorrowBookLable);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 1, 2, 1);
+            Margin = new Padding(4, 2, 4, 2);
             Name = "MemberBorrowBookForm";
             Text = "MemberBorrowBook";
             Load += MemberBorrowBookForm_Load;

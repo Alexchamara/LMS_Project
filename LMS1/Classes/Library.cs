@@ -10,11 +10,6 @@ namespace LMS1.Classes
 {
     public class Library
     {
-        //Create a class constructor for 'Library' class
-        //public Library(string bName, string bAuthor, string bPublication, string bSubject, string bISBN, int bPrice, bool bAvailability = true)
-        //{
-        //}
-
         //Add book to the database
         public void addBook(string titel, string author, string publication, string subject, string isbn, int price)
         {

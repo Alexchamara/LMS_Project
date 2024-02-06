@@ -11,10 +11,10 @@ namespace LMS1
         public LibrarianFace(Library library, Librarian librarian)
         {
             InitializeComponent();
-            librarianLoadPalen(new AddBooksForm(library));
+            librarianLoadPalen(new TransactionForm());
 
-            SidePanel.Height = addBookBtn.Height;
-            SidePanel.Top = addBookBtn.Top;
+            SidePanel.Height = TransactionBtn.Height;
+            SidePanel.Top = TransactionBtn.Top;
             this.library = library;
             this.librarian = librarian;
         }
@@ -43,7 +43,7 @@ namespace LMS1
             SidePanel.Height = TransactionBtn.Height;
             SidePanel.Top = TransactionBtn.Top;
 
-
+            librarianLoadPalen(new TransactionForm());
         }
 
         private void addBookBtn_Click(object sender, EventArgs e)

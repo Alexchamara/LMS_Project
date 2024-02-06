@@ -23,7 +23,6 @@ namespace LMS1.Classes
         private DateTime returnDate;
         Member borrowedMember;
 
-
         public Book  //Create a class constructor for 'AddBook' class
             (string titel, string author, string publication, string subject,
             string ISBN, int price, bool availablility = true)

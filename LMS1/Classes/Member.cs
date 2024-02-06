@@ -14,6 +14,7 @@ public class Member : User
     public Member(string userName, string userId, string password, string userNIC, string userEmail, int contact)
         : base(userName, userId, password, userNIC, userEmail, contact)
     {
+
     }
 
     public List<Book> BorrowedBook
@@ -79,6 +80,9 @@ public class Member : User
                 bookCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
 
                 MessageBox.Show("The book is borrowed successfully!");
+
+                Transaction tra = new Transaction(this.UserId, this.UserId, book.BookTitel, book.BookISBN, "Borrow", DateTime.Now);
+                new MongoClient().GetDatabase("LMSdb").GetCollection<Transaction>("Transactiondb").InsertOne(tra);
             }
             catch (Exception ex)
             {
@@ -155,6 +159,3 @@ public class Member : User
         }
     }
 }
-
-
-

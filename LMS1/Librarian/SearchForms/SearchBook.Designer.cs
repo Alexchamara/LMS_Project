@@ -40,10 +40,12 @@
             // 
             // SearchBookTextBook
             // 
-            SearchBookTextBook.Location = new Point(202, 34);
-            SearchBookTextBook.Margin = new Padding(2, 1, 2, 1);
+            SearchBookTextBook.BorderStyle = BorderStyle.FixedSingle;
+            SearchBookTextBook.Location = new Point(368, 73);
+            SearchBookTextBook.Margin = new Padding(4, 2, 4, 2);
             SearchBookTextBook.Name = "SearchBookTextBook";
-            SearchBookTextBook.Size = new Size(223, 23);
+            SearchBookTextBook.PlaceholderText = "   Search";
+            SearchBookTextBook.Size = new Size(411, 39);
             SearchBookTextBook.TabIndex = 1;
             SearchBookTextBook.TextChanged += SearchBookTextBook_TextChanged;
             // 
@@ -52,13 +54,13 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(11, 68);
-            dataGridView1.Margin = new Padding(2, 1, 2, 1);
+            dataGridView1.Location = new Point(20, 145);
+            dataGridView1.Margin = new Padding(4, 2, 4, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(808, 275);
+            dataGridView1.Size = new Size(1501, 820);
             dataGridView1.TabIndex = 2;
             // 
             // bookBindingSource
@@ -70,12 +72,13 @@
             BookTitelRadioButton.AutoSize = true;
             BookTitelRadioButton.Checked = true;
             BookTitelRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BookTitelRadioButton.Location = new Point(442, 33);
+            BookTitelRadioButton.Location = new Point(814, 70);
+            BookTitelRadioButton.Margin = new Padding(6, 6, 6, 6);
             BookTitelRadioButton.Name = "BookTitelRadioButton";
-            BookTitelRadioButton.Size = new Size(96, 25);
+            BookTitelRadioButton.Size = new Size(184, 41);
             BookTitelRadioButton.TabIndex = 4;
             BookTitelRadioButton.TabStop = true;
-            BookTitelRadioButton.Text = "Book Titel";
+            BookTitelRadioButton.Text = "Book Title";
             BookTitelRadioButton.UseVisualStyleBackColor = true;
             BookTitelRadioButton.CheckedChanged += BookTitelRadioButton_CheckedChanged;
             // 
@@ -83,9 +86,10 @@
             // 
             ISBNRadioButton.AutoSize = true;
             ISBNRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ISBNRadioButton.Location = new Point(550, 33);
+            ISBNRadioButton.Location = new Point(1014, 70);
+            ISBNRadioButton.Margin = new Padding(6, 6, 6, 6);
             ISBNRadioButton.Name = "ISBNRadioButton";
-            ISBNRadioButton.Size = new Size(83, 25);
+            ISBNRadioButton.Size = new Size(161, 41);
             ISBNRadioButton.TabIndex = 5;
             ISBNRadioButton.Text = "ISBN No";
             ISBNRadioButton.UseVisualStyleBackColor = true;
@@ -93,15 +97,15 @@
             // 
             // SearchBook
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(830, 353);
+            ClientSize = new Size(1542, 976);
             Controls.Add(ISBNRadioButton);
             Controls.Add(BookTitelRadioButton);
             Controls.Add(dataGridView1);
             Controls.Add(SearchBookTextBook);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 1, 2, 1);
+            Margin = new Padding(4, 2, 4, 2);
             Name = "SearchBook";
             Text = "SearchBook";
             Load += SearchBook_Load;

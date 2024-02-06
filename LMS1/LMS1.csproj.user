@@ -53,5 +53,8 @@
     <Compile Update="Librarian\SearchForms\SearchMember.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Librarian\TransactionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
