@@ -16,7 +16,7 @@ namespace LMS1
 {
     public partial class RemoverMemberForm : Form
     {
-        Librarian librarian;
+        LibrarianClass librarian;
 
         // MongoDB connection
         IMongoClient client = new MongoClient();
@@ -26,7 +26,7 @@ namespace LMS1
         // DataTable for the DataGridView
         DataTable table;
 
-        public RemoverMemberForm(Librarian librarian)
+        public RemoverMemberForm(LibrarianClass librarian)
         {
             this.librarian = librarian;
             InitializeComponent();

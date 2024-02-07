@@ -34,7 +34,7 @@ namespace LMS1
         {
             //Create a connection with the database
             var client = new MongoClient().GetDatabase("LMSdb");
-            var librarianInfo = client.GetCollection<Librarian>("Librariandb").Find(l => l.UserId == this.LibrarianUserNaneTextBox.Text).FirstOrDefault();
+            var librarianInfo = client.GetCollection<LibrarianClass>("Librariandb").Find(l => l.UserId == this.LibrarianUserNaneTextBox.Text).FirstOrDefault();
 
             //Check the user name and password is valid
             if (librarianInfo != null && librarianInfo.librarianLogin(this.LibrarianUserNaneTextBox.Text, this.LibrarianLogInPassword.Text))
@@ -47,7 +47,7 @@ namespace LMS1
 
                     this.Hide();
 
-                    Librarian librarian = new Librarian("userName", "userId", "password", "userNIC", "userEmail", 1234);
+                    LibrarianClass librarian = new LibrarianClass("userName", "userId", "password", "userNIC", "userEmail", 1234);
                     Library library = new Library();
 
                     new LibrarianFace(library, librarian).Show();

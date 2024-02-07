@@ -4,11 +4,11 @@ namespace LMS1
 {
     public partial class LibrarianFace : Form
     {
-        Librarian librarian;
+        LibrarianClass librarian;
         Library library = new Library();
 
         //Create a constructor for 'LibrarianFace' class
-        public LibrarianFace(Library library, Librarian librarian)
+        public LibrarianFace(Library library, LibrarianClass librarian)
         {
             InitializeComponent();
             librarianLoadPalen(new TransactionForm());

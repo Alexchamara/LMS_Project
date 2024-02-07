@@ -29,6 +29,9 @@
     <Compile Update="Librarian\RemoverMemberForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Librarian\TrasactionCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Log in forms\LibrarianLogInForm.cs">
       <SubType>Form</SubType>
     </Compile>

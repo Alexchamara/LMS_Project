@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            TrasactionSummeryPanel = new Panel();
             SuspendLayout();
+            // 
+            // TrasactionSummeryPanel
+            // 
+            TrasactionSummeryPanel.AutoScroll = true;
+            TrasactionSummeryPanel.Location = new Point(12, 121);
+            TrasactionSummeryPanel.Name = "TrasactionSummeryPanel";
+            TrasactionSummeryPanel.Size = new Size(1518, 932);
+            TrasactionSummeryPanel.TabIndex = 0;
             // 
             // TransactionForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1542, 1065);
+            Controls.Add(TrasactionSummeryPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "TransactionForm";
             Text = "TransactionForm";
@@ -42,5 +52,7 @@
         }
 
         #endregion
+
+        private Panel TrasactionSummeryPanel;
     }
 }

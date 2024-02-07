@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace LMS1.Classes
 {
-    public class Librarian : User
+    public class LibrarianClass : User
     {
         //Create a class constructor for 'Librarian' class
-        public Librarian(string userName, string userId, string password, string userNIC, string userEmail, int contact) : base(userName, userId, password, userNIC, userEmail, contact)
+        public LibrarianClass(string userName, string userId, string password, string userNIC, string userEmail, int contact) : base(userName, userId, password, userNIC, userEmail, contact)
         {
         }
 

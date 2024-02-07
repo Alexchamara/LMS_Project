@@ -14,9 +14,9 @@ namespace LMS1
 {
     public partial class AddMemberForm : Form
     {
-        Librarian librarian;
+        LibrarianClass librarian;
 
-        public AddMemberForm(Librarian librarian)
+        public AddMemberForm(LibrarianClass librarian)
         {
             InitializeComponent();
             this.librarian = librarian;

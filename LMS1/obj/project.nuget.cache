@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KO68Wa7jRMzSRAlIbiJpkvw9KVjxK6lYOakau8364itimUv40g9xY8zvC7IN92ZT6Qo1MsyCe+9VEgbn9TSzcw==",
+  "dgSpecHash": "DggptvYFBAp8rzyecwrMxa716Zv1lVJn/+3nxf6VJGqF/EZf2lcB2o0UOhrFF6tiQM5uF8hrYg8yM+WvWfiNhA==",
   "success": true,
-  "projectFilePath": "C:\\lms2\\LMS_Project\\LMS1\\LMS1.csproj",
+  "projectFilePath": "\\\\Mac\\iCloud\\New folder\\LMS1\\LMS1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexchamara\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\alexchamara\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
