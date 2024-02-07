@@ -30,19 +30,21 @@
         {
             transactionTypelbl = new Label();
             panel1 = new Panel();
+            porfomedlbl = new Label();
+            trasactionIdlbl = new Label();
+            label6 = new Label();
+            label3 = new Label();
             trasactionDatelbl = new Label();
             memberNamelbl = new Label();
             bookNamelbl = new Label();
             memberIdlbl = new Label();
             bookISBNlbl = new Label();
-            trasactionIdlbl = new Label();
-            porfomedlbl = new Label();
             transactionNameText = new Label();
             label1 = new Label();
             label2 = new Label();
             label4 = new Label();
             label5 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            TreasactionDate = new DateTimePicker();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,11 +63,57 @@
             panel1.BackColor = Color.FromArgb(51, 51, 76);
             panel1.Controls.Add(porfomedlbl);
             panel1.Controls.Add(trasactionIdlbl);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(label3);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1500, 70);
             panel1.TabIndex = 2;
+            // 
+            // porfomedlbl
+            // 
+            porfomedlbl.AutoSize = true;
+            porfomedlbl.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
+            porfomedlbl.ForeColor = SystemColors.Control;
+            porfomedlbl.Location = new Point(805, 14);
+            porfomedlbl.Name = "porfomedlbl";
+            porfomedlbl.Size = new Size(213, 40);
+            porfomedlbl.TabIndex = 1;
+            porfomedlbl.Text = "Porformed  By :";
+            // 
+            // trasactionIdlbl
+            // 
+            trasactionIdlbl.AutoSize = true;
+            trasactionIdlbl.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
+            trasactionIdlbl.ForeColor = SystemColors.Control;
+            trasactionIdlbl.Location = new Point(146, 14);
+            trasactionIdlbl.Name = "trasactionIdlbl";
+            trasactionIdlbl.Size = new Size(218, 40);
+            trasactionIdlbl.TabIndex = 1;
+            trasactionIdlbl.Text = "Transaction ID : ";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.Control;
+            label6.Location = new Point(370, 14);
+            label6.Name = "label6";
+            label6.Size = new Size(227, 40);
+            label6.TabIndex = 1;
+            label6.Text = "Transaction Type";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.Control;
+            label3.Location = new Point(1024, 14);
+            label3.Name = "label3";
+            label3.Size = new Size(227, 40);
+            label3.TabIndex = 1;
+            label3.Text = "Transaction Type";
             // 
             // trasactionDatelbl
             // 
@@ -106,7 +154,6 @@
             memberIdlbl.Size = new Size(175, 40);
             memberIdlbl.TabIndex = 1;
             memberIdlbl.Text = "Member ID :";
-            memberIdlbl.Click += label5_Click;
             // 
             // bookISBNlbl
             // 
@@ -117,28 +164,6 @@
             bookISBNlbl.Size = new Size(166, 40);
             bookISBNlbl.TabIndex = 3;
             bookISBNlbl.Text = "Book ISBN :";
-            // 
-            // trasactionIdlbl
-            // 
-            trasactionIdlbl.AutoSize = true;
-            trasactionIdlbl.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            trasactionIdlbl.ForeColor = SystemColors.Control;
-            trasactionIdlbl.Location = new Point(146, 14);
-            trasactionIdlbl.Name = "trasactionIdlbl";
-            trasactionIdlbl.Size = new Size(218, 40);
-            trasactionIdlbl.TabIndex = 1;
-            trasactionIdlbl.Text = "Transaction ID : ";
-            // 
-            // porfomedlbl
-            // 
-            porfomedlbl.AutoSize = true;
-            porfomedlbl.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            porfomedlbl.ForeColor = SystemColors.Control;
-            porfomedlbl.Location = new Point(805, 14);
-            porfomedlbl.Name = "porfomedlbl";
-            porfomedlbl.Size = new Size(213, 40);
-            porfomedlbl.TabIndex = 1;
-            porfomedlbl.Text = "Porformed  By :";
             // 
             // transactionNameText
             // 
@@ -190,18 +215,19 @@
             label5.TabIndex = 1;
             label5.Text = "Transaction Type";
             // 
-            // dateTimePicker1
+            // TreasactionDate
             // 
-            dateTimePicker1.Location = new Point(943, 107);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(390, 39);
-            dateTimePicker1.TabIndex = 4;
+            TreasactionDate.Enabled = false;
+            TreasactionDate.Location = new Point(943, 107);
+            TreasactionDate.Name = "TreasactionDate";
+            TreasactionDate.Size = new Size(390, 39);
+            TreasactionDate.TabIndex = 4;
             // 
             // TrasactionCard
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(dateTimePicker1);
+            Controls.Add(TreasactionDate);
             Controls.Add(bookISBNlbl);
             Controls.Add(bookNamelbl);
             Controls.Add(memberIdlbl);
@@ -238,6 +264,8 @@
         private Label label2;
         private Label label4;
         private Label label5;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker TreasactionDate;
+        private Label label6;
+        private Label label3;
     }
 }
