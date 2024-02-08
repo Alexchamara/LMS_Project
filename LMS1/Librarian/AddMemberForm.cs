@@ -58,7 +58,7 @@ namespace LMS1
             }
         }
 
-        private bool isValidate()
+        public bool isValidate()
         {
             if (this.AddMemberNameTextBox.Text == "")
             {

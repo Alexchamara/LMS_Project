@@ -17,6 +17,7 @@ namespace LMS1.Classes
         //Add member to the database
         public void addMember(string name, string membershipId, string NIC, int contact, string email, string loginPassword)
         {
+            //Create a new member object
             Member member = new Member(name, membershipId, loginPassword, NIC, email, contact);
 
             var client = new MongoClient().GetDatabase("LMSdb");
