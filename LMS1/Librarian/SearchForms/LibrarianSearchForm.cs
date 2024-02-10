@@ -22,6 +22,7 @@ namespace LMS1
             switchBookMember(new SearchMember());
         }
 
+        //Switch between search book and search member
         public void switchBookMember(object Form)
         {
             if (this.LibrarianSearchPanel.Controls.Count > 0)

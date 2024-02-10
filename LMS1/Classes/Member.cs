@@ -86,10 +86,10 @@ public class Member : User
             }
             catch (Exception ex)
             {
+
                 MessageBox.Show(ex.Message, "Error");
             }   
         }
-
     }
 
     //return book method
@@ -149,6 +149,10 @@ public class Member : User
                 //when the book is returned, the borrowed date is removed
                 update = Builders<Book>.Update.Unset("BorrowedDate");
                 bookRemoveCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
+
+                //update the transaction collection
+                Transaction tra = new Transaction(this.UserId, this.UserId, book.BookTitel, book.BookISBN, "Return", DateTime.Now);
+                new MongoClient().GetDatabase("LMSdb").GetCollection<Transaction>("Transactiondb").InsertOne(tra);
 
                 MessageBox.Show("The book is returned successfully!");
             }

@@ -45,7 +45,7 @@ namespace LMS1
                 {
                     // Remove the book from the library
                     library.removeBook(this.ISBNNOTextBox.Text, this.RemoveBookNameTextBox.Text);
-                    //MessageBox.Show("Book removed successfully!");
+                    MessageBox.Show("Book removed successfully!");
                     this.ISBNNOTextBox.Clear();
                     this.RemoveBookNameTextBox.Clear();
                     this.RemoveBookNameTextBox.Focus();
@@ -79,16 +79,15 @@ namespace LMS1
             }
         }
 
+        // Form load event
         private void RemoveBooksForm_Load(object sender, EventArgs e)
         {
             this.RemoveBookNameTextBox.Focus();
             refreshtb();
-
         }
 
         private void refreshtb()
         {
-
             // Fill the DataGridView with the books from the database
             books = database.GetCollection<Book>("Bookdb").Find(_ => true).ToList();
 

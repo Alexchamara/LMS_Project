@@ -10,7 +10,9 @@ namespace LMS1.Classes
 {
     internal class Transaction
     {
-        string Id;
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        string id;
 
         string memberName;
         string memberId;
@@ -32,12 +34,10 @@ namespace LMS1.Classes
             this.transactionDateTime = transactionDateTime;
         }
 
-        [BsonId]
-        [BsonRepresentation(BsonType.String)]
-        public string ID
+        public string Id
         {
-            get { return Id; }
-            set { Id = value; }
+            get { return id; }
+            set { id = value; }
         }
 
         public string MemberName

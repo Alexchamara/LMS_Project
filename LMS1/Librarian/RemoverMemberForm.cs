@@ -42,6 +42,7 @@ namespace LMS1
             {
                 // Remove the member from the library
                 librarian.removeMember(this.RemoveMembershipIdTextBox.Text, this.RemoveMemberNameTextBox.Text);
+                MessageBox.Show("Member removed successfully!");
                 this.RemoveMembershipIdTextBox.Clear();
                 this.RemoveMemberNameTextBox.Clear();
                 this.RemoveNICTextBox.Clear();

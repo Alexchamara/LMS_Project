@@ -268,6 +268,8 @@ C:\lms2\LMS_Project\LMS1\obj\Debug\net7.0-windows\refint\LMS1.dll
 C:\lms2\LMS_Project\LMS1\obj\Debug\net7.0-windows\LMS1.pdb
 C:\lms2\LMS_Project\LMS1\obj\Debug\net7.0-windows\LMS1.genruntimeconfig.cache
 C:\lms2\LMS_Project\LMS1\obj\Debug\net7.0-windows\ref\LMS1.dll
+C:\Users\User\Source\Repos\Alexchamara\LMS_Project\LMS1\obj\Debug\net7.0-windows\LMS1.TransactionForm.resources
+C:\Users\User\Source\Repos\Alexchamara\LMS_Project\LMS1\obj\Debug\net7.0-windows\LMS1.Librarian.TrasactionCard.resources
 \\Mac\iCloud\New folder\LMS1\bin\Debug\net7.0-windows\LMS1.exe
 \\Mac\iCloud\New folder\LMS1\bin\Debug\net7.0-windows\LMS1.deps.json
 \\Mac\iCloud\New folder\LMS1\bin\Debug\net7.0-windows\LMS1.runtimeconfig.json
@@ -312,6 +314,7 @@ C:\lms2\LMS_Project\LMS1\obj\Debug\net7.0-windows\ref\LMS1.dll
 \\Mac\iCloud\New folder\LMS1\obj\Debug\net7.0-windows\LMS1.SearchBook.resources
 \\Mac\iCloud\New folder\LMS1\obj\Debug\net7.0-windows\LMS1.SearchMember.resources
 \\Mac\iCloud\New folder\LMS1\obj\Debug\net7.0-windows\LMS1.TransactionForm.resources
+\\Mac\iCloud\New folder\LMS1\obj\Debug\net7.0-windows\LMS1.Librarian.TrasactionCard.resources
 \\Mac\iCloud\New folder\LMS1\obj\Debug\net7.0-windows\LMS1.LibrarianLogInForm.resources
 \\Mac\iCloud\New folder\LMS1\obj\Debug\net7.0-windows\LMS1.MemberLogInForm.resources
 \\Mac\iCloud\New folder\LMS1\obj\Debug\net7.0-windows\LMS1.MainInterFace.resources
@@ -331,6 +334,3 @@ C:\lms2\LMS_Project\LMS1\obj\Debug\net7.0-windows\ref\LMS1.dll
 \\Mac\iCloud\New folder\LMS1\obj\Debug\net7.0-windows\LMS1.pdb
 \\Mac\iCloud\New folder\LMS1\obj\Debug\net7.0-windows\LMS1.genruntimeconfig.cache
 \\Mac\iCloud\New folder\LMS1\obj\Debug\net7.0-windows\ref\LMS1.dll
-\\Mac\iCloud\New folder\LMS1\obj\Debug\net7.0-windows\LMS1.Librarian.TrasactionCard.resources
-C:\Users\User\Source\Repos\Alexchamara\LMS_Project\LMS1\obj\Debug\net7.0-windows\LMS1.TransactionForm.resources
-C:\Users\User\Source\Repos\Alexchamara\LMS_Project\LMS1\obj\Debug\net7.0-windows\LMS1.Librarian.TrasactionCard.resources

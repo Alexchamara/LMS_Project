@@ -30,7 +30,6 @@ namespace LMS1.Classes
                 if (bookAvailability(isbn))
                 {
                     collection.DeleteOne(m => m.BookISBN == isbn);
-                    MessageBox.Show("Book removed successfully!");
                 }
                 else
                 {
@@ -74,7 +73,5 @@ namespace LMS1.Classes
                 return false;
             }
         }
-
-
     }
 }
