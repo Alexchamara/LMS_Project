@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LMS1.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,22 @@ namespace LMS1.Librarian
 {
     public partial class TrasactionCard : UserControl
     {
-        public TrasactionCard()
+        ClassTransaction transaction;
+        public TrasactionCard(ClassTransaction transaction)
         {
             InitializeComponent();
+            this.transaction = transaction;
         }
 
-        
+        private void TrasactionCard_Load(object sender, EventArgs e)
+        {
+            this.transactionTypeText.Text = transaction.TransactionType;
+            this.transactionMidText.Text = transaction.MemberId;
+            this.transactionMnameText.Text = transaction.MemberName;
+            this.transactionBisbnText.Text = transaction.BookId;
+            this.transactionBnameText.Text = transaction.BookTitle;
+            this.TreasactionDate.Value = transaction.TransactionDateTime;
+        }
+
     }
 }

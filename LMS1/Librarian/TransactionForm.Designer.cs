@@ -28,43 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            TrasactionSummeryPanel = new Panel();
-            trasactionCard1 = new Librarian.TrasactionCard();
-            TrasactionSummeryPanel.SuspendLayout();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             SuspendLayout();
             // 
-            // TrasactionSummeryPanel
+            // flowLayoutPanel1
             // 
-            TrasactionSummeryPanel.AutoScroll = true;
-            TrasactionSummeryPanel.Controls.Add(trasactionCard1);
-            TrasactionSummeryPanel.Location = new Point(12, 121);
-            TrasactionSummeryPanel.Name = "TrasactionSummeryPanel";
-            TrasactionSummeryPanel.Size = new Size(1518, 932);
-            TrasactionSummeryPanel.TabIndex = 0;
-            // 
-            // trasactionCard1
-            // 
-            trasactionCard1.Location = new Point(17, 25);
-            trasactionCard1.Name = "trasactionCard1";
-            trasactionCard1.Size = new Size(1485, 304);
-            trasactionCard1.TabIndex = 0;
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Dock = DockStyle.Bottom;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(0, 58);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(830, 441);
+            flowLayoutPanel1.TabIndex = 0;
+            flowLayoutPanel1.WrapContents = false;
             // 
             // TransactionForm
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1542, 1065);
-            Controls.Add(TrasactionSummeryPanel);
+            ClientSize = new Size(830, 499);
+            Controls.Add(flowLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 1, 2, 1);
             Name = "TransactionForm";
             Text = "TransactionForm";
-            TrasactionSummeryPanel.ResumeLayout(false);
+            Load += TransactionForm_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel TrasactionSummeryPanel;
-        private Librarian.TrasactionCard trasactionCard1;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

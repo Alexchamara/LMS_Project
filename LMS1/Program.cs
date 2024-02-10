@@ -22,6 +22,11 @@ namespace LMS1
         static void Main()
         {
             runApplication();
+
+            ////Add the librarian to the database
+            //LibrarianClass librarian = new LibrarianClass("admin", "admin", "admin", "admin", "admin", 123456789);
+            //var client = new MongoClient().GetDatabase("LMSdb");
+            //client.GetCollection<LibrarianClass>("Librariandb").InsertOne(librarian);
         }
 
         //Run the application
@@ -82,7 +87,7 @@ namespace LMS1
         static void invalidInputMg()
         {
             Console.WriteLine();
-            Console.WriteLine("Invalid Input. Please ENTRY VALID number!");
+            Console.Write("* Invalid Input. Please ENTRY VALID number!");
             Thread.Sleep(1500);
             Console.Clear();
         }
@@ -169,7 +174,7 @@ namespace LMS1
             } while (!isRepeating);
         }
 
-        //Librarian login////////////////////////
+        //Librarian login =================================================================================
         static void LibrarianLogin()
         {
             string userId;
@@ -184,6 +189,7 @@ namespace LMS1
             Console.WriteLine();
             Console.Write("\tEnter your password: ");
             password = Console.ReadLine();
+            Console.WriteLine();
 
             //Finds the librarian from the database
             var client = new MongoClient().GetDatabase("LMSdb");
@@ -201,50 +207,40 @@ namespace LMS1
                     repeatDots();
                     LibrarianFace();
                 }
-                else
-                {
-                    //If the login is not successful
-                    bool isRepeat = true;
-                    do
-                    {
-                        Console.WriteLine();
-                        Console.WriteLine("Invalid user id or password");
-                        Console.WriteLine();
-                        Console.Write("Do you want to try again? (Y/N): ");
-                        Console.WriteLine();
-                        string choice = Console.ReadLine();
-                        if (choice == "N" || choice == "n")
-                        {
-                            runApplication();
-                            Console.Write("Press any key to continue...");
-                            Console.ReadKey();
-                            isRepeat = true;
-                        }
-                        else if (choice == "Y" || choice == "y")
-                        {
-                            LibrarianLogin();
-                            Console.Write("Press any key to continue...");
-                            Console.ReadKey();
-                            isRepeat = true;
-                        }
-                        else
-                        {
-                            for (int i = 0; i < 2; i++)
-                            {
-                                Console.WriteLine("** Please entry Y or N **");
-                            }
-                        }
-                    } while (isRepeat);
-                }
             }
             else
             {
                 //If the login is not successful
+                Console.Write("* Invalid Input. Please ENTRY VALID number!");
+                repeatDots();
                 Console.WriteLine();
-                Console.WriteLine("Invalid user id or password");
-                Console.WriteLine();
-                Console.WriteLine("Press any key to continue...");
-                Console.ReadKey();
+                bool isLogOut = false;
+                do
+                {
+                    Console.WriteLine();
+                    Console.Write("Do you want to go back? (Y/N): ");
+                    string respond = Console.ReadLine();
+                    if (respond == "N" || respond == "n")
+                    {
+                        LibrarianLogin();
+                        isLogOut = false;
+                    }
+                    else if (respond == "Y" || respond == "y")
+                    {
+                        Console.WriteLine();
+                        Console.Write("* Go back");
+                        repeatDots();
+                        runApplication();
+                        isLogOut = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("** Please entry Y or N **");
+                        Application.Exit();
+
+                    }
+                }
+                while (!isLogOut);
                 LibrarianLogin();
             }
         }
@@ -317,9 +313,9 @@ namespace LMS1
                             }
                             else if (respond == "Y" || respond == "y")
                             {
-                                Console.Write("Exiting");
+                                Console.Write("* Log outing");
                                 repeatDots();
-                                Loging();
+                                runApplication();
                                 isLogOut = true;
                             }
                             else
@@ -346,26 +342,22 @@ namespace LMS1
                             string respond = Console.ReadLine();
                             if (respond == "N" || respond == "n")
                             {
-                                Console.WriteLine("Press any key to continue...");
-                                Console.ReadKey();
                                 Loging();
                                 isRepeat = false;
                             }
                             else if (respond == "Y" || respond == "y")
                             {
-                                Console.WriteLine("Press any key to continue...");
-                                Console.ReadKey();
                                 LibrarianFace();
                                 isRepeat = true;
                             }
                             else
                             {
-                                Console.WriteLine("** Please entry Y or N **");
-                                Thread.Sleep(1500);
-                                Application.Exit();
-                                //for (int i = 0; i < 2; i++)
-                                //{
-                                //}
+                                for (int i = 0; i < 2; i++)
+                                {
+                                    Console.WriteLine();
+                                    Console.WriteLine("** Please entry Y or N **");
+                                    Application.Exit();
+                                }
                             }
                         }
                         while (!isRepeat);
@@ -389,7 +381,7 @@ namespace LMS1
                 style("WELCOME TO LIBRARY MANAGMENT SYSTEM : VIEW ALL TRANSACTIONS");
                 //Connect to the database
                 var client = new MongoClient().GetDatabase("LMSdb");
-                var collection = client.GetCollection<Transaction>("Transactiondb");
+                var collection = client.GetCollection<ClassTransaction>("Transactiondb");
                 var transactions = collection.Find(new BsonDocument()).ToList();
 
                 //Display all transactions
@@ -991,9 +983,79 @@ namespace LMS1
             Console.WriteLine("\t\t* Available: " + book.BookAvailablility);
             Console.WriteLine();
         }
+        
+        //Member login  =================================================================================
+        static void MemberLogin()
+        {
+            string userId;
+            string password;
+
+            style("WELCOME TO LIBRARY MANAGMENT SYSTEM : LOG IN");
+
+            Console.WriteLine("Member Login");
+            Console.WriteLine();
+            Console.Write("\tEnter your user id: ");
+            userId = Console.ReadLine();
+            Console.WriteLine();
+            Console.Write("\tEnter your password: ");
+            password = Console.ReadLine();
+            Console.WriteLine();
+
+            //Finds the member from the database
+            var client = new MongoClient().GetDatabase("LMSdb");
+            var member = client.GetCollection<Member>("Memberdb").Find(_ => _.UserId == userId).FirstOrDefault();
+
+            //Check the member name and password is matched
+            if (member != null)
+            {
+                if (member.memberLogin(userId, password))
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("* Login successful");
+                    Console.WriteLine();
+                    Console.Write("* Log in");
+                    repeatDots();
+                    MemberFace(member as Member);
+                }
+            }
+            else
+            {
+                //If the login is not successful
+                Console.Write("* Invalid Input. Please ENTRY VALID number!");
+                repeatDots();
+                Console.WriteLine();
+                bool isLogOut = false;
+                do
+                {
+                    Console.WriteLine();
+                    Console.Write("Do you want to go back? (Y/N): ");
+                    string respond = Console.ReadLine();
+                    if (respond == "N" || respond == "n")
+                    {
+                        MemberLogin();
+                        isLogOut = false;
+                    }
+                    else if (respond == "Y" || respond == "y")
+                    {
+                        Console.WriteLine();
+                        Console.Write("* Go back");
+                        repeatDots();
+                        runApplication();
+                        isLogOut = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("** Please entry Y or N **");
+                        Application.Exit();
+
+                    }
+                }
+                while (!isLogOut);
+            }
+        }
 
         //Member face
-        static void MemberFace()
+        static void MemberFace(Member member)
         {
             int choice = 0;
             while (choice != 5)
@@ -1002,50 +1064,88 @@ namespace LMS1
                 {
                     style(" WELCOME TO LIBRARY MANAGMENT SYSTEM");
                     Console.WriteLine("Choose the application you want to run");
-                    Console.WriteLine("\t1. View all transactions");
-                    Console.WriteLine("\t2. Manage members");
-                    Console.WriteLine("\t3. Manage books");
-                    Console.WriteLine("\t4. Search");
+                    Console.WriteLine();
+                    Console.WriteLine("\t1. Borrow book");
+                    Console.WriteLine();
+                    Console.WriteLine("\t2. Return book");
+                    Console.WriteLine();
+                    Console.WriteLine("\t3. Borrowed book list");
+                    Console.WriteLine();
+                    Console.WriteLine("\t4. Search book");
+                    Console.WriteLine();
                     Console.WriteLine("\t5. Log out");
+                    Console.WriteLine();
                     Console.WriteLine("\t6. Exit");
+                    Console.WriteLine();
                     Console.Write("Enter your choice: ");
                     choice = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine();
                     if (choice == 1)
                     {
-                        Console.WriteLine("View all transactions");
-                        Console.WriteLine("Press any key to continue...");
-                        Console.ReadKey();
+                        Console.Write("* Borrow book");
+                        repeatDots();
+                        MemberBorrowBook(member);
                         Console.Clear();
                     }
                     else if (choice == 2)
                     {
-                        Console.WriteLine("Manage members");
-                        Console.WriteLine("Press any key to continue...");
-                        Console.ReadKey();
+                        Console.Write("* Return book");
+                        repeatDots();
+                        MemberReturnBook(member);
                         Console.Clear();
                     }
                     else if (choice == 3)
                     {
-                        Console.WriteLine("Manage books");
-                        Console.WriteLine("Press any key to continue...");
-                        Console.ReadKey();
+                        Console.Write("* Loading Borrowed book list");
+                        repeatDots();
                         Console.Clear();
                     }
                     else if (choice == 4)
                     {
-                        Console.WriteLine("Search");
-                        Console.WriteLine("Press any key to continue...");
-                        Console.ReadKey();
+                        Console.Write("* Search book");
+                        repeatDots();
+                        searchBook();
                         Console.Clear();
                     }
                     else if (choice == 5)
                     {
-                        Console.WriteLine("Log outing...");
-                        runApplication();
+                        bool isLogOut = false;
+                        do
+                        {
+                            Console.Write("Do you want to log out? (Y/N): ");
+                            string respond = Console.ReadLine();
+                            if (respond == "N" || respond == "n")
+                            {
+                                LibrarianFace();
+                                isLogOut = false;
+                            }
+                            else if (respond == "Y" || respond == "y")
+                            {
+                                Console.WriteLine();
+                                Console.Write("* Log outing");
+                                repeatDots();
+                                runApplication();
+                                isLogOut = true;
+                            }
+                            else
+                            {
+                                for (int i = 0; i < 2; i++)
+                                {
+                                    Console.WriteLine();
+                                    Console.WriteLine("** Please entry Y or N **");
+                                    Application.Exit();
+                                }
+                            }
+                        }
+                        while (!isLogOut);
                     }
                     else if (choice == 6)
                     {
-                        Console.WriteLine("Exiting...");
+                        Console.Write("* Exiting");
+                        repeatDots();
+                        Application.Exit();
+                        Application.Exit();
+
                     }
                     else
                     {
@@ -1059,41 +1159,133 @@ namespace LMS1
             }
         }
 
-        //Member login
-        static void MemberLogin()
+        //Member Borrow book
+        static void MemberBorrowBook(Member member)
         {
-            string userId;
-            string password;
-
-            Console.Write("Enter your user id: ");
-            userId = Console.ReadLine();
-
-            Console.Write("Enter your password: ");
-            password = Console.ReadLine();
-
-            var client = new MongoClient().GetDatabase("LMSdb");
-            var member = client.GetCollection<Member>("Memberdb").Find(_ => _.UserId == userId).FirstOrDefault();
-
-            if (member != null)
+            style("WELCOME TO LIBRARY MANAGMENT SYSTEM : BORROW BOOK");
+            try
             {
-                Console.WriteLine("Login successful");
-                if (member.memberLogin(userId, password))
+                //Entry book details
+                string bookName;
+                string ISBN;
+
+                Console.WriteLine("*** Borrow a book ***");
+                Console.WriteLine();
+                Console.Write("\t1. Entry book name: ");
+                bookName = Console.ReadLine();
+                Console.WriteLine();
+                Console.Write("\t2. Entry book ID: ");
+                ISBN = Console.ReadLine();
+                Console.WriteLine();
+
+                //Add the book to the database
+                member.borrowBook(bookName, ISBN, DateTime.Now);
+
+                Console.WriteLine();
+                Console.WriteLine("Book borrowed successfully!");
+                Console.WriteLine();
+
+                //Ask to add another book
+                bool isRepeat = false;
+                do
                 {
-                    Console.WriteLine("Login successful");
-                    MemberFace();
+                    Console.Write("Do you want to add another book? (Y/N): ");
+                    string respond = Console.ReadLine();
+                    if (respond == "N" || respond == "n")
+                    {
+                        manageBooks();
+                        isRepeat = false;
+                    }
+                    else if (respond == "Y" || respond == "y")
+                    {
+                        addBook();
+                        isRepeat = true;
+                    }
+                    else
+                    {
+                        for (int i = 0; i < 2; i++)
+                        {
+                            Console.WriteLine("** Please entry Y or N **");
+                            Console.WriteLine();
+                            Application.Exit();
+                        }
+                    }
                 }
-                else
-                {
-                    Console.WriteLine("Invalid user id or password");
-                }
+                while (!isRepeat);
+                Console.Clear();
             }
-            else
+            catch (Exception e)
             {
-                Console.WriteLine("Invalid user id or password");
+                Console.WriteLine();
+                Console.WriteLine("** " + e.Message);
+                Thread.Sleep(5000);
+                MemberBorrowBook(member);
             }
         }
 
+        //Member return book
+        static void MemberReturnBook(Member member)
+        {
+            style("WELCOME TO LIBRARY MANAGMENT SYSTEM : RETURN BOOK");
+            try
+            {
+                //Entry book details
+                string bookName;
+                string ISBN;
 
+                Console.WriteLine("*** Return a book ***");
+                Console.WriteLine();
+                Console.Write("\t1. Entry book name: ");
+                bookName = Console.ReadLine();
+                Console.WriteLine();
+                Console.Write("\t2. Entry book ID: ");
+                ISBN = Console.ReadLine();
+                Console.WriteLine();
+
+                //Add the book to the database
+                member.returnBook(bookName, ISBN);
+
+                Console.WriteLine();
+                Console.WriteLine("Book returned successfully!");
+                Console.WriteLine();
+
+                //Ask to add another book
+                bool isRepeat = false;
+                do
+                {
+                    Console.Write("Do you want to add another book? (Y/N): ");
+                    string respond = Console.ReadLine();
+                    if (respond == "N" || respond == "n")
+                    {
+                        manageBooks();
+                        isRepeat = false;
+                    }
+                    else if (respond == "Y" || respond == "y")
+                    {
+                        addBook();
+                        isRepeat = true;
+                    }
+                    else
+                    {
+                        for (int i = 0; i < 2; i++)
+                        {
+                            Console.WriteLine("** Please entry Y or N **");
+                            Console.WriteLine();
+                            Application.Exit();
+                        }
+                    }
+                }
+                while (!isRepeat);
+                Console.Clear();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine();
+                Console.WriteLine("** " + e.Message);
+                Thread.Sleep(15000);
+                MemberReturnBook(member);
+            }
+        }
 
 
         //static void style(string title)

@@ -81,14 +81,14 @@ public class Member : User
 
                 MessageBox.Show("The book is borrowed successfully!");
 
-                Transaction tra = new Transaction(this.UserId, this.UserId, book.BookTitel, book.BookISBN, "Borrow", DateTime.Now);
-                new MongoClient().GetDatabase("LMSdb").GetCollection<Transaction>("Transactiondb").InsertOne(tra);
+                ClassTransaction tra = new ClassTransaction(this.UserId, this.UserId, book.BookTitel, book.BookISBN, "Borrow", DateTime.Now);
+                new MongoClient().GetDatabase("LMSdb").GetCollection<ClassTransaction>("Transactiondb").InsertOne(tra);
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message, "Error");
-            }   
+            }
         }
     }
 
@@ -107,12 +107,12 @@ public class Member : User
             MessageBox.Show("This book is not found!", "Error");
         }
         //check the book title and ISBN is matched
-        else if (!(book.BookTitel == bTitle && book.BookISBN == bISBN))   
+        else if (!(book.BookTitel == bTitle && book.BookISBN == bISBN))
         {
             MessageBox.Show("Incorrect Title or ISBN. Please try again!", "Error");
         }
         //check the book is borrowed by the member
-        else if (book.BorrowedBy == null)  
+        else if (book.BorrowedBy == null)
         {
             MessageBox.Show("This book is not borrowed by you!", "Error");
         }
@@ -150,9 +150,13 @@ public class Member : User
                 update = Builders<Book>.Update.Unset("BorrowedDate");
                 bookRemoveCollection.UpdateOne(m => m.BookISBN == book.BookISBN, update);
 
+                //save the return date into the database
+                var returnedDateUpdate = Builders<Book>.Update.Set("ReturnDate", DateTime.Now);
+                bookRemoveCollection.UpdateOne(m => m.BookISBN == book.BookISBN, returnedDateUpdate);
+
                 //update the transaction collection
-                Transaction tra = new Transaction(this.UserId, this.UserId, book.BookTitel, book.BookISBN, "Return", DateTime.Now);
-                new MongoClient().GetDatabase("LMSdb").GetCollection<Transaction>("Transactiondb").InsertOne(tra);
+                ClassTransaction tra = new ClassTransaction(this.UserId, this.UserId, book.BookTitel, book.BookISBN, "Return", DateTime.Now);
+                new MongoClient().GetDatabase("LMSdb").GetCollection<ClassTransaction>("Transactiondb").InsertOne(tra);
 
                 MessageBox.Show("The book is returned successfully!");
             }

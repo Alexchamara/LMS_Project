@@ -30,20 +30,18 @@
         {
             transactionTypelbl = new Label();
             panel1 = new Panel();
-            porfomedlbl = new Label();
             trasactionIdlbl = new Label();
-            label6 = new Label();
-            label3 = new Label();
+            transactionIDText = new Label();
             trasactionDatelbl = new Label();
             memberNamelbl = new Label();
             bookNamelbl = new Label();
             memberIdlbl = new Label();
             bookISBNlbl = new Label();
-            transactionNameText = new Label();
-            label1 = new Label();
-            label2 = new Label();
-            label4 = new Label();
-            label5 = new Label();
+            transactionTypeText = new Label();
+            transactionMnameText = new Label();
+            transactionMidText = new Label();
+            transactionBnameText = new Label();
+            transactionBisbnText = new Label();
             TreasactionDate = new DateTimePicker();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -52,76 +50,57 @@
             // 
             transactionTypelbl.AutoSize = true;
             transactionTypelbl.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            transactionTypelbl.Location = new Point(168, 106);
+            transactionTypelbl.Location = new Point(90, 50);
+            transactionTypelbl.Margin = new Padding(2, 0, 2, 0);
             transactionTypelbl.Name = "transactionTypelbl";
-            transactionTypelbl.Size = new Size(182, 40);
+            transactionTypelbl.Size = new Size(95, 20);
             transactionTypelbl.TabIndex = 1;
             transactionTypelbl.Text = "Transaction : ";
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(51, 51, 76);
-            panel1.Controls.Add(porfomedlbl);
             panel1.Controls.Add(trasactionIdlbl);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label3);
+            panel1.Controls.Add(transactionIDText);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(2, 1, 2, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1500, 70);
+            panel1.Size = new Size(808, 33);
             panel1.TabIndex = 2;
-            // 
-            // porfomedlbl
-            // 
-            porfomedlbl.AutoSize = true;
-            porfomedlbl.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            porfomedlbl.ForeColor = SystemColors.Control;
-            porfomedlbl.Location = new Point(805, 14);
-            porfomedlbl.Name = "porfomedlbl";
-            porfomedlbl.Size = new Size(213, 40);
-            porfomedlbl.TabIndex = 1;
-            porfomedlbl.Text = "Porformed  By :";
             // 
             // trasactionIdlbl
             // 
             trasactionIdlbl.AutoSize = true;
             trasactionIdlbl.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
             trasactionIdlbl.ForeColor = SystemColors.Control;
-            trasactionIdlbl.Location = new Point(146, 14);
+            trasactionIdlbl.Location = new Point(44, 7);
+            trasactionIdlbl.Margin = new Padding(2, 0, 2, 0);
             trasactionIdlbl.Name = "trasactionIdlbl";
-            trasactionIdlbl.Size = new Size(218, 40);
+            trasactionIdlbl.Size = new Size(114, 20);
             trasactionIdlbl.TabIndex = 1;
             trasactionIdlbl.Text = "Transaction ID : ";
             // 
-            // label6
+            // transactionIDText
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = SystemColors.Control;
-            label6.Location = new Point(370, 14);
-            label6.Name = "label6";
-            label6.Size = new Size(227, 40);
-            label6.TabIndex = 1;
-            label6.Text = "Transaction Type";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(1024, 14);
-            label3.Name = "label3";
-            label3.Size = new Size(227, 40);
-            label3.TabIndex = 1;
-            label3.Text = "Transaction Type";
+            transactionIDText.AutoSize = true;
+            transactionIDText.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
+            transactionIDText.ForeColor = SystemColors.Control;
+            transactionIDText.Location = new Point(164, 7);
+            transactionIDText.Margin = new Padding(2, 0, 2, 0);
+            transactionIDText.Name = "transactionIDText";
+            transactionIDText.Size = new Size(119, 20);
+            transactionIDText.TabIndex = 1;
+            transactionIDText.Text = "Transaction Type";
             // 
             // trasactionDatelbl
             // 
             trasactionDatelbl.AutoSize = true;
             trasactionDatelbl.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            trasactionDatelbl.Location = new Point(748, 106);
+            trasactionDatelbl.Location = new Point(403, 50);
+            trasactionDatelbl.Margin = new Padding(2, 0, 2, 0);
             trasactionDatelbl.Name = "trasactionDatelbl";
-            trasactionDatelbl.Size = new Size(91, 40);
+            trasactionDatelbl.Size = new Size(48, 20);
             trasactionDatelbl.TabIndex = 3;
             trasactionDatelbl.Text = "Date :";
             // 
@@ -129,9 +108,10 @@
             // 
             memberNamelbl.AutoSize = true;
             memberNamelbl.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            memberNamelbl.Location = new Point(168, 171);
+            memberNamelbl.Location = new Point(90, 80);
+            memberNamelbl.Margin = new Padding(2, 0, 2, 0);
             memberNamelbl.Name = "memberNamelbl";
-            memberNamelbl.Size = new Size(139, 40);
+            memberNamelbl.Size = new Size(72, 20);
             memberNamelbl.TabIndex = 1;
             memberNamelbl.Text = "Member :";
             // 
@@ -139,9 +119,10 @@
             // 
             bookNamelbl.AutoSize = true;
             bookNamelbl.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            bookNamelbl.Location = new Point(748, 171);
+            bookNamelbl.Location = new Point(403, 80);
+            bookNamelbl.Margin = new Padding(2, 0, 2, 0);
             bookNamelbl.Name = "bookNamelbl";
-            bookNamelbl.Size = new Size(189, 40);
+            bookNamelbl.Size = new Size(98, 20);
             bookNamelbl.TabIndex = 3;
             bookNamelbl.Text = "Book Name : ";
             // 
@@ -149,9 +130,10 @@
             // 
             memberIdlbl.AutoSize = true;
             memberIdlbl.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            memberIdlbl.Location = new Point(168, 235);
+            memberIdlbl.Location = new Point(90, 110);
+            memberIdlbl.Margin = new Padding(2, 0, 2, 0);
             memberIdlbl.Name = "memberIdlbl";
-            memberIdlbl.Size = new Size(175, 40);
+            memberIdlbl.Size = new Size(91, 20);
             memberIdlbl.TabIndex = 1;
             memberIdlbl.Text = "Member ID :";
             // 
@@ -159,73 +141,80 @@
             // 
             bookISBNlbl.AutoSize = true;
             bookISBNlbl.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            bookISBNlbl.Location = new Point(748, 235);
+            bookISBNlbl.Location = new Point(403, 110);
+            bookISBNlbl.Margin = new Padding(2, 0, 2, 0);
             bookISBNlbl.Name = "bookISBNlbl";
-            bookISBNlbl.Size = new Size(166, 40);
+            bookISBNlbl.Size = new Size(86, 20);
             bookISBNlbl.TabIndex = 3;
             bookISBNlbl.Text = "Book ISBN :";
             // 
-            // transactionNameText
+            // transactionTypeText
             // 
-            transactionNameText.AutoSize = true;
-            transactionNameText.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            transactionNameText.Location = new Point(356, 106);
-            transactionNameText.Name = "transactionNameText";
-            transactionNameText.Size = new Size(227, 40);
-            transactionNameText.TabIndex = 1;
-            transactionNameText.Text = "Transaction Type";
+            transactionTypeText.AutoSize = true;
+            transactionTypeText.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
+            transactionTypeText.Location = new Point(192, 50);
+            transactionTypeText.Margin = new Padding(2, 0, 2, 0);
+            transactionTypeText.Name = "transactionTypeText";
+            transactionTypeText.Size = new Size(119, 20);
+            transactionTypeText.TabIndex = 1;
+            transactionTypeText.Text = "Transaction Type";
             // 
-            // label1
+            // transactionMnameText
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(356, 171);
-            label1.Name = "label1";
-            label1.Size = new Size(227, 40);
-            label1.TabIndex = 1;
-            label1.Text = "Transaction Type";
+            transactionMnameText.AutoSize = true;
+            transactionMnameText.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
+            transactionMnameText.Location = new Point(192, 80);
+            transactionMnameText.Margin = new Padding(2, 0, 2, 0);
+            transactionMnameText.Name = "transactionMnameText";
+            transactionMnameText.Size = new Size(119, 20);
+            transactionMnameText.TabIndex = 1;
+            transactionMnameText.Text = "Transaction Type";
             // 
-            // label2
+            // transactionMidText
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(356, 235);
-            label2.Name = "label2";
-            label2.Size = new Size(227, 40);
-            label2.TabIndex = 1;
-            label2.Text = "Transaction Type";
+            transactionMidText.AutoSize = true;
+            transactionMidText.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
+            transactionMidText.Location = new Point(192, 110);
+            transactionMidText.Margin = new Padding(2, 0, 2, 0);
+            transactionMidText.Name = "transactionMidText";
+            transactionMidText.Size = new Size(119, 20);
+            transactionMidText.TabIndex = 1;
+            transactionMidText.Text = "Transaction Type";
             // 
-            // label4
+            // transactionBnameText
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(943, 171);
-            label4.Name = "label4";
-            label4.Size = new Size(227, 40);
-            label4.TabIndex = 1;
-            label4.Text = "Transaction Type";
+            transactionBnameText.AutoSize = true;
+            transactionBnameText.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
+            transactionBnameText.Location = new Point(508, 80);
+            transactionBnameText.Margin = new Padding(2, 0, 2, 0);
+            transactionBnameText.Name = "transactionBnameText";
+            transactionBnameText.Size = new Size(119, 20);
+            transactionBnameText.TabIndex = 1;
+            transactionBnameText.Text = "Transaction Type";
             // 
-            // label5
+            // transactionBisbnText
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(943, 235);
-            label5.Name = "label5";
-            label5.Size = new Size(227, 40);
-            label5.TabIndex = 1;
-            label5.Text = "Transaction Type";
+            transactionBisbnText.AutoSize = true;
+            transactionBisbnText.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
+            transactionBisbnText.Location = new Point(508, 110);
+            transactionBisbnText.Margin = new Padding(2, 0, 2, 0);
+            transactionBisbnText.Name = "transactionBisbnText";
+            transactionBisbnText.Size = new Size(119, 20);
+            transactionBisbnText.TabIndex = 1;
+            transactionBisbnText.Text = "Transaction Type";
             // 
             // TreasactionDate
             // 
             TreasactionDate.Enabled = false;
-            TreasactionDate.Location = new Point(943, 107);
+            TreasactionDate.Location = new Point(508, 50);
+            TreasactionDate.Margin = new Padding(2, 1, 2, 1);
             TreasactionDate.Name = "TreasactionDate";
-            TreasactionDate.Size = new Size(390, 39);
+            TreasactionDate.Size = new Size(212, 23);
             TreasactionDate.TabIndex = 4;
             // 
             // TrasactionCard
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(TreasactionDate);
             Controls.Add(bookISBNlbl);
@@ -234,14 +223,16 @@
             Controls.Add(trasactionDatelbl);
             Controls.Add(memberNamelbl);
             Controls.Add(panel1);
-            Controls.Add(label5);
-            Controls.Add(label2);
-            Controls.Add(label4);
-            Controls.Add(label1);
-            Controls.Add(transactionNameText);
+            Controls.Add(transactionBisbnText);
+            Controls.Add(transactionMidText);
+            Controls.Add(transactionBnameText);
+            Controls.Add(transactionMnameText);
+            Controls.Add(transactionTypeText);
             Controls.Add(transactionTypelbl);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "TrasactionCard";
-            Size = new Size(1500, 321);
+            Size = new Size(808, 150);
+            Load += TrasactionCard_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -267,5 +258,11 @@
         private DateTimePicker TreasactionDate;
         private Label label6;
         private Label label3;
+        private Label transactionIDText;
+        private Label transactionTypeText;
+        private Label transactionMnameText;
+        private Label transactionMidText;
+        private Label transactionBnameText;
+        private Label transactionBisbnText;
     }
 }

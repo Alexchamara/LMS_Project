@@ -40,10 +40,9 @@
             // 
             NICRadioBtn.AutoSize = true;
             NICRadioBtn.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            NICRadioBtn.Location = new Point(1152, 60);
-            NICRadioBtn.Margin = new Padding(6, 6, 6, 6);
+            NICRadioBtn.Location = new Point(620, 28);
             NICRadioBtn.Name = "NICRadioBtn";
-            NICRadioBtn.Size = new Size(97, 41);
+            NICRadioBtn.Size = new Size(51, 25);
             NICRadioBtn.TabIndex = 44;
             NICRadioBtn.Text = "NIC";
             NICRadioBtn.UseVisualStyleBackColor = true;
@@ -53,10 +52,9 @@
             // 
             membershipIdRadioBtn.AutoSize = true;
             membershipIdRadioBtn.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            membershipIdRadioBtn.Location = new Point(883, 60);
-            membershipIdRadioBtn.Margin = new Padding(6, 6, 6, 6);
+            membershipIdRadioBtn.Location = new Point(475, 28);
             membershipIdRadioBtn.Name = "membershipIdRadioBtn";
-            membershipIdRadioBtn.Size = new Size(259, 41);
+            membershipIdRadioBtn.Size = new Size(132, 25);
             membershipIdRadioBtn.TabIndex = 45;
             membershipIdRadioBtn.Text = "Membership ID";
             membershipIdRadioBtn.UseVisualStyleBackColor = true;
@@ -67,10 +65,9 @@
             memberNameRadioBtn.AutoSize = true;
             memberNameRadioBtn.Checked = true;
             memberNameRadioBtn.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            memberNameRadioBtn.Location = new Point(738, 60);
-            memberNameRadioBtn.Margin = new Padding(6, 6, 6, 6);
+            memberNameRadioBtn.Location = new Point(397, 28);
             memberNameRadioBtn.Name = "memberNameRadioBtn";
-            memberNameRadioBtn.Size = new Size(131, 41);
+            memberNameRadioBtn.Size = new Size(69, 25);
             memberNameRadioBtn.TabIndex = 46;
             memberNameRadioBtn.TabStop = true;
             memberNameRadioBtn.Text = "Name";
@@ -81,39 +78,40 @@
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.BackgroundColor = SystemColors.Control;
+            dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(13, 132);
-            dataGridView1.Margin = new Padding(4, 2, 4, 2);
+            dataGridView1.Location = new Point(7, 62);
+            dataGridView1.Margin = new Padding(2, 1, 2, 1);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(1516, 833);
+            dataGridView1.Size = new Size(816, 390);
             dataGridView1.TabIndex = 49;
             // 
             // SearchMemberTextRemove
             // 
             SearchMemberTextRemove.BorderStyle = BorderStyle.FixedSingle;
-            SearchMemberTextRemove.Location = new Point(294, 62);
-            SearchMemberTextRemove.Margin = new Padding(4, 2, 4, 2);
+            SearchMemberTextRemove.Location = new Point(158, 29);
+            SearchMemberTextRemove.Margin = new Padding(2, 1, 2, 1);
             SearchMemberTextRemove.Name = "SearchMemberTextRemove";
             SearchMemberTextRemove.PlaceholderText = "    Search";
-            SearchMemberTextRemove.Size = new Size(411, 39);
+            SearchMemberTextRemove.Size = new Size(222, 23);
             SearchMemberTextRemove.TabIndex = 48;
             SearchMemberTextRemove.TextChanged += SearchMemberTextRemoveMember_TextChanged;
             // 
             // SearchMember
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1542, 976);
+            ClientSize = new Size(830, 458);
             Controls.Add(NICRadioBtn);
             Controls.Add(membershipIdRadioBtn);
             Controls.Add(memberNameRadioBtn);
             Controls.Add(dataGridView1);
             Controls.Add(SearchMemberTextRemove);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(6, 6, 6, 6);
             Name = "SearchMember";
             Text = "SearchMember";
             Load += SearchMember_Load;

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LMS1.Classes
 {
-    internal class Transaction
+    public class ClassTransaction
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
@@ -24,7 +24,7 @@ namespace LMS1.Classes
         string transactiontype;
         DateTime transactionDateTime;
 
-        public Transaction(string memberName, string memberId, string bookTitle, string bookId, string transactiontype, DateTime transactionDateTime)
+        public ClassTransaction(string memberName, string memberId, string bookTitle, string bookId, string transactiontype, DateTime transactionDateTime)
         {
             this.memberName = memberName;
             this.memberId = memberId;

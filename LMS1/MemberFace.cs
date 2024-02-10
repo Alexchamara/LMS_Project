@@ -68,6 +68,8 @@ namespace LMS1
 
         private void MemberFace_Load(object sender, EventArgs e)
         {
+            this.label1.Text = member.UserName;
+            this.label2.Text = member.UserName;
 
         }
 

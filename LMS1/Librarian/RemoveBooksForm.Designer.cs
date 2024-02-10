@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoveBooksForm));
+            dataGridView1 = new DataGridView();
             pictureBox1 = new PictureBox();
             RemoveBookBtn = new Button();
             RemoveBookNameTextBox = new TextBox();
@@ -39,20 +40,36 @@
             ISBNRadioButton = new RadioButton();
             BookTitelRadioButton = new RadioButton();
             SearchBookTextRemoveBook = new TextBox();
-            dataGridView1 = new DataGridView();
             ClearBtn = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.BackgroundColor = SystemColors.Control;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(7, 264);
+            dataGridView1.Margin = new Padding(2, 1, 2, 1);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersWidth = 82;
+            dataGridView1.RowTemplate.Height = 41;
+            dataGridView1.Size = new Size(816, 230);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1098, 162);
-            pictureBox1.Margin = new Padding(4, 2, 4, 2);
+            pictureBox1.Location = new Point(591, 76);
+            pictureBox1.Margin = new Padding(2, 1, 2, 1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(254, 228);
+            pictureBox1.Size = new Size(137, 107);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 19;
             pictureBox1.TabStop = false;
@@ -62,10 +79,10 @@
             RemoveBookBtn.BackColor = Color.FromArgb(246, 174, 0);
             RemoveBookBtn.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             RemoveBookBtn.ForeColor = SystemColors.Control;
-            RemoveBookBtn.Location = new Point(695, 348);
-            RemoveBookBtn.Margin = new Padding(4, 2, 4, 2);
+            RemoveBookBtn.Location = new Point(374, 163);
+            RemoveBookBtn.Margin = new Padding(2, 1, 2, 1);
             RemoveBookBtn.Name = "RemoveBookBtn";
-            RemoveBookBtn.Size = new Size(342, 58);
+            RemoveBookBtn.Size = new Size(184, 27);
             RemoveBookBtn.TabIndex = 3;
             RemoveBookBtn.Text = "Remove Book";
             RemoveBookBtn.UseVisualStyleBackColor = false;
@@ -73,18 +90,18 @@
             // 
             // RemoveBookNameTextBox
             // 
-            RemoveBookNameTextBox.Location = new Point(635, 162);
-            RemoveBookNameTextBox.Margin = new Padding(4, 2, 4, 2);
+            RemoveBookNameTextBox.Location = new Point(342, 76);
+            RemoveBookNameTextBox.Margin = new Padding(2, 1, 2, 1);
             RemoveBookNameTextBox.Name = "RemoveBookNameTextBox";
-            RemoveBookNameTextBox.Size = new Size(400, 39);
+            RemoveBookNameTextBox.Size = new Size(217, 23);
             RemoveBookNameTextBox.TabIndex = 1;
             // 
             // ISBNNOTextBox
             // 
-            ISBNNOTextBox.Location = new Point(635, 247);
-            ISBNNOTextBox.Margin = new Padding(4, 2, 4, 2);
+            ISBNNOTextBox.Location = new Point(342, 116);
+            ISBNNOTextBox.Margin = new Padding(2, 1, 2, 1);
             ISBNNOTextBox.Name = "ISBNNOTextBox";
-            ISBNNOTextBox.Size = new Size(400, 39);
+            ISBNNOTextBox.Size = new Size(217, 23);
             ISBNNOTextBox.TabIndex = 2;
             // 
             // ISBNNoLable
@@ -92,10 +109,10 @@
             ISBNNoLable.Anchor = AnchorStyles.Top;
             ISBNNoLable.AutoSize = true;
             ISBNNoLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            ISBNNoLable.Location = new Point(209, 241);
-            ISBNNoLable.Margin = new Padding(4, 0, 4, 0);
+            ISBNNoLable.Location = new Point(113, 113);
+            ISBNNoLable.Margin = new Padding(2, 0, 2, 0);
             ISBNNoLable.Name = "ISBNNoLable";
-            ISBNNoLable.Size = new Size(149, 43);
+            ISBNNoLable.Size = new Size(77, 24);
             ISBNNoLable.TabIndex = 0;
             ISBNNoLable.Text = "ISBN No";
             // 
@@ -104,10 +121,10 @@
             BookNameLable.Anchor = AnchorStyles.Top;
             BookNameLable.AutoSize = true;
             BookNameLable.Font = new Font("Franklin Gothic Medium", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            BookNameLable.Location = new Point(209, 158);
-            BookNameLable.Margin = new Padding(4, 0, 4, 0);
+            BookNameLable.Location = new Point(113, 74);
+            BookNameLable.Margin = new Padding(2, 0, 2, 0);
             BookNameLable.Name = "BookNameLable";
-            BookNameLable.Size = new Size(205, 43);
+            BookNameLable.Size = new Size(106, 24);
             BookNameLable.TabIndex = 0;
             BookNameLable.Text = "Book Name";
             // 
@@ -116,10 +133,10 @@
             RemoveBookLable.Anchor = AnchorStyles.Top;
             RemoveBookLable.AutoSize = true;
             RemoveBookLable.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Underline, GraphicsUnit.Point);
-            RemoveBookLable.Location = new Point(458, 34);
-            RemoveBookLable.Margin = new Padding(4, 0, 4, 0);
+            RemoveBookLable.Location = new Point(247, 16);
+            RemoveBookLable.Margin = new Padding(2, 0, 2, 0);
             RemoveBookLable.Name = "RemoveBookLable";
-            RemoveBookLable.Size = new Size(313, 61);
+            RemoveBookLable.Size = new Size(158, 30);
             RemoveBookLable.TabIndex = 0;
             RemoveBookLable.Text = "Remove Book";
             // 
@@ -127,10 +144,9 @@
             // 
             ISBNRadioButton.AutoSize = true;
             ISBNRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ISBNRadioButton.Location = new Point(1001, 493);
-            ISBNRadioButton.Margin = new Padding(6);
+            ISBNRadioButton.Location = new Point(539, 231);
             ISBNRadioButton.Name = "ISBNRadioButton";
-            ISBNRadioButton.Size = new Size(161, 41);
+            ISBNRadioButton.Size = new Size(83, 25);
             ISBNRadioButton.TabIndex = 0;
             ISBNRadioButton.Text = "ISBN No";
             ISBNRadioButton.UseVisualStyleBackColor = true;
@@ -141,10 +157,9 @@
             BookTitelRadioButton.AutoSize = true;
             BookTitelRadioButton.Checked = true;
             BookTitelRadioButton.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BookTitelRadioButton.Location = new Point(810, 491);
-            BookTitelRadioButton.Margin = new Padding(6);
+            BookTitelRadioButton.Location = new Point(436, 230);
             BookTitelRadioButton.Name = "BookTitelRadioButton";
-            BookTitelRadioButton.Size = new Size(184, 41);
+            BookTitelRadioButton.Size = new Size(96, 25);
             BookTitelRadioButton.TabIndex = 0;
             BookTitelRadioButton.TabStop = true;
             BookTitelRadioButton.Text = "Book Titel";
@@ -153,47 +168,32 @@
             // 
             // SearchBookTextRemoveBook
             // 
-            SearchBookTextRemoveBook.Location = new Point(358, 495);
-            SearchBookTextRemoveBook.Margin = new Padding(4, 2, 4, 2);
+            SearchBookTextRemoveBook.Location = new Point(193, 232);
+            SearchBookTextRemoveBook.Margin = new Padding(2, 1, 2, 1);
             SearchBookTextRemoveBook.Name = "SearchBookTextRemoveBook";
             SearchBookTextRemoveBook.PlaceholderText = "   Search";
-            SearchBookTextRemoveBook.Size = new Size(411, 39);
+            SearchBookTextRemoveBook.Size = new Size(223, 23);
             SearchBookTextRemoveBook.TabIndex = 0;
             SearchBookTextRemoveBook.TextChanged += SearchBookTextRemoveBook_TextChanged;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(13, 563);
-            dataGridView1.Margin = new Padding(4, 2, 4, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 82;
-            dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(1516, 491);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
             // ClearBtn
             // 
             ClearBtn.AutoSize = true;
             ClearBtn.Font = new Font("Franklin Gothic Medium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ClearBtn.ForeColor = SystemColors.ActiveCaptionText;
-            ClearBtn.Location = new Point(910, 301);
-            ClearBtn.Margin = new Padding(4, 0, 4, 0);
+            ClearBtn.Location = new Point(490, 141);
+            ClearBtn.Margin = new Padding(2, 0, 2, 0);
             ClearBtn.Name = "ClearBtn";
-            ClearBtn.Size = new Size(134, 30);
+            ClearBtn.Size = new Size(65, 16);
             ClearBtn.TabIndex = 0;
             ClearBtn.Text = "Clear Fields";
             ClearBtn.Click += ClearBtn_Click;
             // 
             // RemoveBooksForm
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1542, 1065);
+            ClientSize = new Size(830, 499);
             Controls.Add(ClearBtn);
             Controls.Add(dataGridView1);
             Controls.Add(ISBNRadioButton);
@@ -207,12 +207,12 @@
             Controls.Add(BookNameLable);
             Controls.Add(RemoveBookLable);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 2, 4, 2);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "RemoveBooksForm";
             Text = "RemoveBooksForm";
             Load += RemoveBooksForm_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
