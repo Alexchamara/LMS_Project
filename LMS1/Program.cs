@@ -847,7 +847,7 @@ namespace LMS1
                     else if (choice == 2)   //Search a member
                     {
                         Console.WriteLine();
-                        //searchMember();
+                        searchMember();
                         Console.Clear();
                     }
                     else if (choice == 3)   //Back to menu
@@ -872,6 +872,111 @@ namespace LMS1
                     Console.Clear();
                 }
             }
+        }
+
+        //Search member by name and membership id
+        static void searchMember()
+        {
+            style("WELCOME TO LIBRARY MANAGMENT SYSTEM : SEARCH");
+            int choice = 0;
+            do
+            {
+                try
+                {
+                    //Entry member details
+                    string memberName;
+                    string membershipId;
+
+                    Console.WriteLine("*** Search a member ***");
+                    Console.WriteLine();
+                    Console.WriteLine("\t1. Member name");
+                    Console.WriteLine();
+                    Console.WriteLine("\t2. Membership ID");
+                    Console.WriteLine();
+                    Console.WriteLine("\t3. Back to menu");
+                    Console.WriteLine();
+                    Console.Write("* Enter choice: ");
+                    choice = int.Parse(Console.ReadLine());
+
+                    //Connect to the database
+                    var database = new MongoClient().GetDatabase("LMSdb");
+                    Member member;
+                    switch (choice)
+                    {
+                        case 1:
+                            Console.WriteLine();
+                            Console.Write("Enter Member name: ");
+                            memberName = Console.ReadLine();
+                            member = database.GetCollection<Member>("Memberdb").Find(m => m.UserName == memberName).FirstOrDefault();
+                            displayMemberDetails(member);
+                            break;
+                        case 2:
+                            Console.WriteLine();
+                            Console.Write("Enter Membership ID: ");
+                            membershipId = Console.ReadLine();
+                            member = database.GetCollection<Member>("Memberdb").Find(m => m.UserId == membershipId).FirstOrDefault();
+                            displayMemberDetails(member);
+                            break;
+                        case 3:
+                            Console.WriteLine();
+                            LibrarianFace();
+                            break;
+                    }
+                    Console.WriteLine();
+
+                    //Ask to search another member
+                    bool isRepeat = false;
+                    do
+                    {
+                        Console.Write("Do you want to search another member? (Y/N): ");
+                        string respond = Console.ReadLine();
+                        if (respond == "N" || respond == "n")
+                        {
+                            LibrarianFace();
+                            isRepeat = false;
+                        }
+                        else if (respond == "Y" || respond == "y")
+                        {
+                            searchMember();
+                            isRepeat = true;
+                        }
+                        else
+                        {
+                            for (int i = 0; i < 2; i++)
+                            {
+                                Console.WriteLine("** Please entry Y or N **");
+                                Console.WriteLine();
+                                Application.Exit();
+                            }
+                        }
+                    }
+                    while (!isRepeat);
+                    Console.Clear();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("** " + e.Message);
+                    Thread.Sleep(2000);
+                    searchMember();
+                }
+            } while (choice != 2);
+            Console.Clear();
+        }
+
+        //Display member details
+        static void displayMemberDetails(Member member)
+        {
+            Console.WriteLine("\t\t* Member name: " + member.UserName);
+            Console.WriteLine();
+            Console.WriteLine("\t\t* Membership ID: " + member.UserId);
+            Console.WriteLine();
+            Console.WriteLine("\t\t* NIC: " + member.UserNIC);
+            Console.WriteLine();
+            Console.WriteLine("\t\t* Contact: " + member.Contact);
+            Console.WriteLine();
+            Console.WriteLine("\t\t* Email: " + member.UserEmail);
+            Console.WriteLine();
         }
 
         //Search book by title and isbn
@@ -1286,13 +1391,5 @@ namespace LMS1
                 MemberReturnBook(member);
             }
         }
-
-
-        //static void style(string title)
-        //{
-        //    Console.BackgroundColor = ConsoleColor.White;
-        //    Console.ForegroundColor = ConsoleColor.Black;
-        //    Console.Clear();
-        //}
     }
 }
