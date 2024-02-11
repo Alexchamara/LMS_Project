@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LMS1.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,11 @@ namespace LMS1
 {
     public partial class LibrarianSearchForm : Form
     {
-        public LibrarianSearchForm()
+        User user;
+
+        public LibrarianSearchForm(User user)
         {
+            this.user = user;
             InitializeComponent();
         }
 
@@ -38,13 +42,11 @@ namespace LMS1
         private void SearchMemberRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             switchBookMember(new SearchMember());
-
         }
 
         private void SearchBookRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            switchBookMember(new SearchBook());
-
+            switchBookMember(new SearchBook(user));
         }
     }
 }

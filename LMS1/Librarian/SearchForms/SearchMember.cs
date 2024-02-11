@@ -54,6 +54,7 @@ namespace LMS1
             dataGridView1.DataSource = table;
         }
 
+        // Remove member button click event
         private void SearchMemberTextRemoveMember_TextChanged(object sender, EventArgs e)
         {
             if (this.memberNameRadioBtn.Checked)
@@ -76,6 +77,7 @@ namespace LMS1
             }
         }
 
+        // Remove member button click event
         private void memberNameRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
             this.SearchMemberTextRemove.Clear();
@@ -86,6 +88,7 @@ namespace LMS1
             dataGridView1.DataSource = dv;
         }
 
+        // Radio button checked changed to Membership ID
         private void membershipIdRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
             this.SearchMemberTextRemove.Clear();
@@ -96,6 +99,7 @@ namespace LMS1
             dataGridView1.DataSource = dv;
         }
 
+        // Radio button checked changed to NIC
         private void NICRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
             this.SearchMemberTextRemove.Clear();

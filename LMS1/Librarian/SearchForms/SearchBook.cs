@@ -20,15 +20,18 @@ namespace LMS1
         IMongoDatabase database;
         List<Book> books = new List<Book>();
 
+        User user;
+
         // DataTable for the DataGridView
         DataTable table;
 
         // Constructor
-        public SearchBook()
+        public SearchBook(User user)
         {
             InitializeComponent();
             database = client.GetDatabase("LMSdb");
             books = database.GetCollection<Book>("Bookdb").Find(_ => true).ToList();
+            this.user = user;
         }
 
         // Load event
@@ -37,8 +40,9 @@ namespace LMS1
             this.SearchBookTextBook.Focus();
 
             // Fill the DataGridView with the books from the database
-            books = database.GetCollection<Book>("Bookdb").Find(_ => true).ToList();
+            //books = user.searchBook();
 
+            // Create a new DataTable
             table = new DataTable();
             table.Columns.Add("Titel", typeof(string));
             table.Columns.Add("ISBN", typeof(string));
@@ -51,7 +55,7 @@ namespace LMS1
             // Add the books to the DataTable
             foreach (Book book in books)
             {
-                table.Rows.Add(book.BookTitel, book.BookISBN, book.BookAuthor, 
+                table.Rows.Add(book.BookTitel, book.BookISBN, book.BookAuthor,
                     book.BookPublication, book.BookSubject, book.BookPrice, book.BookAvailablility);
             }
 
@@ -82,9 +86,8 @@ namespace LMS1
             this.SearchBookTextBook.Clear();
             this.SearchBookTextBook.Focus();
 
-            DataView dv = table.DefaultView;
-            dv.RowFilter = "ISBN LIKE '" + SearchBookTextBook.Text + "%'";
-            dataGridView1.DataSource = dv;
+            // Search the book using ISBN
+            Book book = user.searchBook(SearchBookTextBook.Text);
         }
 
         // Radio button checked changed to BookTitel
@@ -93,11 +96,8 @@ namespace LMS1
             this.SearchBookTextBook.Clear();
             this.SearchBookTextBook.Focus();
 
-            DataView dv = table.DefaultView;
-            dv.RowFilter = "Titel LIKE '" + SearchBookTextBook.Text + "%'";
-            dataGridView1.DataSource = dv;
+            // Search the book using BookTitel
+            Book book = user.searchBook(SearchBookTextBook.Text);
         }
-
-  
     }
 }

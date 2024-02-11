@@ -17,6 +17,7 @@ public class Member : User
 
     }
 
+    //get and set the borrow list
     public List<Book> BorrowedBook
     {
         get { return this.borrowedList; }

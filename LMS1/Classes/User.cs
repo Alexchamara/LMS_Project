@@ -69,13 +69,20 @@ namespace LMS1.Classes
         }
 
         //Search the book using ISBN from the database
-        public Book searchBook(string ISBN)
+        public Book searchBook(string keyword)
         {
             var client = new MongoClient().GetDatabase("LMSdb");
             var bookCollection = client.GetCollection<Book>("Bookdb");
 
-            return bookCollection.Find(b => b.BookISBN == ISBN).FirstOrDefault();
-
+            Book book = bookCollection.Find(b => b.BookISBN == keyword).FirstOrDefault();
+            if (book != null)
+            {
+                return book;
+            }
+            else
+            {
+                return book = bookCollection.Find(b => b.BookTitel == keyword).FirstOrDefault();
+            }
         }
 
         //Check the librarian name and password is matched

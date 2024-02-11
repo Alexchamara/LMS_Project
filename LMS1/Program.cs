@@ -21,7 +21,9 @@ namespace LMS1
         [STAThread]
         static void Main()
         {
-            runApplication();
+            //runApplication();
+            ApplicationConfiguration.Initialize();
+            Application.Run(new MainInterFace());
 
             ////Add the librarian to the database
             //LibrarianClass librarian = new LibrarianClass("admin", "admin", "admin", "admin", "admin", 123456789);
@@ -269,6 +271,7 @@ namespace LMS1
                     Console.Write("Enter your choice: ");
                     choice = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine();
+
                     if (choice == 1)    //View all transactions
                     {
                         Console.Write("* View all transactions");
@@ -497,7 +500,6 @@ namespace LMS1
 
                 //Add the book to the database
                 Library library = new Library();
-                //LibrarianClass librarian = new LibrarianClass("admin", "admin", "admin", "admin", "admin", 123456789);
                 library.addBook(bookName, ISBN, author, publisher, subject, price);
 
                 Console.WriteLine();

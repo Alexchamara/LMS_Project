@@ -60,7 +60,7 @@ namespace LMS1
 
         private void searchBookBtn_Click(object sender, EventArgs e)
         {
-            memberLoadPanel(new SearchBook());
+            memberLoadPanel(new SearchBook(member));
 
             SidePanel.Height = searchBookBtn.Height;
             SidePanel.Top = searchBookBtn.Top;
